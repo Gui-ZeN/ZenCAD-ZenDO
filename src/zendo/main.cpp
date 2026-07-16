@@ -3,7 +3,10 @@
 #include <QApplication>
 #include <QFileInfo>
 #include <QIcon>
+#include <QLibraryInfo>
+#include <QLocale>
 #include <QSurfaceFormat>
+#include <QTranslator>
 
 #include "app/Theme.hpp"
 #include "ZendoWindow.hpp"
@@ -21,8 +24,29 @@ int main(int argc, char** argv) {
     app.setApplicationName(QStringLiteral("Zendo"));
     // R48: o "Sobre" precisa dizer qual build Ã©. RITUAL DA LEVA:
     // esta linha e o AppVersion do installer/zencad.iss andam JUNTAS.
-    app.setApplicationVersion(QStringLiteral("2.0.49"));
+    app.setApplicationVersion(QStringLiteral("2.0.50"));
     app.setApplicationDisplayName(QStringLiteral("Zendo"));
+
+    // R52: os botoes que o Qt escreve sozinho (OK/Cancel/Close/Yes/No) vinham
+    // EM INGLES. O dogfooding da R51 achou "Cancel" no telhado, no Fotografo e
+    // em todo QInputDialog -- num app 100% pt-BR, e ao lado do QFileDialog
+    // NATIVO, que vem em portugues: "Salvar/Cancelar" e "OK/Cancel" na mesma
+    // tela. O Guilherme ja tinha odiado um "Close" solto na R50; nunca era um
+    // caso isolado, era o catalogo inteiro faltando.
+    // INCONDICIONAL, nao QLocale::system(): o app e pt-BR por design -- num
+    // Windows em ingles o certo continua sendo "Cancelar", nao meio a meio.
+    // O windeployqt ja gera translations/qt_pt_BR.qm no build-app-rel e o
+    // zencad.iss ja embarca translations\* -- por isso isto sao 5 linhas.
+    static QTranslator qtTr;
+    const QLocale ptBR(QLocale::Portuguese, QLocale::Brazil);
+    const QString trDir =
+        QCoreApplication::applicationDirPath() + QStringLiteral("/translations");
+    if (qtTr.load(ptBR, QStringLiteral("qt"), QStringLiteral("_"), trDir) ||
+        // fallback do dev-run (build-app/ nao passa pelo windeployqt)
+        qtTr.load(ptBR, QStringLiteral("qt"), QStringLiteral("_"),
+                  QLibraryInfo::path(QLibraryInfo::TranslationsPath)))
+        app.installTranslator(&qtTr);
+
     app.setStyleSheet(cad::zenTheme(cad::ThemeMode::Dark) +
                       zendo::zendoChrome());   // Sumi + moldura prÃ³pria (R33)
     // R34: toda janela nova (diÃ¡logos) ganha a caption escura ao aparecer
@@ -53,6 +77,7 @@ int main(int argc, char** argv) {
     bool hdri = false;                       // R46: cÃ©u real no --render
     bool qaAutosave = false, qaRecovery = false;   // R48
     bool qaLimpeza = false, qaAjuda = false, qaProtecao = false;
+    bool qaI18n = false, qaEnquadrar = false, qaFoto = false;  // R52
     QString recdir;
     bool qaDirty = false;
     const QStringList args = app.arguments();
@@ -177,6 +202,12 @@ int main(int argc, char** argv) {
             qaProtecao = true;
         else if (args[i] == QLatin1String("--qa-dirtybase"))
             qaDirty = true;
+        else if (args[i] == QLatin1String("--qa-i18n"))
+            qaI18n = true;          // R52: prova que o catalogo do Qt carregou
+        else if (args[i] == QLatin1String("--enquadrar"))
+            qaEnquadrar = true;     // R52: --render com camera de APRESENTACAO
+        else if (args[i] == QLatin1String("--qa-foto"))
+            qaFoto = true;          // R52: dumpa o resolver do enquadramento
         else if (args[i] == QLatin1String("--qa-recdir") && i + 1 < args.size())
             recdir = args[++i];     // R48: raiz isolada do QA
         else if (args[i] == QLatin1String("--qa-engine") && i + 1 < args.size())
@@ -377,6 +408,9 @@ int main(int argc, char** argv) {
     if (qaAjuda) w.setQaAjuda(true);
     if (qaProtecao) w.setQaProtecao(true);
     if (qaDirty) w.setQaDirtyBase(true);
+    if (qaI18n) w.setQaI18n(true);
+    if (qaEnquadrar) w.setQaEnquadrar(true);
+    if (qaFoto) w.setQaFoto(true);
     if (!dimang.isEmpty()) w.setQaDimAng(dimang);
     if (!move.isEmpty()) w.setQaMove(move, false);
     if (!copy.isEmpty()) w.setQaMove(copy, true);

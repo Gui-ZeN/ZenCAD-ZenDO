@@ -53,6 +53,19 @@ public:
     bool sunOn() const { return m_sunOn; }
     // R36: a vista corrente em MUNDO (órbita ou walk) + sol pro Fotógrafo
     void cameraWorld(cad::Point3& eye, cad::Point3& tgt) const;
+    // R52: a câmera de APRESENTAÇÃO (o Fotógrafo usava a de modelagem e a
+    // foto saía sem céu). PURA e estática — o diálogo e o QA chamam a MESMA
+    // (padrão do presetFotografo, R47).
+    static void enquadrarFoto(const cad::Point3& lo, const cad::Point3& hi,
+                              double yawDeg, double fovYDeg, double aspect,
+                              cad::Point3& eye, cad::Point3& tgt);
+    // bbox do que MERECE foto: descarta as malhas ACHATADAS (terreno, rua,
+    // calçada). Sem isso repete a R45 — a rua de 130 m inflou o bbox e a casa
+    // virou formiga. false = cena vazia.
+    bool boundsFoto(cad::Point3& lo, cad::Point3& hi) const;
+    float yawAtual() const { return m_yaw; }
+    float pitchAtual() const { return m_pitch; }
+    bool emWalk() const { return m_walk; }
     bool sunAngles(double& elevDeg, double& azimDeg) const;
     float fovY() const { return m_fov; }
     // R37: sol PURO por mês/hora/lat (mesma conta do computeSunDir, sem

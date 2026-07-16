@@ -397,6 +397,43 @@ ZendoWindow::ZendoWindow() {
     mCam->addAction(QStringLiteral("En&quadrar tudo (Zoom Extents)"),
                     QKeySequence(QStringLiteral("Shift+Z")), m_vp,
                     &Viewport3D::zoomExtents);
+
+    // R52: VISTAS PADRÃO. O dogfooding da R51 esbarrou nisto: pra pôr uma
+    // janela na fachada eu precisava VER a fachada, e o único caminho era
+    // orbitar no olho. Todo modelador tem isto; o Zendo não tinha.
+    // Valem triplo (razão do Fable pra promover da lista dos "menores"):
+    //  1) são QAction → entram SOZINHAS na cola gerada do menu Ajuda;
+    //  2) dão um caminho de enquadrar sem depender do botão do MEIO —
+    //     quem usa trackpad (e o robô do dogfooding) não consegue orbitar;
+    //  3) servem de enquadramento manual pra foto.
+    // ATALHO: Ctrl+número, NUNCA número puro — o Zendo tem type-anytime e
+    // "1" solto é uma MEDIDA indo pro VCB, não um comando.
+    // A convenção sai da viewMatrix: dir=(cos p·cos y, cos p·sin y, sin p),
+    // e o olho fica em target+dir·dist — então yaw=-90 (olho no sul) É a
+    // fachada frontal, e pitch=89 (o teto do clamp) é a planta.
+    QMenu* mVistas = mCam->addMenu(QStringLiteral("&Vistas padrão"));
+    struct Vista { const char* nome; const char* tecla; float yaw, pitch; };
+    static const Vista kVistas[] = {
+        {"&Frente",     "Ctrl+1", -90.0f,  0.0f},
+        {"&Trás",       "Ctrl+2",  90.0f,  0.0f},
+        {"&Esquerda",   "Ctrl+3", 180.0f,  0.0f},
+        {"&Direita",    "Ctrl+4",   0.0f,  0.0f},
+        {"T&opo (planta)", "Ctrl+5", -90.0f, 89.0f},
+        {"&Isométrica", "Ctrl+6", -135.0f, 35.264f},   // atan(1/√2): a iso real
+    };
+    for (const Vista& v : kVistas) {
+        const float yaw = v.yaw, pitch = v.pitch;
+        const QString nome = QString::fromUtf8(v.nome).remove(QLatin1Char('&'));
+        mVistas->addAction(QString::fromUtf8(v.nome),
+                           QKeySequence(QString::fromLatin1(v.tecla)), this,
+                           [this, yaw, pitch, nome] {
+                               m_vp->setWalkthrough(false);   // sai da 1ª pessoa
+                               m_vp->zoomExtents();           // pega o alvo/raio
+                               m_vp->setCameraPose(yaw, pitch, 1.0f);
+                               statusBar()->showMessage(
+                                   QStringLiteral("Vista: %1").arg(nome), 3000);
+                           });
+    }
     QAction* actOrtho =
         mCam->addAction(QStringLiteral("Projeção &paralela (técnica)"));
     actOrtho->setCheckable(true);
@@ -2121,6 +2158,22 @@ QString ZendoWindow::colaDeAtalhos() const {
     h += QStringLiteral("</table>");
     // Os GESTOS (o que muda no meio da ação) não são QActions e nenhuma
     // varredura os acha — moram aqui e nos Primeiros passos.
+    // R52: e a CÂMERA morava em lugar NENHUM. O dogfooding da R51 abriu esta
+    // cola procurando como se orbita e não achou — porque órbita/pan/zoom são
+    // eventos de mouse no viewport, não QAction: a varredura acima, que eu
+    // achei elegante na R48, NUNCA PODERIA vê-los. O gerado-do-código tem um
+    // ponto cego, e o remédio é o mesmo bloco manual que já existia aqui
+    // embaixo. (Fonte: Viewport3D::mouseMoveEvent/wheelEvent.)
+    h += QStringLiteral(
+        "<br><b>Câmera (mouse)</b><table cellpadding='3'>"
+        "<tr><td><b>botão do MEIO</b></td><td>arrastar ORBITA "
+        "(em torno do ponto sob o cursor)</td></tr>"
+        "<tr><td><b>botão DIREITO</b></td><td>arrastar dá PAN · "
+        "Shift+meio também</td></tr>"
+        "<tr><td><b>roda</b></td><td>ZOOM no ponto sob o cursor</td></tr>"
+        "<tr><td><b>Ctrl+1…6</b></td><td>vistas padrão — o caminho sem "
+        "botão do meio</td></tr>"
+        "</table>");
     h += QStringLiteral(
         "<br><b>No meio da ação</b><table cellpadding='3'>"
         "<tr><td><b>digitar</b></td><td>define a medida exata</td></tr>"
@@ -2185,7 +2238,7 @@ void ZendoWindow::primeirosPassos(bool forcado) {
 
     v->addWidget(rotulo(QStringLiteral("ZENDO · PRIMEIROS PASSOS"), "ppCaption"));
     v->addSpacing(10);
-    v->addWidget(rotulo(QStringLiteral("Três coisas que o app\nnão conta sozinho"),
+    v->addWidget(rotulo(QStringLiteral("Quatro coisas que o app\nnão conta sozinho"),
                         "ppTitle"));
     v->addSpacing(18);
     v->addWidget(fio("ppRule"));
@@ -2199,17 +2252,28 @@ void ZendoWindow::primeirosPassos(bool forcado) {
         QStringList teclas;
     };
     const QVector<Passo> passos{
-        {"01", "Digite a medida — em qualquer ferramenta",
+        // R52: a navegação virou o 01 porque é a coisa nº 1 que o app não
+        // contava — literalmente em lugar NENHUM (nem aqui, nem na cola). Foi
+        // a primeira parede do dogfooding: sem saber orbitar, não dá pra ver
+        // a fachada, e sem ver a fachada não dá pra fazer nada nela.
+        {"01", "Gire a vista com o botão do MEIO",
+         "Arrastar com o botão do meio orbita em torno do ponto sob o cursor; "
+         "o botão direito desloca; a roda dá zoom onde o mouse está. Sem mouse "
+         "de três botões? Ctrl+1 a Ctrl+6 dão as vistas prontas — frente, "
+         "topo, isométrica.",
+         {QStringLiteral("meio"), QStringLiteral("direito"),
+          QStringLiteral("roda"), QStringLiteral("Ctrl+1…6")}},
+        {"02", "Digite a medida — em qualquer ferramenta",
          "Desenhe um retângulo grosso modo e digite 4;3 — ele vira 4×3 m. "
          "Puxe uma parede e digite 2,80. Não há campo pra clicar: comece a "
          "digitar e o número aparece no rodapé, à direita.",
          {QStringLiteral("4;3"), QStringLiteral("2,80"), QStringLiteral("Enter")}},
-        {"02", "Os pontos coloridos são o motor de precisão",
+        {"03", "Os pontos coloridos são o motor de precisão",
          "Movendo o mouse, o Zendo mostra o que achou: extremo, meio, sobre a "
          "aresta, sobre a face. Clique quando o ponto certo aparecer e o "
          "desenho nasce exato — sem zoom, sem sorte.",
          {QStringLiteral("Shift"), QStringLiteral("← ↑ →")}},
-        {"03", "Ctrl muda o que a ferramenta faz",
+        {"04", "Ctrl muda o que a ferramenta faz",
          "Ctrl+Pull empilha um volume novo em vez de mover a face. "
          "Ctrl+Mover copia em vez de mover. Ctrl+Balde pinta o sólido "
          "inteiro; Alt+Balde vira conta-gotas.",
@@ -2274,7 +2338,7 @@ void ZendoWindow::primeirosPassos(bool forcado) {
     rod->addWidget(go);
     v->addLayout(rod);
 
-    dlg.setFixedSize(600, 640);
+    dlg.setFixedSize(600, 742);   // R52: 4º passo (a navegação) entrou
     dlg.exec();
     // Aparece UMA vez na vida e nunca mais — F1 e o menu Ajuda trazem de
     // volta. (Um checkbox "não mostrar de novo" só criaria estado ambíguo
@@ -2679,8 +2743,8 @@ QString findBlender(const QString& raizUnica = QString()) {
 bool ZendoWindow::buildRenderJob(const QString& outPng, double elevDeg,
                                  double azimDeg, int samples, int resX,
                                  int resY, bool interior, bool hdri,
-                                 QString& blender, QStringList& args,
-                                 QString& err) {
+                                 bool enquadrar, QString& blender,
+                                 QStringList& args, QString& err) {
     blender = findBlender();
     if (blender.isEmpty()) {
         err = QStringLiteral("Blender não encontrado.");
@@ -2699,7 +2763,25 @@ bool ZendoWindow::buildRenderJob(const QString& outPng, double elevDeg,
         return false;
     }
     cad::Point3 eye, tgt;
-    m_vp->cameraWorld(eye, tgt);
+    if (enquadrar) {
+        // R52: o achado do dogfooding. A câmera de MODELAGEM olha de cima —
+        // e o render de cima mostra a BARRIGA da esfera do HDRI (cinza morto),
+        // não o céu. Provado A/B: mesma cena, mesmo HDRI, mesmo sol; só a
+        // altura muda e o céu azul aparece.
+        // Troco a FONTE do eye/tgt do job — NÃO a câmera do viewport. Mexer
+        // na câmera do usuário pediria restore, esbarraria em undo/cenas e
+        // destruiria a vista de trabalho de quem só queria uma foto.
+        cad::Point3 lo, hi;
+        if (m_vp->boundsFoto(lo, hi))
+            Viewport3D::enquadrarFoto(lo, hi, m_vp->yawAtual(),
+                                      double(m_vp->fovY()),
+                                      double(resX) / std::max(1, resY),
+                                      eye, tgt);
+        else
+            m_vp->cameraWorld(eye, tgt);      // cena vazia: nada a enquadrar
+    } else {
+        m_vp->cameraWorld(eye, tgt);
+    }
     args.clear();
     args << QStringLiteral("--background") << QStringLiteral("--factory-startup")
          << QStringLiteral("--python") << script << QStringLiteral("--")
@@ -2897,11 +2979,34 @@ void ZendoWindow::renderDialog() {
     v->addLayout(topo);
     v->addWidget(lHora);
     v->addWidget(sHora);
+    // R52: A CÂMERA DA FOTO. Era invisível e sempre a do viewport — e como se
+    // modela olhando de CIMA, a foto saía com a barriga cinza do HDRI no lugar
+    // do céu. COMBO e não checkbox: a escolha aparece por extenso, e checkbox
+    // marcado é fácil de não ver.
+    // O padrão NÃO reenquadra sempre: câmera alta é enquadramento LEGÍTIMO —
+    // a planta humanizada da R35 (telhado oculto, vista de cima) foi entregue
+    // 2× assim. Deriva do que o usuário está fazendo:
+    //   • em walkthrough → ele está de pé DENTRO da cena: a vista é a foto;
+    //   • olhando muito de cima (pitch > 50°) → é vista de trabalho: enquadra;
+    //   • resto → respeita.
+    QComboBox* cCam = new QComboBox;
+    cCam->addItems({QStringLiteral("Como estou vendo"),
+                    QStringLiteral("Enquadrar para foto (nível do olho)")});
+    const bool deCima = !m_vp->emWalk() && m_vp->pitchAtual() > 50.0f;
+    cCam->setCurrentIndex(deCima ? 1 : 0);
     QFormLayout* form = new QFormLayout;
+    form->addRow(QStringLiteral("Câmera:"), cCam);
     form->addRow(QStringLiteral("Céu:"), cCeu);
     form->addRow(QStringLiteral("Qualidade:"), cQual);
     form->addRow(QStringLiteral("Resolução:"), cRes);
     v->addLayout(form);
+    if (deCima) {   // ENSINA o porquê, em vez de decidir calado
+        QLabel* dica = new QLabel(QStringLiteral(
+            "Você está olhando de cima — daí a foto sai sem céu."));
+        dica->setObjectName(QStringLiteral("ppFoot"));
+        dica->setWordWrap(true);
+        v->addWidget(dica);
+    }
     v->addWidget(cInt);
     QDialogButtonBox* bb = new QDialogButtonBox(
         QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
@@ -2930,10 +3035,12 @@ void ZendoWindow::renderDialog() {
                              sHora->value() / 2.0, m_vp->sunLat(), elev, azim);
     QString blender, err;
     QStringList args;
+    const bool enquadrar = cCam->currentIndex() == 1;
     if (!buildRenderJob(out, elev, azim, kSamples[cQual->currentIndex()],
                         kResX[cRes->currentIndex()],
                         kResY[cRes->currentIndex()], cInt->isChecked(),
-                        cCeu->currentIndex() == 1, blender, args, err)) {
+                        cCeu->currentIndex() == 1, enquadrar, blender, args,
+                        err)) {
         statusBar()->showMessage(QStringLiteral("Render: %1").arg(err), 6000);
         return;
     }
@@ -3323,8 +3430,8 @@ void ZendoWindow::shootAndQuit(const QString& pngPath) {
             double relev = 30.0, razim = 235.0;
             if (m_vp->sunOn()) m_vp->sunAngles(relev, razim);
             if (buildRenderJob(m_qaRender, relev, razim, 128, 1920, 1080,
-                               m_vp->walkOn(), m_qaHdri, blender, rargs,
-                               err)) {
+                               m_vp->walkOn(), m_qaHdri, m_qaEnquadrar,
+                               blender, rargs, err)) {
                 QFile::remove(m_qaRender);   // R46: "ok" com PNG velho mentia
                 const int rc = QProcess::execute(blender, rargs);
                 m_lastInfo = QStringLiteral("render rc=%1 ok=%2")
@@ -3367,6 +3474,52 @@ void ZendoWindow::shootAndQuit(const QString& pngPath) {
                         .arg(r.ok).arg(r.cutLoops).arg(r.edgeSegs)
                         .arg(r.error);
             }
+        }
+        if (m_qaFoto) {
+            // R52: prova do enquadramento SEM abrir o diálogo e — de
+            // propósito — SEM --cam. Era a flag de conveniência do QA que
+            // enquadrava tudo bonito e escondeu por 15 levas que o usuário
+            // fotografa da vista de trabalho. Aqui a régua é a cena crua.
+            // Dois números importam: (a) 'dechao' — o bbox de foto EXCLUIU o
+            // terreno? (senão a casa vira formiga, R45); (b) 'decima' — o
+            // DEFAULT que o combo escolheria com a câmera como está.
+            cad::Point3 lo, hi, eye, tgt;
+            const bool ok = m_vp->boundsFoto(lo, hi);
+            if (ok)
+                Viewport3D::enquadrarFoto(lo, hi, m_vp->yawAtual(),
+                                          double(m_vp->fovY()), 16.0 / 9.0,
+                                          eye, tgt);
+            const bool deCima = !m_vp->emWalk() && m_vp->pitchAtual() > 50.0f;
+            m_lastInfo =
+                QStringLiteral("foto ok=%1 bbox=%2x%3x%4 olho=%5 alvo=%6 "
+                               "decima=%7 pitch=%8")
+                    .arg(ok)
+                    .arg(hi.x - lo.x, 0, 'f', 2)
+                    .arg(hi.y - lo.y, 0, 'f', 2)
+                    .arg(hi.z - lo.z, 0, 'f', 2)
+                    .arg(eye.z, 0, 'f', 2)
+                    .arg(tgt.z, 0, 'f', 2)
+                    .arg(deCima)
+                    .arg(double(m_vp->pitchAtual()), 0, 'f', 1);
+        }
+        if (m_qaI18n) {
+            // R52: a PROVA do tradutor, por CONTEÚDO (lição da R47: "existe"
+            // não é prova). Não olho o QTranslator nem o .qm: pergunto ao
+            // PRÓPRIO Qt qual texto ele poria nos botões que ele escreve
+            // sozinho — é exatamente o "Cancel" que o dogfooding achou.
+            // Isto regride EM SILÊNCIO (basta o .qm não ser copiado no
+            // deploy), e silêncio foi o que custou caro na R42/R51.
+            QDialogButtonBox bb(QDialogButtonBox::Ok | QDialogButtonBox::Cancel |
+                                QDialogButtonBox::Close);
+            const auto txt = [&bb](QDialogButtonBox::StandardButton b) {
+                QPushButton* p = bb.button(b);
+                return p ? p->text().remove(QLatin1Char('&')) : QStringLiteral("?");
+            };
+            m_lastInfo = QStringLiteral("i18n ok=%1 cancel='%2' close='%3'")
+                             .arg(txt(QDialogButtonBox::Cancel) ==
+                                  QStringLiteral("Cancelar"))
+                             .arg(txt(QDialogButtonBox::Cancel),
+                                  txt(QDialogButtonBox::Close));
         }
         {
             // R48: o dump é INCONDICIONAL. Isto aqui era uma lista de 40+

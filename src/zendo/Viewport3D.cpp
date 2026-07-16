@@ -1156,6 +1156,75 @@ void Viewport3D::qaScaleTo(const QString& s) {
 }
 
 // R8: enquadrar TUDO mantendo o ângulo do olhar
+// R52: bbox do que MERECE aparecer na foto. A R45 ensinou (a duras penas) que
+// enquadrar pelo bbox CRU quebra: a rua de 130 m do Sobrado inflou a caixa e a
+// casa saiu do tamanho de uma formiga. Terreno, rua e calçada são ACHATADOS —
+// ocupam metros de chão e centímetros de altura. Descarto quem tem menos de
+// 1 m de altura E é largo; sobra a arquitetura (casa, árvore, muro).
+// Se TUDO for achatado (um estudo só de piso), volto ao bbox cru — enquadrar
+// alguma coisa é melhor que enquadrar nada.
+bool Viewport3D::boundsFoto(Point3& lo, Point3& hi) const {
+    lo = Point3{1e300, 1e300, 1e300};
+    hi = Point3{-1e300, -1e300, -1e300};
+    Point3 loCru = lo, hiCru = hi;
+    bool any = false, anyCru = false;
+    for (const MeshPart& part : m_meshes) {
+        if (part.hidden) continue;
+        Point3 l{1e300, 1e300, 1e300}, h{-1e300, -1e300, -1e300};
+        bool v0 = false;
+        for (std::size_t v = 0; v < part.mesh.vertexCount(); ++v) {
+            const Point3& p = part.mesh.vertex(Idx(v)).p;
+            l.x = std::min(l.x, p.x); h.x = std::max(h.x, p.x);
+            l.y = std::min(l.y, p.y); h.y = std::max(h.y, p.y);
+            l.z = std::min(l.z, p.z); h.z = std::max(h.z, p.z);
+            v0 = true;
+        }
+        if (!v0) continue;
+        loCru.x = std::min(loCru.x, l.x); hiCru.x = std::max(hiCru.x, h.x);
+        loCru.y = std::min(loCru.y, l.y); hiCru.y = std::max(hiCru.y, h.y);
+        loCru.z = std::min(loCru.z, l.z); hiCru.z = std::max(hiCru.z, h.z);
+        anyCru = true;
+        const double alt = h.z - l.z;
+        const double larg = std::max(h.x - l.x, h.y - l.y);
+        if (alt < 1.0 && larg > 4.0) continue;      // chapado e largo: chão
+        lo.x = std::min(lo.x, l.x); hi.x = std::max(hi.x, h.x);
+        lo.y = std::min(lo.y, l.y); hi.y = std::max(hi.y, h.y);
+        lo.z = std::min(lo.z, l.z); hi.z = std::max(hi.z, h.z);
+        any = true;
+    }
+    if (!any && anyCru) { lo = loCru; hi = hiCru; return true; }
+    return any;
+}
+
+// R52: dado o bbox e o azimute, planta a câmera onde um FOTÓGRAFO plantaria:
+// no olho de quem está de pé (1,65 m), a uma distância que faz o objeto caber.
+// PURA (só matemática) porque é o que o QA precisa exercitar sem abrir janela.
+// O yaw vem de FORA de propósito: o usuário já escolheu de que lado olha —
+// corrijo a ALTURA, não a intenção dele.
+void Viewport3D::enquadrarFoto(const Point3& lo, const Point3& hi,
+                               double yawDeg, double fovYDeg, double aspect,
+                               Point3& eye, Point3& tgt) {
+    const Point3 c = (lo + hi) * 0.5;
+    const double fovY = qDegreesToRadians(std::clamp(fovYDeg, 10.0, 100.0));
+    const double tY = std::tan(fovY * 0.5);
+    const double tX = tY * std::max(0.2, aspect);       // FOV horizontal
+    // A distância sai do que precisa CABER em cada eixo da imagem — não de
+    // uma esfera circunscrita. Primeira versão usava r=semi-diagonal 3D e
+    // sin(fov/2): num terreno de 28×21×5 (uma PANQUECA), a esfera tem 18 m de
+    // raio e jogava a câmera a 52 m — a casa saía do tamanho de um selo. Cena
+    // de arquitetura é sempre larga e baixa; a esfera é a métrica errada.
+    const double meiaAlt = std::max(0.5, (hi.z - lo.z) * 0.5);
+    const double meiaLarg = std::max(
+        0.5, std::hypot(hi.x - lo.x, hi.y - lo.y) * 0.5);   // pior caso XY
+    const double d = std::max(meiaAlt / tY, meiaLarg / tX) * 1.06;
+    const double olho = 1.65;                             // de pé, na calçada
+    // mira a 40% da altura: o eixo do prédio, não o telhado nem o rodapé
+    tgt = Point3{c.x, c.y, lo.z + (hi.z - lo.z) * 0.40};
+    const double yaw = qDegreesToRadians(yawDeg);
+    eye = Point3{c.x + std::cos(yaw) * d, c.y + std::sin(yaw) * d,
+                 lo.z + olho};
+}
+
 void Viewport3D::zoomExtents() {
     Point3 lo{1e300, 1e300, 1e300}, hi{-1e300, -1e300, -1e300};
     bool any = false;
@@ -8592,6 +8661,10 @@ void Viewport3D::mousePressEvent(QMouseEvent* e) {
         }
     } else if (e->button() == Qt::MiddleButton) {
         // padrão da indústria: botão do MEIO orbita (Shift+meio = pan)
+        // R52: mexeu aqui? a cola do menu Ajuda descreve estes gestos À MÃO
+        // (ZendoWindow::colaDeAtalhos, bloco "Câmera (mouse)") — a varredura
+        // de QAction não enxerga evento de mouse, então nada avisa se
+        // divergir. Ficou 52 levas sem estar escrito em lugar nenhum.
         m_drag = (e->modifiers() & Qt::ShiftModifier) ? Drag::Pan : Drag::Orbit;
         int mi = -1;
         Idx f = HalfEdgeMesh::kNone;

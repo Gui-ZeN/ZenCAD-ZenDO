@@ -138,6 +138,9 @@ public:
     void setQaAjuda(bool b) { m_qaAjuda = b; }
     void setQaProtecao(bool b) { m_qaProtecao = b; }
     void setQaDirtyBase(bool b) { m_qaDirtyBase = b; }
+    void setQaI18n(bool b) { m_qaI18n = b; }                    // R52
+    void setQaEnquadrar(bool b) { m_qaEnquadrar = b; }          // R52
+    void setQaFoto(bool b) { m_qaFoto = b; }                    // R52
     // R48: raiz injetável — o QA jamais toca a recuperação REAL
     static void setPastaRecuperacao(const QString& d);
     void primeirosPassos(bool forcado);      // R48: painel de boas-vindas
@@ -171,8 +174,8 @@ private:
                                 bool& interior, int& qual);      // R47
     bool buildRenderJob(const QString& outPng, double elevDeg, double azimDeg,
                         int samples, int resX, int resY, bool interior,
-                        bool hdri, QString& blender, QStringList& args,
-                        QString& err);
+                        bool hdri, bool enquadrar, QString& blender,
+                        QStringList& args, QString& err);
     QString bridgeSuggestion(const QString& stem) const;
 
     std::unique_ptr<cad::DrawingManager> m_doc;
@@ -262,5 +265,8 @@ private:
     bool m_qaLimpeza{false}, m_qaAjuda{false};                  // R48
     bool m_qaProtecao{false};                                   // R48
     bool m_qaDirtyBase{false};                                  // R48
+    bool m_qaI18n{false};                                       // R52
+    bool m_qaEnquadrar{false};                                  // R52
+    bool m_qaFoto{false};                                       // R52
     std::unique_ptr<QLockFile> m_lock;   // R48: dono da sessão
 };
