@@ -141,6 +141,7 @@ public:
     void setQaI18n(bool b) { m_qaI18n = b; }                    // R52
     void setQaEnquadrar(bool b) { m_qaEnquadrar = b; }          // R52
     void setQaFoto(bool b) { m_qaFoto = b; }                    // R52
+    void setQaVista(const QString& s) { m_qaVista = s; }        // R52
     // R48: raiz injetável — o QA jamais toca a recuperação REAL
     static void setPastaRecuperacao(const QString& d);
     void primeirosPassos(bool forcado);      // R48: painel de boas-vindas
@@ -268,5 +269,7 @@ private:
     bool m_qaI18n{false};                                       // R52
     bool m_qaEnquadrar{false};                                  // R52
     bool m_qaFoto{false};                                       // R52
+    QString m_qaVista;                                          // R52
+    double yawFoto() const;                                     // R52
     std::unique_ptr<QLockFile> m_lock;   // R48: dono da sessão
 };

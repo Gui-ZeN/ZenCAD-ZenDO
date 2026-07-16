@@ -1164,10 +1164,10 @@ void Viewport3D::qaScaleTo(const QString& s) {
 // Se TUDO for achatado (um estudo só de piso), volto ao bbox cru — enquadrar
 // alguma coisa é melhor que enquadrar nada.
 bool Viewport3D::boundsFoto(Point3& lo, Point3& hi) const {
-    lo = Point3{1e300, 1e300, 1e300};
-    hi = Point3{-1e300, -1e300, -1e300};
-    Point3 loCru = lo, hiCru = hi;
-    bool any = false, anyCru = false;
+    struct Cx { Point3 l, h; double vol; };
+    std::vector<Cx> cand;
+    Point3 loCru{1e300, 1e300, 1e300}, hiCru{-1e300, -1e300, -1e300};
+    bool anyCru = false;
     for (const MeshPart& part : m_meshes) {
         if (part.hidden) continue;
         Point3 l{1e300, 1e300, 1e300}, h{-1e300, -1e300, -1e300};
@@ -1186,14 +1186,71 @@ bool Viewport3D::boundsFoto(Point3& lo, Point3& hi) const {
         anyCru = true;
         const double alt = h.z - l.z;
         const double larg = std::max(h.x - l.x, h.y - l.y);
-        if (alt < 1.0 && larg > 4.0) continue;      // chapado e largo: chão
-        lo.x = std::min(lo.x, l.x); hi.x = std::max(hi.x, h.x);
-        lo.y = std::min(lo.y, l.y); hi.y = std::max(hi.y, h.y);
-        lo.z = std::min(lo.z, l.z); hi.z = std::max(hi.z, h.z);
-        any = true;
+        // chapado + largo + NO CHÃO. O `l.z < 0.5` não é detalhe: terreno e
+        // rua se distinguem por POSIÇÃO, não só por tamanho. Sem ele, laje de
+        // cobertura / marquise / carport (0,2 m de espessura, 5 m de vão, a
+        // z=2,5) caem no descarte e saem CORTADOS da foto quando avançam além
+        // do corpo da casa. Espelho d'água e deck, aterrados, seguem fora ✓.
+        if (alt < 1.0 && larg > 4.0 && l.z < 0.5) continue;
+        cand.push_back({l, h, (h.x - l.x) * (h.y - l.y) * alt});
     }
-    if (!any && anyCru) { lo = loCru; hi = hiCru; return true; }
-    return any;
+    if (cand.empty()) {
+        if (!anyCru) return false;
+        lo = loCru; hi = hiCru;    // estudo só de piso: enquadra o que tem
+        return true;
+    }
+    // O ASSUNTO da foto é o PRÉDIO — não o lote. Tirar o terreno do bbox NÃO
+    // BASTA: 5 árvores espalhadas num terreno de 30 m deixam a caixa com 28 m
+    // de largura, a câmera recua pra 44 m e a casa vira um ponto no gramado
+    // (vi na prova visual). Fotógrafo enquadra o assunto e deixa o resto
+    // sangrar pra fora do quadro.
+    //
+    // Assunto = a maior MASSA CONECTADA, não a maior PEÇA. A diferença não é
+    // acadêmica: o Sobrado tem ~195 sólidos e cada parede é fina, então a
+    // maior *peça* dele é uma ÁRVORE (copa frondosa tem bbox maior que parede
+    // de 20 cm) — o enquadramento ia fotografar a árvore. Junto quem se
+    // ENCOSTA em componentes conexos e fico com o de maior volume somado: a
+    // casa inteira (paredes + lajes + telhado) é um componente gordo; cada
+    // árvore, sozinha no gramado (o terreno já saiu), é um componente magro.
+    const double f = 0.5;      // "encostado" tolera junta imperfeita
+    const auto tocam = [f](const Cx& a, const Cx& b) {
+        return a.l.x <= b.h.x + f && a.h.x >= b.l.x - f &&
+               a.l.y <= b.h.y + f && a.h.y >= b.l.y - f &&
+               a.l.z <= b.h.z + f && a.h.z >= b.l.z - f;
+    };
+    const int n = int(cand.size());
+    std::vector<int> comp(std::size_t(n), -1);
+    int nComp = 0;
+    for (int i = 0; i < n; ++i) {          // flood-fill (n pequeno: ~200)
+        if (comp[std::size_t(i)] >= 0) continue;
+        std::vector<int> fila{i};
+        comp[std::size_t(i)] = nComp;
+        while (!fila.empty()) {
+            const int k = fila.back();
+            fila.pop_back();
+            for (int j = 0; j < n; ++j) {
+                if (comp[std::size_t(j)] >= 0) continue;
+                if (!tocam(cand[std::size_t(k)], cand[std::size_t(j)])) continue;
+                comp[std::size_t(j)] = nComp;
+                fila.push_back(j);
+            }
+        }
+        ++nComp;
+    }
+    std::vector<double> vol(std::size_t(nComp), 0.0);
+    for (int i = 0; i < n; ++i)
+        vol[std::size_t(comp[std::size_t(i)])] += cand[std::size_t(i)].vol;
+    const int alvo = int(std::max_element(vol.begin(), vol.end()) - vol.begin());
+    lo = Point3{1e300, 1e300, 1e300};
+    hi = Point3{-1e300, -1e300, -1e300};
+    for (int i = 0; i < n; ++i) {
+        if (comp[std::size_t(i)] != alvo) continue;
+        const Cx& c = cand[std::size_t(i)];
+        lo.x = std::min(lo.x, c.l.x); hi.x = std::max(hi.x, c.h.x);
+        lo.y = std::min(lo.y, c.l.y); hi.y = std::max(hi.y, c.h.y);
+        lo.z = std::min(lo.z, c.l.z); hi.z = std::max(hi.z, c.h.z);
+    }
+    return true;
 }
 
 // R52: dado o bbox e o azimute, planta a câmera onde um FOTÓGRAFO plantaria:
@@ -1208,21 +1265,34 @@ void Viewport3D::enquadrarFoto(const Point3& lo, const Point3& hi,
     const double fovY = qDegreesToRadians(std::clamp(fovYDeg, 10.0, 100.0));
     const double tY = std::tan(fovY * 0.5);
     const double tX = tY * std::max(0.2, aspect);       // FOV horizontal
-    // A distância sai do que precisa CABER em cada eixo da imagem — não de
-    // uma esfera circunscrita. Primeira versão usava r=semi-diagonal 3D e
-    // sin(fov/2): num terreno de 28×21×5 (uma PANQUECA), a esfera tem 18 m de
-    // raio e jogava a câmera a 52 m — a casa saía do tamanho de um selo. Cena
-    // de arquitetura é sempre larga e baixa; a esfera é a métrica errada.
-    const double meiaAlt = std::max(0.5, (hi.z - lo.z) * 0.5);
-    const double meiaLarg = std::max(
-        0.5, std::hypot(hi.x - lo.x, hi.y - lo.y) * 0.5);   // pior caso XY
-    const double d = std::max(meiaAlt / tY, meiaLarg / tX) * 1.06;
-    const double olho = 1.65;                             // de pé, na calçada
+    const double yaw = qDegreesToRadians(yawDeg);
+    const double cy = std::cos(yaw), sy = std::sin(yaw);
     // mira a 40% da altura: o eixo do prédio, não o telhado nem o rodapé
     tgt = Point3{c.x, c.y, lo.z + (hi.z - lo.z) * 0.40};
-    const double yaw = qDegreesToRadians(yawDeg);
-    eye = Point3{c.x + std::cos(yaw) * d, c.y + std::sin(yaw) * d,
-                 lo.z + olho};
+
+    // A distância sai do que precisa CABER em cada eixo da IMAGEM — não de uma
+    // esfera circunscrita: cena de arquitetura é uma PANQUECA (28×21×5), a
+    // esfera tem raio 18 e jogava a câmera a 52 m (casa do tamanho de um selo).
+    // Com o yaw na mão a projeção é exata, então nada de "pior caso":
+    //  · ACROSS = a largura que aparece de lado (o que precisa caber em X);
+    //  · ALONG  = a meia-profundidade na direção do olhar — a face PRÓXIMA
+    //    fica ALONG mais perto que o centro, e ignorar isso não é ser
+    //    conservador, é errar (a diagonal superestimava o across e o along
+    //    faltava; os dois erros se cancelavam por SORTE em casa quadrada).
+    const double dx = hi.x - lo.x, dy = hi.y - lo.y;
+    const double across = (dx * std::fabs(sy) + dy * std::fabs(cy)) * 0.5;
+    const double along  = (dx * std::fabs(cy) + dy * std::fabs(sy)) * 0.5;
+    // mirando a 40%, a folga de CIMA é 60% da altura — não os 50% de um
+    // "meiaAlt": num prédio alto o topo cortaria.
+    const double acimaAlvo = std::max(0.5, hi.z - tgt.z);
+    const double d = along + std::max(acimaAlvo / tY, across / tX) * 1.06;
+
+    // Altura do olho: 1,65 m é o fotógrafo DE PÉ — certo pra casa, errado pra
+    // um estudo de mesa. Uma cadeira de 0,9 m a ~1,4 m de distância daria 43°
+    // de mergulho e o céu sumiria de novo — no exato gesto que isto conserta.
+    // Fotógrafo agacha: limito o mergulho a 10°.
+    const double olho = std::min(1.65, tgt.z + d * std::tan(qDegreesToRadians(10.0)));
+    eye = Point3{c.x + cy * d, c.y + sy * d, std::max(lo.z + 0.15, olho)};
 }
 
 void Viewport3D::zoomExtents() {
@@ -8581,7 +8651,10 @@ QString Viewport3D::debugSelState() const {
 }
 
 // ---------------------------------------------------------------------------
-//  Câmera: LMB órbita (clique parado = ferramenta) · RMB/MMB pan · roda zoom
+//  Câmera: MMB orbita (Shift+MMB pan) · RMB pan · roda zoom no cursor
+//  R52: dizia "LMB órbita · RMB/MMB pan" — errado desde a G3, e era a
+//  1ª linha que se lia antes destes handlers. A cola do menu Ajuda cita
+//  esta função como fonte; documentação que mente é pior que ausente.
 // ---------------------------------------------------------------------------
 void Viewport3D::mousePressEvent(QMouseEvent* e) {
     m_lastPos = e->pos();

@@ -78,6 +78,7 @@ int main(int argc, char** argv) {
     bool qaAutosave = false, qaRecovery = false;   // R48
     bool qaLimpeza = false, qaAjuda = false, qaProtecao = false;
     bool qaI18n = false, qaEnquadrar = false, qaFoto = false;  // R52
+    QString qaVista;                                          // R52
     QString recdir;
     bool qaDirty = false;
     const QStringList args = app.arguments();
@@ -208,6 +209,8 @@ int main(int argc, char** argv) {
             qaEnquadrar = true;     // R52: --render com camera de APRESENTACAO
         else if (args[i] == QLatin1String("--qa-foto"))
             qaFoto = true;          // R52: dumpa o resolver do enquadramento
+        else if (args[i] == QLatin1String("--qa-vista") && i + 1 < args.size())
+            qaVista = args[++i];    // R52: dispara a QAction REAL da vista
         else if (args[i] == QLatin1String("--qa-recdir") && i + 1 < args.size())
             recdir = args[++i];     // R48: raiz isolada do QA
         else if (args[i] == QLatin1String("--qa-engine") && i + 1 < args.size())
@@ -411,6 +414,7 @@ int main(int argc, char** argv) {
     if (qaI18n) w.setQaI18n(true);
     if (qaEnquadrar) w.setQaEnquadrar(true);
     if (qaFoto) w.setQaFoto(true);
+    if (!qaVista.isEmpty()) w.setQaVista(qaVista);
     if (!dimang.isEmpty()) w.setQaDimAng(dimang);
     if (!move.isEmpty()) w.setQaMove(move, false);
     if (!copy.isEmpty()) w.setQaMove(copy, true);

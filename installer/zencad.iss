@@ -52,6 +52,13 @@ Source: "{#CadDir}\translations\*"; DestDir: "{app}\translations"; Flags: ignore
 Source: "{#ZendoDir}\{#ZendoExe}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#ZendoDir}\*.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#ZendoDir}\assets\*"; DestDir: "{app}\assets"; Flags: ignoreversion recursesubdirs createallsubdirs
+; R52: as translations do Zendo por conta PRÓPRIA. A linha do {#CadDir} acima
+; já traz um qt_pt_BR.qm e o merge no mesmo {app} fazia o Zendo pegar CARONA no
+; deploy do app 2D — se um dia o windeployqt do ZenCAD pulasse as translations,
+; o skipifsourcedoesntexist silenciava o instalador, o Zendo voltava pro inglês
+; e a sonda --qa-i18n continuaria passando AQUI (o fallback do QLibraryInfo
+; esconde na máquina de dev). Mesmo conteúdo, merge inofensivo, sem carona.
+Source: "{#ZendoDir}\translations\*"; DestDir: "{app}\translations"; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist
 
 [Icons]
 Name: "{group}\ZenCAD"; Filename: "{app}\{#CadExe}"

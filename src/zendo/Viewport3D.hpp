@@ -65,7 +65,7 @@ public:
     bool boundsFoto(cad::Point3& lo, cad::Point3& hi) const;
     float yawAtual() const { return m_yaw; }
     float pitchAtual() const { return m_pitch; }
-    bool emWalk() const { return m_walk; }
+    // (walkOn() já existe logo abaixo — não duplicar o mesmo estado.)
     bool sunAngles(double& elevDeg, double& azimDeg) const;
     float fovY() const { return m_fov; }
     // R37: sol PURO por mês/hora/lat (mesma conta do computeSunDir, sem

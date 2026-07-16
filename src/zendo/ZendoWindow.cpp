@@ -428,8 +428,19 @@ ZendoWindow::ZendoWindow() {
                            QKeySequence(QString::fromLatin1(v.tecla)), this,
                            [this, yaw, pitch, nome] {
                                m_vp->setWalkthrough(false);   // sai da 1ª pessoa
-                               m_vp->zoomExtents();           // pega o alvo/raio
-                               m_vp->setCameraPose(yaw, pitch, 1.0f);
+                               m_vp->zoomExtents();  // alvo/raio do bbox AGORA
+                               // NÃO usar setCameraPose aqui: ele reescreve
+                               // target/dist a partir de m_center/m_radius, que
+                               // só são calculados no finishScene (load/rebuild)
+                               // — durante a modelagem estão CONGELADOS no
+                               // estudo em branco (origem, raio 14). O
+                               // zoomExtents acima viraria no-op e a vista
+                               // miraria a origem: casa modelada a 20 m sairia
+                               // do quadro. Leio o que ele acabou de calcular e
+                               // troco só o ÂNGULO.
+                               float y0, p0, d0, t[3];
+                               m_vp->cameraState(y0, p0, d0, t);
+                               m_vp->setCameraState(yaw, pitch, d0, t);
                                statusBar()->showMessage(
                                    QStringLiteral("Vista: %1").arg(nome), 3000);
                            });
@@ -2740,6 +2751,18 @@ QString findBlender(const QString& raizUnica = QString()) {
 }
 }  // namespace
 
+// R52: o yaw que o enquadrarFoto espera é o azimute da POSIÇÃO do olho (ele
+// planta a câmera em c+(cos,sin)·d e mira o centro) — a convenção da ÓRBITA.
+// No walkthrough m_yaw é o azimute do OLHAR: o setWalkthrough soma 180° ao
+// entrar, justamente porque as duas convenções são opostas. Sem desfazer isso,
+// quem está de pé diante da fachada sul e pede "Enquadrar" recebe uma foto dos
+// FUNDOS — calada. É a 3ª aparição desta família (a meia-volta é da R27); a
+// conversão mora aqui, num lugar só, com o nome do que ela faz.
+double ZendoWindow::yawFoto() const {
+    const double y = double(m_vp->yawAtual());
+    return m_vp->walkOn() ? y + 180.0 : y;
+}
+
 bool ZendoWindow::buildRenderJob(const QString& outPng, double elevDeg,
                                  double azimDeg, int samples, int resX,
                                  int resY, bool interior, bool hdri,
@@ -2773,8 +2796,7 @@ bool ZendoWindow::buildRenderJob(const QString& outPng, double elevDeg,
         // destruiria a vista de trabalho de quem só queria uma foto.
         cad::Point3 lo, hi;
         if (m_vp->boundsFoto(lo, hi))
-            Viewport3D::enquadrarFoto(lo, hi, m_vp->yawAtual(),
-                                      double(m_vp->fovY()),
+            Viewport3D::enquadrarFoto(lo, hi, yawFoto(), double(m_vp->fovY()),
                                       double(resX) / std::max(1, resY),
                                       eye, tgt);
         else
@@ -2992,15 +3014,22 @@ void ZendoWindow::renderDialog() {
     QComboBox* cCam = new QComboBox;
     cCam->addItems({QStringLiteral("Como estou vendo"),
                     QStringLiteral("Enquadrar para foto (nível do olho)")});
-    const bool deCima = !m_vp->emWalk() && m_vp->pitchAtual() > 50.0f;
+    const bool deCima = !m_vp->walkOn() && m_vp->pitchAtual() > 50.0f;
     cCam->setCurrentIndex(deCima ? 1 : 0);
+    // DECIDIR e EXPLICAR são coisas diferentes. O default só vira em 50° (ser
+    // conservador com a intenção do usuário), mas o céu some bem antes: ele
+    // entra no quadro só enquanto o mergulho for menor que MEIO FOV. Com
+    // pitch=38° e fov=42° a foto já sai sem céu — avisar ali e deixar a
+    // escolha com ele é honesto; decidir por ele, não.
+    const bool semCeu = !m_vp->walkOn() &&
+                        m_vp->pitchAtual() > m_vp->fovY() * 0.5f;
     QFormLayout* form = new QFormLayout;
     form->addRow(QStringLiteral("Câmera:"), cCam);
     form->addRow(QStringLiteral("Céu:"), cCeu);
     form->addRow(QStringLiteral("Qualidade:"), cQual);
     form->addRow(QStringLiteral("Resolução:"), cRes);
     v->addLayout(form);
-    if (deCima) {   // ENSINA o porquê, em vez de decidir calado
+    if (semCeu) {   // ENSINA o porquê, em vez de decidir calado
         QLabel* dica = new QLabel(QStringLiteral(
             "Você está olhando de cima — daí a foto sai sem céu."));
         dica->setObjectName(QStringLiteral("ppFoot"));
@@ -3475,6 +3504,36 @@ void ZendoWindow::shootAndQuit(const QString& pngPath) {
                         .arg(r.error);
             }
         }
+        if (!m_qaVista.isEmpty()) {
+            // R52: dispara a QAction REAL da vista (acha pelo texto do menu) e
+            // dumpa o estado que ela produziu. A regra é da R27/R28 e tem 25
+            // levas: QA de câmera exercita a FUNÇÃO, não o estado final —
+            // replicar a conta aqui provaria a minha aritmética, não o produto.
+            // Item D foi o único desta leva sem sonda, e foi o único com bug
+            // (o zoomExtents virava no-op sob o setCameraPose). Não é acaso.
+            QAction* alvo = nullptr;
+            for (QAction* a : findChildren<QAction*>()) {
+                QString t = a->text();
+                t.remove(QLatin1Char('&'));
+                if (t.compare(m_qaVista, Qt::CaseInsensitive) == 0) {
+                    alvo = a;
+                    break;
+                }
+            }
+            if (alvo) alvo->trigger();
+            float y, p, d, t[3];
+            m_vp->cameraState(y, p, d, t);
+            m_lastInfo = QStringLiteral("vista '%1' achou=%2 yaw=%3 pitch=%4 "
+                                        "alvo=(%5,%6,%7) dist=%8")
+                             .arg(m_qaVista)
+                             .arg(alvo != nullptr)
+                             .arg(double(y), 0, 'f', 1)
+                             .arg(double(p), 0, 'f', 1)
+                             .arg(double(t[0]), 0, 'f', 2)
+                             .arg(double(t[1]), 0, 'f', 2)
+                             .arg(double(t[2]), 0, 'f', 2)
+                             .arg(double(d), 0, 'f', 2);
+        }
         if (m_qaFoto) {
             // R52: prova do enquadramento SEM abrir o diálogo e — de
             // propósito — SEM --cam. Era a flag de conveniência do QA que
@@ -3486,21 +3545,28 @@ void ZendoWindow::shootAndQuit(const QString& pngPath) {
             cad::Point3 lo, hi, eye, tgt;
             const bool ok = m_vp->boundsFoto(lo, hi);
             if (ok)
-                Viewport3D::enquadrarFoto(lo, hi, m_vp->yawAtual(),
+                Viewport3D::enquadrarFoto(lo, hi, yawFoto(),
                                           double(m_vp->fovY()), 16.0 / 9.0,
                                           eye, tgt);
-            const bool deCima = !m_vp->emWalk() && m_vp->pitchAtual() > 50.0f;
+            const bool deCima = !m_vp->walkOn() && m_vp->pitchAtual() > 50.0f;
+            // eye.x/eye.y ENTRAM no dump: sem eles o azimute é invisível, e
+            // foi exatamente aí que morava o bug do walk (a câmera plantava
+            // 180° errada e fotografava os fundos — o dump de eye.z passava
+            // igual). Prova que não mostra o eixo do erro não é prova.
             m_lastInfo =
-                QStringLiteral("foto ok=%1 bbox=%2x%3x%4 olho=%5 alvo=%6 "
-                               "decima=%7 pitch=%8")
+                QStringLiteral("foto ok=%1 bbox=%2x%3x%4 olho=(%5,%6,%7) "
+                               "alvo=(%8,%9,%10) decima=%11 pitch=%12 walk=%13")
                     .arg(ok)
                     .arg(hi.x - lo.x, 0, 'f', 2)
                     .arg(hi.y - lo.y, 0, 'f', 2)
                     .arg(hi.z - lo.z, 0, 'f', 2)
+                    .arg(eye.x, 0, 'f', 2).arg(eye.y, 0, 'f', 2)
                     .arg(eye.z, 0, 'f', 2)
+                    .arg(tgt.x, 0, 'f', 2).arg(tgt.y, 0, 'f', 2)
                     .arg(tgt.z, 0, 'f', 2)
                     .arg(deCima)
-                    .arg(double(m_vp->pitchAtual()), 0, 'f', 1);
+                    .arg(double(m_vp->pitchAtual()), 0, 'f', 1)
+                    .arg(m_vp->walkOn());
         }
         if (m_qaI18n) {
             // R52: a PROVA do tradutor, por CONTEÚDO (lição da R47: "existe"
