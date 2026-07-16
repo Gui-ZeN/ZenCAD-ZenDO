@@ -2135,44 +2135,146 @@ QString ZendoWindow::colaDeAtalhos() const {
     return h;
 }
 
-// R48: os VERBOS INVISÍVEIS. Não é tour, é um painel único que se lê em 30s.
+// R48/R50: os VERBOS INVISÍVEIS — não é tour, é uma folha que se lê em 30s.
+// R50 (feedback "achei horrível"): era um QTextBrowser BRANCO com HTML cru e
+// um botão "Close" em inglês, no meio de um app todo sumi — parecia alerta do
+// sistema, não instrução do ateliê. Agora é widget nativo com a tinta da casa:
+// o numeral em latão faz a hierarquia (não o negrito), as teclas viram chip
+// (a linguagem do VCB, R33) e o único latão SÓLIDO é o botão — porque é a
+// única coisa que se clica.
 void ZendoWindow::primeirosPassos(bool forcado) {
     QSettings cfg(QStringLiteral("Zen"), QStringLiteral("Zendo"));
     if (!forcado && cfg.value(QStringLiteral("ajuda/vistos")).toBool()) return;
+
     QDialog dlg(this);
-    dlg.setWindowTitle(QStringLiteral("Primeiros passos no Zendo"));
-    dlg.resize(560, 520);
-    QVBoxLayout* v = new QVBoxLayout(&dlg);
-    QTextBrowser* tb = new QTextBrowser(&dlg);
-    tb->setOpenExternalLinks(false);
-    tb->setHtml(QStringLiteral(
-        "<h3>Três coisas que o Zendo não conta sozinho</h3>"
-        "<p><b>1 · Você pode DIGITAR a medida.</b> Toda ferramenta aceita "
-        "número: desenhe um retângulo grosso modo e digite <i>4;3</i> — ele "
-        "vira 4×3 m. Puxe uma parede e digite <i>2,80</i>. Não precisa "
-        "clicar em campo nenhum: comece a digitar e a medida aparece no "
-        "rodapé, à direita.</p>"
-        "<p><b>2 · Os pontos coloridos são o motor de precisão.</b> Enquanto "
-        "você move o mouse, o Zendo mostra o que encontrou: extremo, meio, "
-        "centro, sobre a aresta, sobre a face. Clique quando o ponto certo "
-        "aparecer e o desenho nasce exato — sem zoom, sem sorte. "
-        "<i>Shift</i> trava a direção encontrada.</p>"
-        "<p><b>3 · Ctrl muda o que a ferramenta faz.</b> "
-        "<i>Ctrl+Pull</i> empilha um volume novo em vez de mover a face. "
-        "<i>Ctrl+Mover</i> copia. <i>Ctrl+Balde</i> pinta o sólido inteiro; "
-        "<i>Alt+Balde</i> é conta-gotas.</p>"
-        "<hr>"
-        "<p><b>O caminho curto:</b> Retângulo no chão → Pull pra cima → "
-        "duplo-clique numa face pra selecionar o sólido → Balde pra texturar "
-        "→ <b>Câmera → Render fotorrealista</b> pra fotografar. O motor de "
-        "render se instala sozinho na primeira foto.</p>"
-        "<p><b>Se travar:</b> <i>Esc</i> cancela qualquer coisa. "
-        "<i>Ctrl+Z</i> desfaz. O rodapé sempre diz o que a ferramenta ativa "
-        "espera de você, e <b>F1</b> traz este painel de volta.</p>"));
-    v->addWidget(tb);
-    QDialogButtonBox* bb = new QDialogButtonBox(QDialogButtonBox::Close, &dlg);
-    connect(bb, &QDialogButtonBox::rejected, &dlg, &QDialog::accept);
-    v->addWidget(bb);
+    dlg.setObjectName(QStringLiteral("ppPanel"));
+    dlg.setWindowTitle(QStringLiteral("Primeiros passos"));
+    // a caption escura vem sozinha: o DarkTitleFilter da R34 está no qApp e
+    // pega toda janela nova. (Incluir o ZendoChrome aqui puxaria windows.h
+    // pro arquivo que fala com o kernel — a colisão de macros da R33.)
+
+    QHBoxLayout* raiz = new QHBoxLayout(&dlg);
+    raiz->setContentsMargins(0, 0, 0, 0);
+    raiz->setSpacing(0);
+    QFrame* spine = new QFrame(&dlg);        // a lombada latão dos docks
+    spine->setObjectName(QStringLiteral("ppSpine"));
+    spine->setFixedWidth(3);
+    spine->setAutoFillBackground(true);      // sem isto o QSS não pinta
+    raiz->addWidget(spine);
+
+    QWidget* sheet = new QWidget(&dlg);
+    sheet->setObjectName(QStringLiteral("ppSheet"));
+    raiz->addWidget(sheet, 1);
+    QVBoxLayout* v = new QVBoxLayout(sheet);
+    v->setContentsMargins(34, 30, 34, 26);
+    v->setSpacing(0);
+
+    const auto rotulo = [&](const QString& txt, const char* obj) {
+        QLabel* l = new QLabel(txt, sheet);
+        l->setObjectName(QString::fromLatin1(obj));
+        l->setWordWrap(true);
+        return l;
+    };
+    const auto fio = [&](const char* obj) {
+        QFrame* f = new QFrame(sheet);
+        f->setObjectName(QString::fromLatin1(obj));
+        f->setFixedHeight(1);
+        f->setAutoFillBackground(true);
+        return f;
+    };
+
+    v->addWidget(rotulo(QStringLiteral("ZENDO · PRIMEIROS PASSOS"), "ppCaption"));
+    v->addSpacing(10);
+    v->addWidget(rotulo(QStringLiteral("Três coisas que o app\nnão conta sozinho"),
+                        "ppTitle"));
+    v->addSpacing(18);
+    v->addWidget(fio("ppRule"));
+    v->addSpacing(22);
+
+    // --- os três verbos: numeral latão | (título + corpo + teclas) ---------
+    struct Passo {
+        const char* num;
+        const char* head;
+        const char* body;
+        QStringList teclas;
+    };
+    const QVector<Passo> passos{
+        {"01", "Digite a medida — em qualquer ferramenta",
+         "Desenhe um retângulo grosso modo e digite 4;3 — ele vira 4×3 m. "
+         "Puxe uma parede e digite 2,80. Não há campo pra clicar: comece a "
+         "digitar e o número aparece no rodapé, à direita.",
+         {QStringLiteral("4;3"), QStringLiteral("2,80"), QStringLiteral("Enter")}},
+        {"02", "Os pontos coloridos são o motor de precisão",
+         "Movendo o mouse, o Zendo mostra o que achou: extremo, meio, sobre a "
+         "aresta, sobre a face. Clique quando o ponto certo aparecer e o "
+         "desenho nasce exato — sem zoom, sem sorte.",
+         {QStringLiteral("Shift"), QStringLiteral("← ↑ →")}},
+        {"03", "Ctrl muda o que a ferramenta faz",
+         "Ctrl+Pull empilha um volume novo em vez de mover a face. "
+         "Ctrl+Mover copia em vez de mover. Ctrl+Balde pinta o sólido "
+         "inteiro; Alt+Balde vira conta-gotas.",
+         {QStringLiteral("Ctrl"), QStringLiteral("Alt")}},
+    };
+    for (const Passo& p : passos) {
+        QHBoxLayout* linha = new QHBoxLayout;
+        linha->setContentsMargins(0, 0, 0, 0);
+        linha->setSpacing(18);
+        QLabel* num = rotulo(QString::fromUtf8(p.num), "ppNum");
+        num->setFixedWidth(38);
+        num->setAlignment(Qt::AlignLeft | Qt::AlignTop);
+        linha->addWidget(num, 0, Qt::AlignTop);
+        QVBoxLayout* col = new QVBoxLayout;
+        col->setContentsMargins(0, 0, 0, 0);
+        col->setSpacing(5);
+        col->addWidget(rotulo(QString::fromUtf8(p.head), "ppHead"));
+        col->addWidget(rotulo(QString::fromUtf8(p.body), "ppBody"));
+        QHBoxLayout* chips = new QHBoxLayout;
+        chips->setContentsMargins(0, 3, 0, 0);
+        chips->setSpacing(6);
+        for (const QString& t : p.teclas) {
+            QLabel* k = new QLabel(t, sheet);
+            k->setObjectName(QStringLiteral("ppKey"));
+            chips->addWidget(k, 0, Qt::AlignLeft);
+        }
+        chips->addStretch();
+        col->addLayout(chips);
+        linha->addLayout(col, 1);
+        v->addLayout(linha);
+        v->addSpacing(24);
+    }
+
+    v->addWidget(fio("ppRuleSoft"));
+    v->addSpacing(16);
+    QLabel* caminho = rotulo(
+        QStringLiteral("O caminho curto"), "ppPathStrong");
+    v->addWidget(caminho);
+    v->addSpacing(4);
+    v->addWidget(rotulo(
+        QStringLiteral("Retângulo no chão  →  Pull pra cima  →  duplo-clique "
+                       "numa face seleciona o sólido  →  Balde texturiza  →  "
+                       "Câmera ▸ Render fotorrealista.\nO motor de render se "
+                       "instala sozinho na primeira foto."),
+        "ppPath"));
+    v->addSpacing(14);
+    v->addWidget(rotulo(
+        QStringLiteral("Se travar: Esc cancela qualquer coisa · Ctrl+Z "
+                       "desfaz · o rodapé sempre diz o que a ferramenta "
+                       "espera de você · F1 traz esta folha de volta."),
+        "ppFoot"));
+    v->addStretch();
+    v->addSpacing(18);
+
+    QHBoxLayout* rod = new QHBoxLayout;
+    rod->addStretch();
+    QPushButton* go = new QPushButton(QStringLiteral("Começar"), sheet);
+    go->setObjectName(QStringLiteral("ppGo"));
+    go->setCursor(Qt::PointingHandCursor);
+    go->setDefault(true);
+    connect(go, &QPushButton::clicked, &dlg, &QDialog::accept);
+    rod->addWidget(go);
+    v->addLayout(rod);
+
+    dlg.setFixedSize(600, 640);
     dlg.exec();
     // Aparece UMA vez na vida e nunca mais — F1 e o menu Ajuda trazem de
     // volta. (Um checkbox "não mostrar de novo" só criaria estado ambíguo

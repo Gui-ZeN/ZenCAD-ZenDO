@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     app.setApplicationName(QStringLiteral("Zendo"));
     // R48: o "Sobre" precisa dizer qual build Ã©. RITUAL DA LEVA:
     // esta linha e o AppVersion do installer/zencad.iss andam JUNTAS.
-    app.setApplicationVersion(QStringLiteral("2.0.48"));
+    app.setApplicationVersion(QStringLiteral("2.0.49"));
     app.setApplicationDisplayName(QStringLiteral("Zendo"));
     app.setStyleSheet(cad::zenTheme(cad::ThemeMode::Dark) +
                       zendo::zendoChrome());   // Sumi + moldura prÃ³pria (R33)

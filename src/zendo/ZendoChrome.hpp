@@ -135,6 +135,44 @@ QLabel#vcbChip {
   border: 1px solid rgba(194,160,99,0.35); border-radius: 4px;
   padding: 2px 10px; min-width: 88px;
 }
+
+/* ---- R50: PRIMEIROS PASSOS — a folha do ateliê ----------------------
+   Era um retângulo BRANCO com HTML cru e um botão "Close" em inglês, no
+   meio de um app todo sumi: gritava "alerta do sistema" onde devia
+   sussurrar "instrução do ateliê". Mesma tinta, mesmo latão, mesmo fio
+   da Bandeja — o painel agora É o app, não uma visita.                */
+QDialog#ppPanel { background: #17191c; }
+QWidget#ppSheet { background: #17191c; }
+/* a lombada latão dos docks, de novo: amarra o painel à casa */
+QFrame#ppSpine { background: #c2a063; }
+QLabel#ppCaption {                       /* mesma voz do vcbCaption */
+  color: #6f6a60; font-size: 10px; letter-spacing: 3px; font-weight: 600;
+}
+QLabel#ppTitle {
+  color: #e8e4d9; font-size: 25px; font-weight: 300; letter-spacing: 0.3px;
+}
+QFrame#ppRule { background: rgba(194,160,99,0.45); max-height: 1px; }
+QFrame#ppRuleSoft { background: rgba(255,255,255,0.07); max-height: 1px; }
+QLabel#ppNum {                           /* o numeral é a hierarquia */
+  color: rgba(194,160,99,0.55); font-size: 26px; font-weight: 300;
+  letter-spacing: 1px;
+}
+QLabel#ppHead { color: #e8e4d9; font-size: 14px; font-weight: 600; }
+QLabel#ppBody { color: #a9a396; font-size: 13px; }
+QLabel#ppKey {                           /* as teclas viram chip (R33) */
+  background: #202327; color: #c2a063; font-size: 12px; font-weight: 600;
+  border: 1px solid rgba(194,160,99,0.35); border-radius: 4px;
+  padding: 3px 9px;
+}
+QLabel#ppPath { color: #8f897c; font-size: 12px; }
+QLabel#ppPathStrong { color: #cfc9bc; font-size: 12px; font-weight: 600; }
+QPushButton#ppGo {                       /* CTA: o único latão sólido */
+  background: #c2a063; color: #17191c; font-weight: 700; font-size: 13px;
+  border: none; border-radius: 5px; padding: 9px 30px; letter-spacing: 0.5px;
+}
+QPushButton#ppGo:hover { background: #d4b57a; }
+QPushButton#ppGo:pressed { background: #b08f52; }
+QLabel#ppFoot { color: #5f5a52; font-size: 11px; }
 )QSS");
 }
 
