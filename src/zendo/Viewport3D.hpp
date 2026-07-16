@@ -189,7 +189,8 @@ public:
     // NÃO é gravado no .zendo (o app o regenera a cada sessão)
     void addLibraryComponent(
         const QString& name, const cad::HalfEdgeMesh& mesh,
-        const std::map<cad::HalfEdgeMesh::Idx, std::array<float, 3>>& cores);
+        const std::map<cad::HalfEdgeMesh::Idx, std::array<float, 3>>& cores,
+        bool organico = false);            // R55: vegetação varia por inserção
     // R15: importa um .obj como componente DO USUÁRIO (persistido no .zendo);
     // devolve o nome registrado ("" = falhou). yUp converte Blender→Z-up.
     QString importObjComponent(const QString& path, double escala, bool yUp);
@@ -237,6 +238,11 @@ public:
     void setSketchJson(const QJsonArray& a);
     void qaDoublePick(double nx, double ny);     // seleciona o sólido inteiro
     void qaHover(const QString& seq);   // G1: "nx,ny;nx,ny…" — infere e acumula
+    // R55: hover DE VERDADE — despacha um QMouseEvent de movimento pelo
+    // caminho normal do widget. O qaHover acima chama inferAt direto e por isso
+    // NÃO passa por mouseMoveEvent: usá-lo pra testar feedback de hover é o
+    // mesmo falso-positivo do robô que teleporta o cursor (R51/R54).
+    void qaMouseMove(double nx, double ny);
     bool redoLast();                    // G2: refazer (Ctrl+Y)
     void qaErase(double nx, double ny, bool hide = false); // G2/R8: borracha
     void qaVertexMove(const QString& s);             // G2: "nx,ny,dx,dy,dz"
@@ -716,6 +722,7 @@ private:
     std::vector<SceneSnap> m_redo;          // G2: espelho do undo (Ctrl+Y)
     std::map<QString, MeshPart> m_compDefs;      // biblioteca de componentes
     QSet<QString> m_libComps;                    // R14: os de fábrica (não salva)
+    QSet<QString> m_organicos;                   // R55: os que jitteram ao inserir
     QString m_pendingComp;                       // inserção aguardando clique
 
     // --- GL -----------------------------------------------------------------

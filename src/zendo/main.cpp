@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     app.setApplicationName(QStringLiteral("Zendo"));
     // R48: o "Sobre" precisa dizer qual build Ã©. RITUAL DA LEVA:
     // esta linha e o AppVersion do installer/zencad.iss andam JUNTAS.
-    app.setApplicationVersion(QStringLiteral("2.0.50"));
+    app.setApplicationVersion(QStringLiteral("2.0.51"));
     app.setApplicationDisplayName(QStringLiteral("Zendo"));
 
     // R52: os botoes que o Qt escreve sozinho (OK/Cancel/Close/Yes/No) vinham
@@ -67,11 +67,11 @@ int main(int argc, char** argv) {
         palette, bucket, paintat, arcq, protr, scaleq, fmperim, texscale,
         impobj, mirror, dim3d, walk, dimclick, poscam, walksim,
         clipface, clipplane, cutplane, clipslide, dimang, clipdrag, render,
-        stair, guard, slabhole, engine;
+        stair, guard, slabhole, engine, qaBalde;
     int preset = -1;                         // R47
     bool inspect = false, fixsolid = false, cleanup = false, subtract = false;
     bool unite = false;
-    bool walkenter = false;
+    bool walkenter = false, qaCtrlS = false;
     bool follow = false, ortho = false, newstudy = false, night = false;
     bool del = false, glue = false, terrain = false, redef = false;
     bool hdri = false;                       // R46: cÃ©u real no --render
@@ -149,6 +149,10 @@ int main(int argc, char** argv) {
             gltf = args[++i];   // exporta glTF (QA)
         else if (args[i] == QLatin1String("--hover") && i + 1 < args.size())
             hover = args[++i];  // G1: "nx,ny;nx,ny" â€” inferÃªncia tipada (QA)
+        else if (args[i] == QLatin1String("--qa-ctrls"))
+            qaCtrlS = true;       // R55: exercita Salvar (Ctrl+S) sem dialogo
+        else if (args[i] == QLatin1String("--qa-balde") && i + 1 < args.size())
+            qaBalde = args[++i];  // R55: "nx,ny" - balde + mouseMove real (QA)
         else if (args[i] == QLatin1String("--redo") && i + 1 < args.size())
             redoN = args[++i];  // G2: nÂº de Ctrl+Y apÃ³s os undo (QA)
         else if (args[i] == QLatin1String("--erase") && i + 1 < args.size())
@@ -352,6 +356,8 @@ int main(int argc, char** argv) {
     if (!obj.isEmpty()) w.setQaObj(obj);
     if (!gltf.isEmpty()) w.setQaGltf(gltf);
     if (!hover.isEmpty()) w.setQaHover(hover);
+    if (!qaBalde.isEmpty()) w.setQaBalde(qaBalde);
+    if (qaCtrlS) w.setQaCtrlS(true);
     if (!redoN.isEmpty()) w.setQaRedo(redoN.toInt());
     if (!erase.isEmpty()) w.setQaErase(erase);
     if (!vmove.isEmpty()) w.setQaVMove(vmove);

@@ -3298,10 +3298,18 @@ QString Viewport3D::faceInfo(int meshIdx, Idx face) const {
     const QString quem = part.wallNo > 0
                              ? QStringLiteral("Parede %1").arg(part.wallNo)
                              : QStringLiteral("Sólido");   // R1: neutro
-    return QStringLiteral("%1 · %2 · %3 m² — P: empurrar/puxar")
+    // R55: a dica segue a FERRAMENTA. Com o balde na mão, "P: empurrar/puxar"
+    // é conselho da ferramenta errada — quem está pintando quer saber o que o
+    // clique vai vestir, não como extrudar.
+    const QString dica =
+        m_tool == Tool::Paint
+            ? QStringLiteral("clique pinta · Ctrl = sólido inteiro")
+            : QStringLiteral("P: empurrar/puxar");
+    return QStringLiteral("%1 · %2 · %3 m² — %4")
         .arg(quem)
         .arg(QString::fromUtf8(kind))
-        .arg(part.mesh.faceArea(face), 0, 'f', 2);
+        .arg(part.mesh.faceArea(face), 0, 'f', 2)
+        .arg(dica);
 }
 
 void Viewport3D::selectAt(const QPoint& pos) {
@@ -4291,6 +4299,13 @@ void Viewport3D::drawInferOverlay(QPainter& qp) {
 
 // QA G1: sequência de hovers "nx,ny;nx,ny…" — cada um infere (e adquire);
 // o último fica no overlay e vai pro dump via pickInfo.
+void Viewport3D::qaMouseMove(double nx, double ny) {
+    const QPointF p(nx * width(), ny * height());
+    QMouseEvent ev(QEvent::MouseMove, p, mapToGlobal(p), Qt::NoButton,
+                   Qt::NoButton, Qt::NoModifier);
+    QCoreApplication::sendEvent(this, &ev);      // o caminho real, não um atalho
+}
+
 void Viewport3D::qaHover(const QString& seq) {
     Infer in;
     const QStringList pts = seq.split(';', Qt::SkipEmptyParts);
@@ -6122,11 +6137,61 @@ bool Viewport3D::roofSelected(double ridgeH, double beiral, bool hip) {
         return false;
     }
     const HalfEdgeMesh& base = m_meshes[std::size_t(m_selMesh)].mesh;
+
+    // R55: o telhado agora ACOMPANHA O GIRO do sólido.
+    // Até aqui esta função media o bbox no eixo do MUNDO — sobre um sólido
+    // girado o telhado saía reto, e o "beiral" era medido da CAIXA que envolve
+    // o sólido, não das paredes: no dogfooding da R54, um volume a 8° ganhou
+    // um telhado ortogonal com beiral fantasma de até 1,2 m variando ao longo
+    // da borda. O Fable previu isto lendo este código, e o meu próprio script
+    // de entrega desviava da ferramenta construindo o telhado à mão por causa
+    // disso — quando a entrega desvia da ferramenta, a ferramenta está devendo.
+    //
+    // A cura não é refazer nada: é medir no FRAME DO SÓLIDO. Acho o ângulo
+    // pela aresta horizontal mais longa do SÓLIDO (o loop varre todo z, não só
+    // o footprint — numa caixa dá no mesmo; num sólido cuja aresta horizontal
+    // mais longa esteja no topo, o θ vem de lá, e ainda assim é melhor que o
+    // θ=0 forçado de antes), projeto os vértices lá,
+    // faço exatamente a mesma conta de sempre em coordenadas locais, e giro
+    // os 6 vértices de volta no fim.
+    // Sólido alinhado dá θ = 0 EXATO (atan2(0,L) = 0 → cos=1, sin=0): a saída
+    // fica byte-idêntica à de antes, e a regressão sai de graça.
+    double theta = 0.0;
+    {
+        double melhor = -1.0;
+        for (std::size_t h = 0; h < base.halfEdgeCount(); ++h) {
+            const Idx he = Idx(h);
+            const Point3& p = base.vertex(base.halfEdge(he).origin).p;
+            const Point3& q =
+                base.vertex(base.halfEdge(base.halfEdge(he).next).origin).p;
+            if (std::abs(p.z - q.z) > 1e-6) continue;       // só arestas horiz.
+            const double dx = q.x - p.x, dy = q.y - p.y;
+            const double L2 = dx * dx + dy * dy;
+            if (L2 <= melhor || L2 < 1e-12) continue;
+            melhor = L2;
+            theta = std::atan2(dy, dx);
+        }
+        // dobra pra [0°, 90°): o retângulo tem 4 arestas, e as 4 descrevem o
+        // mesmo frame a menos de múltiplos de 90°.
+        const double q90 = M_PI * 0.5;
+        theta = std::fmod(theta, q90);
+        if (theta < 0) theta += q90;
+        if (theta > q90 * 0.5) theta -= q90;      // escolhe o giro menor
+    }
+    const double ct = std::cos(theta), st = std::sin(theta);
+    const auto paraLocal = [ct, st](double x, double y) {
+        return std::pair<double, double>{x * ct + y * st, -x * st + y * ct};
+    };
+    const auto paraMundo = [ct, st](double x, double y) {
+        return std::pair<double, double>{x * ct - y * st, x * st + y * ct};
+    };
+
     double x0 = 1e300, x1 = -1e300, y0 = 1e300, y1 = -1e300, zt = -1e300;
     for (std::size_t v = 0; v < base.vertexCount(); ++v) {
         const Point3& p = base.vertex(Idx(v)).p;
-        x0 = std::min(x0, p.x); x1 = std::max(x1, p.x);
-        y0 = std::min(y0, p.y); y1 = std::max(y1, p.y);
+        const auto l = paraLocal(p.x, p.y);          // bbox NO FRAME do sólido
+        x0 = std::min(x0, l.first);  x1 = std::max(x1, l.first);
+        y0 = std::min(y0, l.second); y1 = std::max(y1, l.second);
         zt = std::max(zt, p.z);
     }
     x0 -= beiral; x1 += beiral;                  // BEIRAL: avança o bbox
@@ -6137,10 +6202,16 @@ bool Viewport3D::roofSelected(double ridgeH, double beiral, bool hip) {
     const bool ridgeX = (x1 - x0) >= (y1 - y0);   // cumeeira no eixo longo
     const double zr = zt + ridgeH;
     Idx a, b, c, d, r0, r1;
-    a = m.addVertex({x0, y0, zt});
-    b = m.addVertex({x1, y0, zt});
-    c = m.addVertex({x1, y1, zt});
-    d = m.addVertex({x0, y1, zt});
+    // addVertex em MUNDO, computado em LOCAL: o resto da função (tacaniça,
+    // oitões, base) segue idêntico, porque no frame local ele é o de sempre.
+    const auto vLocal = [&m, &paraMundo](double lx, double ly, double z) {
+        const auto w = paraMundo(lx, ly);
+        return m.addVertex({w.first, w.second, z});
+    };
+    a = vLocal(x0, y0, zt);
+    b = vLocal(x1, y0, zt);
+    c = vLocal(x1, y1, zt);
+    d = vLocal(x0, y1, zt);
     // QUATRO águas: cumeeira encurtada (tacaniças a 45°)
     const double dHip =
         hip ? std::min((ridgeX ? y1 - y0 : x1 - x0) * 0.5,
@@ -6148,16 +6219,16 @@ bool Viewport3D::roofSelected(double ridgeH, double beiral, bool hip) {
             : 0.0;
     if (ridgeX) {
         const double ym = (y0 + y1) * 0.5;
-        r0 = m.addVertex({x0 + dHip, ym, zr});
-        r1 = m.addVertex({x1 - dHip, ym, zr});
+        r0 = vLocal(x0 + dHip, ym, zr);
+        r1 = vLocal(x1 - dHip, ym, zr);
         m.addFace({a, b, r1, r0});   // água sul
         m.addFace({c, d, r0, r1});   // água norte
         m.addFace({d, a, r0});       // oitão oeste
         m.addFace({b, c, r1});       // oitão leste
     } else {
         const double xm = (x0 + x1) * 0.5;
-        r0 = m.addVertex({xm, y0 + dHip, zr});
-        r1 = m.addVertex({xm, y1 - dHip, zr});
+        r0 = vLocal(xm, y0 + dHip, zr);
+        r1 = vLocal(xm, y1 - dHip, zr);
         m.addFace({b, c, r1, r0});   // água leste
         m.addFace({d, a, r0, r1});   // água oeste
         m.addFace({a, b, r0});       // oitão sul
@@ -6598,7 +6669,8 @@ void Viewport3D::mirrorSelected(int axis) {
 // R14: componente de FÁBRICA — vai pra biblioteca, não pro arquivo
 void Viewport3D::addLibraryComponent(
     const QString& name, const cad::HalfEdgeMesh& mesh,
-    const std::map<cad::HalfEdgeMesh::Idx, std::array<float, 3>>& cores) {
+    const std::map<cad::HalfEdgeMesh::Idx, std::array<float, 3>>& cores,
+    bool organico) {
     if (m_compDefs.count(name)) return;      // o do usuário tem prioridade
     MeshPart def;
     def.mesh = mesh;
@@ -6606,6 +6678,7 @@ void Viewport3D::addLibraryComponent(
     def.compName = name;
     m_compDefs[name] = std::move(def);
     m_libComps.insert(name);
+    if (organico) m_organicos.insert(name);
 }
 
 bool Viewport3D::makeComponent(const QString& name) {
@@ -6617,6 +6690,10 @@ bool Viewport3D::makeComponent(const QString& name) {
     pushUndo();
     m_meshes[std::size_t(m_selMesh)].compName = name;
     m_compDefs[name] = m_meshes[std::size_t(m_selMesh)];
+    // R55: o nome deixou de ser o da fábrica — larga o jitter junto. Sem isto,
+    // um componente DO USUÁRIO batizado de "Árvore" (o nome óbvio em pt-BR)
+    // herdaria o giro aleatório e o ±15% da vegetação, calado.
+    m_organicos.remove(name);
     m_edited = true;
     emit pickInfo(QStringLiteral(
                       "Componente \"%1\" criado — insira cópias pelo menu; "
@@ -6630,6 +6707,21 @@ bool Viewport3D::insertComponent(const QString& name, const Point3& at) {
     if (it == m_compDefs.end()) return false;
     pushUndo();
     MeshPart inst = it->second;
+    // R55: vegetação não nasce em fôrma. Gira num ângulo qualquer e muda de
+    // porte ±15%. A semente vem da POSIÇÃO: a mesma árvore no mesmo ponto sai
+    // sempre igual (undo/redo e reabrir o arquivo não a remexem), mas duas
+    // árvores lado a lado nunca são a mesma árvore.
+    if (m_organicos.contains(name)) {
+        unsigned s = unsigned(std::llround(at.x * 1000.0) * 73856093LL ^
+                              std::llround(at.y * 1000.0) * 19349663LL);
+        const auto frand = [&s]() {
+            s = s * 1103515245u + 12345u;
+            return double((s >> 16) & 0x7fff) / 32767.0;
+        };
+        const Point3 piv = inst.mesh.bboxCenter();
+        inst.mesh.rotateZ(piv, frand() * 2.0 * 3.14159265358979);
+        inst.mesh.scaleAbout(piv, 0.85 + 0.30 * frand());
+    }
     // assenta a instância: centro XY no clique, base no z do clique
     double minZ = 1e300;
     for (std::size_t v = 0; v < inst.mesh.vertexCount(); ++v)
@@ -6675,6 +6767,7 @@ int Viewport3D::redefineComponent() {
     if (itOld != m_compDefs.end()) oldDims = dimsOf(itOld->second.mesh);
     MeshPart def = m_meshes[std::size_t(m_selMesh)];
     m_compDefs[name] = def;
+    m_organicos.remove(name);        // R55: idem — a def agora é do usuário
     const Point3 dc = def.mesh.bboxCenter();
     int changed = 0, kept = 0;
     for (int i = 0; i < int(m_meshes.size()); ++i) {
@@ -6770,8 +6863,10 @@ void Viewport3D::setCompsJson(const QJsonArray& arr) {
                 float(a.at(1).toDouble()), float(a.at(2).toDouble()),
                 float(a.at(3).toDouble())};
         }
-        if (ok && !part.compName.isEmpty())
+        if (ok && !part.compName.isEmpty()) {
+            m_organicos.remove(part.compName);   // R55: veio do arquivo
             m_compDefs[part.compName] = std::move(part);
+        }
     }
 }
 
@@ -8903,6 +8998,26 @@ void Viewport3D::mouseMoveEvent(QMouseEvent* e) {
         m_hovMesh = mi;
         m_hovFace = f;
         m_hlDirty = true;
+        // R55: o BALDE agora ANUNCIA o alvo antes de pintar.
+        // Com a seta dá pra clicar só pra conferir; com o balde, conferir é
+        // errar — o clique já pinta. O realce sempre existiu (esta função é
+        // fallthrough de toda ferramenta sem branch, o Paint incluso: o
+        // "sem destaque" que o dogfooding relatou era falso-positivo do robô,
+        // que teleporta o cursor e não gera mouseMove). O que faltava era o
+        // TEXTO: o faceInfo só saía no CLIQUE da seta.
+        if (m_tool == Tool::Paint) {
+            if (mi >= 0 && f != HalfEdgeMesh::kNone) {
+                emit pickInfo(faceInfo(mi, f));
+            } else {
+                // saiu de toda face: devolve a instrução do balde. Sem isto o
+                // rodapé fica com a info órfã de uma face que o mouse já
+                // deixou — pior que não dizer nada.
+                emit pickInfo(QStringLiteral(
+                    "BALDE: clique nas faces pra pintar — Ctrl = sólido "
+                    "inteiro · Alt = conta-gotas · a paleta troca o material "
+                    "(Esc sai)"));
+            }
+        }
         update();
     }
 }

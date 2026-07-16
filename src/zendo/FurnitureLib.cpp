@@ -247,6 +247,7 @@ Movel arvore(const char* nome, double s, unsigned seed) {
     blob(0.0, 0.0, 2.15 * s, 1.00 * s, {0.333f, 0.416f, 0.278f});
     blob(0.48 * s, 0.30 * s, 2.72 * s, 0.60 * s, {0.408f, 0.502f, 0.322f});
     blob(-0.52 * s, -0.26 * s, 2.55 * s, 0.54 * s, {0.290f, 0.447f, 0.298f});
+    b.mv.organico = true;                   // R55: gira e varia de porte
     return b.mv;
 }
 

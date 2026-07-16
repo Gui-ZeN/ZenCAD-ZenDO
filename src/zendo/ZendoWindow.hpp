@@ -75,6 +75,8 @@ public:
     }
     void setQaCircle(const QString& s) { m_qaCircle = s; }   // "cx,cy,rx,ry"
     void setQaHover(const QString& s) { m_qaHover = s; }     // G1 "nx,ny;…"
+    void setQaBalde(const QString& s) { m_qaBalde = s; }     // R55 "nx,ny"
+    void setQaCtrlS(bool b) { m_qaCtrlS = b; }               // R55: Ctrl+S
     void setQaRedo(int n) { m_qaRedo = n; }                  // G2: Ctrl+Y
     void setQaErase(const QString& s) { m_qaErase = s; }     // G2 "nx,ny"
     void setQaVMove(const QString& s) { m_qaVMove = s; }     // G2 5 números
@@ -157,7 +159,8 @@ public:
 private:
     void openDialog();
     void openStudyDialog();
-    void saveStudyDialog();
+    void saveStudyQuick();       // R55: Ctrl+S grava; só pede nome se não há
+    void saveStudyDialog();      // Salvar como (Ctrl+Shift+S)
     void savePackageDialog();                  // R38: texturas viajam junto
     void heightDialog();
     void pushPullDialog();
@@ -217,9 +220,11 @@ private:
     double m_qaMoveZ{0.0}, m_qaRot{0.0}, m_qaScale{0.0}, m_qaOffset{0.0};
     QString m_qaRoof, m_qaVcb, m_qaPencil, m_qaMkComp, m_qaInsComp;
     QString m_qaMkScene, m_qaGoScene, m_qaSun, m_qaTex, m_qaClip, m_qaObj,
-        m_qaGltf, m_qaHover, m_qaErase, m_qaVMove, m_qaSketch3d, m_qaSelBox,
+        m_qaGltf, m_qaHover, m_qaBalde, m_qaErase, m_qaVMove, m_qaSketch3d,
+        m_qaSelBox,
         m_qaTape, m_qaArray, m_qaMkGroup, m_qaCtxAt, m_qaTagSet, m_qaTagVis;
     bool m_qaFollow{false};
+    bool m_qaCtrlS{false};                   // R55: exercita o Salvar direto
     bool m_qaOrtho{false};
     double m_qaFog{0.0};
     bool m_qaNewStudy{false};

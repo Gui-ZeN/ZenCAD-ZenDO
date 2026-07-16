@@ -323,8 +323,20 @@ ZendoWindow::ZendoWindow() {
                      QKeySequence::Open, this, &ZendoWindow::openDialog);
     mFile->addAction(QStringLiteral("Abrir &estudo 3D (.zendo)…"),
                      this, &ZendoWindow::openStudyDialog);
-    mFile->addAction(QStringLiteral("&Salvar estudo 3D…"),
-                     QKeySequence::Save, this, &ZendoWindow::saveStudyDialog);
+    // R55: Ctrl+S GRAVA. Até aqui ele chamava o saveStudyDialog direto, então
+    // todo save pedia o nome e mandava confirmar "substituir" — mesmo com o
+    // arquivo aberto e o título da janela já sendo o dele. O dogfooding da R54
+    // bateu nisso a cada salvada. Salvar não pergunta nada; quem quer escolher
+    // o nome usa Salvar como. (O "…" do rótulo antigo era a promessa de um
+    // diálogo que agora não vem — some junto.)
+    // A recuperação da R48 fica MELHOR, não pior: lá o m_studyPath é a ORIGEM
+    // (o arquivo do usuário, nunca o autosave) e o comentário daquela leva já
+    // pedia esta semântica — "Salvar tem que ir pro arquivo do usuário (ou
+    // pedir um nome, se ele nunca salvou)". Origem vazia → cai no diálogo.
+    mFile->addAction(QStringLiteral("&Salvar estudo 3D"), QKeySequence::Save,
+                     this, &ZendoWindow::saveStudyQuick);
+    mFile->addAction(QStringLiteral("Salvar &como…"), QKeySequence::SaveAs,
+                     this, &ZendoWindow::saveStudyDialog);
     mFile->addAction(QStringLiteral("Salvar como &pacote (leva texturas)…"),
                      this, &ZendoWindow::savePackageDialog);   // R38
     mFile->addSeparator();
@@ -1057,7 +1069,7 @@ ZendoWindow::ZendoWindow() {
     }
     // R14: o mobiliário de fábrica entra na biblioteca de componentes
     for (const moblib::Movel& mv : moblib::gerarTodos()) {
-        m_vp->addLibraryComponent(mv.nome, mv.mesh, mv.cores);
+        m_vp->addLibraryComponent(mv.nome, mv.mesh, mv.cores, mv.organico);
         QListWidgetItem* it = new QListWidgetItem(movelThumb(mv), QString());
         it->setToolTip(QStringLiteral("%1 — clique aqui e depois clique na "
                                       "cena para posicionar")
@@ -1436,6 +1448,19 @@ ZendoWindow::ZendoWindow() {
                         "Ctrl no 1º clique: angular")}};
     connect(m_vp, &Viewport3D::toolChanged, this,
             [this, toolActs, curs, hints, hint](int t) {
+        // R55: ferramenta armada na TELA INICIAL puxa o espaço pra frente.
+        // O dogfooding da R54 apertou R na start page e o rodapé anunciou
+        // "clique o 1º canto sobre uma face — ou no CHÃO": não existe chão
+        // ali, e os cliques morriam no widget da tela inicial. Os atalhos são
+        // QAction de janela — disparam com a start page na frente.
+        // Trazer o espaço (em vez de bloquear o atalho) é o padrão que a casa
+        // já tem: openStudy/openFile também fazem showSpace() ao concluir —
+        // "ação que opera no espaço traz o espaço". Bloquear seria um 3º
+        // padrão. Select fica de fora: Esc e todo desarme emitem
+        // toolChanged(Select) e não podem arrancar ninguém da tela inicial.
+        if (t != int(Viewport3D::Tool::Select) &&
+            m_stack && m_stack->currentWidget() != m_vp)
+            showSpace();
         for (QAction* a : toolActs) a->setChecked(a->data().toInt() == t);
         const auto it = curs.find(t);
         if (it != curs.end()) m_vp->setCursor(it->second);
@@ -2552,6 +2577,16 @@ void ZendoWindow::openStudyDialog() {
     if (!f.isEmpty()) openStudy(f);
 }
 
+// R55: o Ctrl+S de verdade — grava onde já está, e só pede nome se não houver
+// arquivo ainda. É o par do saveStudyDialog (Salvar como), não um substituto.
+void ZendoWindow::saveStudyQuick() {
+    if (m_studyPath.isEmpty()) {
+        saveStudyDialog();
+        return;
+    }
+    saveStudy(m_studyPath);      // já avisa sozinho se a escrita falhar
+}
+
 void ZendoWindow::saveStudyDialog() {
     QString sugg = m_studyPath;
     if (sugg.isEmpty() && !m_sourcePath.isEmpty()) {
@@ -3287,6 +3322,26 @@ void ZendoWindow::shootAndQuit(const QString& pngPath) {
         }
         if (!m_qaVMove.isEmpty()) m_vp->qaVertexMove(m_qaVMove);       // G2
         if (!m_qaHover.isEmpty()) m_vp->qaHover(m_qaHover);   // G1: inferência
+        if (m_qaCtrlS) {   // R55: o Ctrl+S de verdade. Se ele abrir diálogo
+            // num app headless, ESTE processo trava e o timeout mata a QA —
+            // o teste falha alto, que é como um teste tem que falhar.
+            saveStudyQuick();
+            emit m_vp->pickInfo(
+                QStringLiteral("qa-ctrls: gravou em [%1]").arg(m_studyPath));
+        }
+        if (!m_qaBalde.isEmpty()) {          // R55: balde + hover DE VERDADE
+            const QStringList p = m_qaBalde.split(',');
+            if (p.size() == 2) {
+                const bool antes = m_stack->currentWidget() == m_vp;
+                m_vp->setTool(Viewport3D::Tool::Paint);
+                const bool depois = m_stack->currentWidget() == m_vp;
+                emit m_vp->pickInfo(
+                    QStringLiteral("qa-stack: antes=%1 depois=%2")
+                        .arg(antes ? "espaco" : "tela-inicial")
+                        .arg(depois ? "espaco" : "tela-inicial"));
+                m_vp->qaMouseMove(p[0].toDouble(), p[1].toDouble());
+            }
+        }
         if (!m_qaObj.isEmpty()) {            // exports SÓ depois das edições
             const int nf = m_vp->exportObj(m_qaObj);
             m_lastInfo = QStringLiteral("obj tris=%1").arg(nf);
