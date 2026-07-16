@@ -1,0 +1,10880 @@
+{
+ "app": "ZenCAD",
+ "version": 1,
+ "settings": {
+  "ltScale": 0.05,
+  "unitIndex": 3,
+  "unitDecimals": 2,
+  "unitSuffix": " m",
+  "currentLayer": "PAREDES"
+ },
+ "layers": [
+  {
+   "name": "0",
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "PAREDES",
+   "color": [
+    232,
+    232,
+    232,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.5,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "HACH-PAR",
+   "color": [
+    96,
+    100,
+    108,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "HACH-VIS",
+   "color": [
+    120,
+    104,
+    82,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "ESQUADRIAS",
+   "color": [
+    95,
+    180,
+    196,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.25,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "MOBILIARIO",
+   "color": [
+    128,
+    133,
+    143,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.18,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "COTAS",
+   "color": [
+    225,
+    200,
+    90,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "TEXTO",
+   "color": [
+    235,
+    235,
+    235,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "TITULO",
+   "color": [
+    194,
+    160,
+    99,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.35,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "SIMBOLOS",
+   "color": [
+    220,
+    82,
+    82,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.3,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "TERRENO",
+   "color": [
+    124,
+    178,
+    124,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.35,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "VEGETACAO",
+   "color": [
+    96,
+    165,
+    96,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "PISO",
+   "color": [
+    110,
+    114,
+    122,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "PISCINA",
+   "color": [
+    95,
+    155,
+    205,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "ESTRUTURA",
+   "color": [
+    165,
+    165,
+    170,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.5,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  }
+ ],
+ "dimStyles": [
+  {
+   "name": "Standard",
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1
+  }
+ ],
+ "currentDim": "Standard",
+ "textStyles": [
+  {
+   "name": "Standard",
+   "height": 0.22,
+   "font": "Arial"
+  }
+ ],
+ "currentText": "Standard",
+ "blocks": [],
+ "layouts": [
+  {
+   "name": "01 IMPLANTAÇÃO",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "IMPLANTAÇÃO",
+   "project": "CASA PÁTIO — RESID. UNIFAMILIAR",
+   "author": "ZenCAD · Claude",
+   "date": "02/07/2026",
+   "scaleLabel": "1:100",
+   "viewports": [
+    {
+     "xMm": 127.0,
+     "yMm": 59.0,
+     "wMm": 260,
+     "hMm": 330,
+     "modelCx": 7.5,
+     "modelCy": 7.0,
+     "mmPerUnit": 10.0,
+     "scaleDenom": 100.0
+    }
+   ]
+  },
+  {
+   "name": "02 PLANTA TÉRREO",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "PLANTA BAIXA — TÉRREO",
+   "project": "CASA PÁTIO — RESID. UNIFAMILIAR",
+   "author": "ZenCAD · Claude",
+   "date": "02/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 57.0,
+     "yMm": 74.0,
+     "wMm": 400,
+     "hMm": 300,
+     "modelCx": 36.0,
+     "modelCy": 2.8,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0
+    }
+   ]
+  },
+  {
+   "name": "03 PLANTA SUPERIOR",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "PLANTA BAIXA — SUPERIOR",
+   "project": "CASA PÁTIO — RESID. UNIFAMILIAR",
+   "author": "ZenCAD · Claude",
+   "date": "02/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 57.0,
+     "yMm": 74.0,
+     "wMm": 400,
+     "hMm": 300,
+     "modelCx": 66.0,
+     "modelCy": 2.8,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0
+    }
+   ]
+  },
+  {
+   "name": "04 ELEVAÇÃO FRONTAL",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "ELEVAÇÃO FRONTAL",
+   "project": "CASA PÁTIO — RESID. UNIFAMILIAR",
+   "author": "ZenCAD · Claude",
+   "date": "02/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 57.0,
+     "yMm": 94.0,
+     "wMm": 400,
+     "hMm": 260,
+     "modelCx": 36.0,
+     "modelCy": -18.8,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0
+    }
+   ]
+  },
+  {
+   "name": "05 CORTE AA",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "CORTE AA",
+   "project": "CASA PÁTIO — RESID. UNIFAMILIAR",
+   "author": "ZenCAD · Claude",
+   "date": "02/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 87.0,
+     "yMm": 94.0,
+     "wMm": 340,
+     "hMm": 260,
+     "modelCx": 64.0,
+     "modelCy": -18.6,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0
+    }
+   ]
+  }
+ ],
+ "currentLayout": 1,
+ "entities": [
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     30.0,
+     0.0,
+     0.0
+    ],
+    [
+     32.2,
+     0.0,
+     0.0
+    ],
+    [
+     32.2,
+     0.15,
+     0.0
+    ],
+    [
+     30.0,
+     0.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      30.0,
+      0.0,
+      0.0
+     ],
+     [
+      32.2,
+      0.0,
+      0.0
+     ],
+     [
+      32.2,
+      0.15,
+      0.0
+     ],
+     [
+      30.0,
+      0.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     33.2,
+     0.0,
+     0.0
+    ],
+    [
+     34.2,
+     0.0,
+     0.0
+    ],
+    [
+     34.2,
+     0.15,
+     0.0
+    ],
+    [
+     33.2,
+     0.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      33.2,
+      0.0,
+      0.0
+     ],
+     [
+      34.2,
+      0.0,
+      0.0
+     ],
+     [
+      34.2,
+      0.15,
+      0.0
+     ],
+     [
+      33.2,
+      0.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.0,
+     0.0,
+     0.0
+    ],
+    [
+     42.0,
+     0.0,
+     0.0
+    ],
+    [
+     42.0,
+     0.15,
+     0.0
+    ],
+    [
+     37.0,
+     0.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      37.0,
+      0.0,
+      0.0
+     ],
+     [
+      42.0,
+      0.0,
+      0.0
+     ],
+     [
+      42.0,
+      0.15,
+      0.0
+     ],
+     [
+      37.0,
+      0.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     30.0,
+     7.85,
+     0.0
+    ],
+    [
+     38.0,
+     7.85,
+     0.0
+    ],
+    [
+     38.0,
+     8.0,
+     0.0
+    ],
+    [
+     30.0,
+     8.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      30.0,
+      7.85,
+      0.0
+     ],
+     [
+      38.0,
+      7.85,
+      0.0
+     ],
+     [
+      38.0,
+      8.0,
+      0.0
+     ],
+     [
+      30.0,
+      8.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     40.0,
+     7.85,
+     0.0
+    ],
+    [
+     40.6,
+     7.85,
+     0.0
+    ],
+    [
+     40.6,
+     8.0,
+     0.0
+    ],
+    [
+     40.0,
+     8.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      40.0,
+      7.85,
+      0.0
+     ],
+     [
+      40.6,
+      7.85,
+      0.0
+     ],
+     [
+      40.6,
+      8.0,
+      0.0
+     ],
+     [
+      40.0,
+      8.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     41.4,
+     7.85,
+     0.0
+    ],
+    [
+     42.0,
+     7.85,
+     0.0
+    ],
+    [
+     42.0,
+     8.0,
+     0.0
+    ],
+    [
+     41.4,
+     8.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      41.4,
+      7.85,
+      0.0
+     ],
+     [
+      42.0,
+      7.85,
+      0.0
+     ],
+     [
+      42.0,
+      8.0,
+      0.0
+     ],
+     [
+      41.4,
+      8.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     30.0,
+     0.15,
+     0.0
+    ],
+    [
+     30.15,
+     0.15,
+     0.0
+    ],
+    [
+     30.15,
+     2.6,
+     0.0
+    ],
+    [
+     30.0,
+     2.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      30.0,
+      0.15,
+      0.0
+     ],
+     [
+      30.15,
+      0.15,
+      0.0
+     ],
+     [
+      30.15,
+      2.6,
+      0.0
+     ],
+     [
+      30.0,
+      2.6,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     30.0,
+     5.4,
+     0.0
+    ],
+    [
+     30.15,
+     5.4,
+     0.0
+    ],
+    [
+     30.15,
+     7.85,
+     0.0
+    ],
+    [
+     30.0,
+     7.85,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      30.0,
+      5.4,
+      0.0
+     ],
+     [
+      30.15,
+      5.4,
+      0.0
+     ],
+     [
+      30.15,
+      7.85,
+      0.0
+     ],
+     [
+      30.0,
+      7.85,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     41.85,
+     0.15,
+     0.0
+    ],
+    [
+     42.0,
+     0.15,
+     0.0
+    ],
+    [
+     42.0,
+     0.9,
+     0.0
+    ],
+    [
+     41.85,
+     0.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      41.85,
+      0.15,
+      0.0
+     ],
+     [
+      42.0,
+      0.15,
+      0.0
+     ],
+     [
+      42.0,
+      0.9,
+      0.0
+     ],
+     [
+      41.85,
+      0.9,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     41.85,
+     1.5,
+     0.0
+    ],
+    [
+     42.0,
+     1.5,
+     0.0
+    ],
+    [
+     42.0,
+     7.85,
+     0.0
+    ],
+    [
+     41.85,
+     7.85,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      41.85,
+      1.5,
+      0.0
+     ],
+     [
+      42.0,
+      1.5,
+      0.0
+     ],
+     [
+      42.0,
+      7.85,
+      0.0
+     ],
+     [
+      41.85,
+      7.85,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     36.85,
+     0.15,
+     0.0
+    ],
+    [
+     37.0,
+     0.15,
+     0.0
+    ],
+    [
+     37.0,
+     2.3,
+     0.0
+    ],
+    [
+     36.85,
+     2.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      36.85,
+      0.15,
+      0.0
+     ],
+     [
+      37.0,
+      0.15,
+      0.0
+     ],
+     [
+      37.0,
+      2.3,
+      0.0
+     ],
+     [
+      36.85,
+      2.3,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     36.85,
+     3.5,
+     0.0
+    ],
+    [
+     37.0,
+     3.5,
+     0.0
+    ],
+    [
+     37.0,
+     5.6,
+     0.0
+    ],
+    [
+     36.85,
+     5.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      36.85,
+      3.5,
+      0.0
+     ],
+     [
+      37.0,
+      3.5,
+      0.0
+     ],
+     [
+      37.0,
+      5.6,
+      0.0
+     ],
+     [
+      36.85,
+      5.6,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     36.85,
+     7.0,
+     0.0
+    ],
+    [
+     37.0,
+     7.0,
+     0.0
+    ],
+    [
+     37.0,
+     7.85,
+     0.0
+    ],
+    [
+     36.85,
+     7.85,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      36.85,
+      7.0,
+      0.0
+     ],
+     [
+      37.0,
+      7.0,
+      0.0
+     ],
+     [
+      37.0,
+      7.85,
+      0.0
+     ],
+     [
+      36.85,
+      7.85,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.0,
+     3.85,
+     0.0
+    ],
+    [
+     40.6,
+     3.85,
+     0.0
+    ],
+    [
+     40.6,
+     4.0,
+     0.0
+    ],
+    [
+     37.0,
+     4.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      37.0,
+      3.85,
+      0.0
+     ],
+     [
+      40.6,
+      3.85,
+      0.0
+     ],
+     [
+      40.6,
+      4.0,
+      0.0
+     ],
+     [
+      37.0,
+      4.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     41.5,
+     3.85,
+     0.0
+    ],
+    [
+     41.85,
+     3.85,
+     0.0
+    ],
+    [
+     41.85,
+     4.0,
+     0.0
+    ],
+    [
+     41.5,
+     4.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      41.5,
+      3.85,
+      0.0
+     ],
+     [
+      41.85,
+      3.85,
+      0.0
+     ],
+     [
+      41.85,
+      4.0,
+      0.0
+     ],
+     [
+      41.5,
+      4.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     39.75,
+     0.15,
+     0.0
+    ],
+    [
+     39.9,
+     0.15,
+     0.0
+    ],
+    [
+     39.9,
+     1.5,
+     0.0
+    ],
+    [
+     39.75,
+     1.5,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      39.75,
+      0.15,
+      0.0
+     ],
+     [
+      39.9,
+      0.15,
+      0.0
+     ],
+     [
+      39.9,
+      1.5,
+      0.0
+     ],
+     [
+      39.75,
+      1.5,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     39.75,
+     2.2,
+     0.0
+    ],
+    [
+     39.9,
+     2.2,
+     0.0
+    ],
+    [
+     39.9,
+     2.35,
+     0.0
+    ],
+    [
+     39.75,
+     2.35,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      39.75,
+      2.2,
+      0.0
+     ],
+     [
+      39.9,
+      2.2,
+      0.0
+     ],
+     [
+      39.9,
+      2.35,
+      0.0
+     ],
+     [
+      39.75,
+      2.35,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     39.75,
+     2.35,
+     0.0
+    ],
+    [
+     41.85,
+     2.35,
+     0.0
+    ],
+    [
+     41.85,
+     2.5,
+     0.0
+    ],
+    [
+     39.75,
+     2.5,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      39.75,
+      2.35,
+      0.0
+     ],
+     [
+      41.85,
+      2.35,
+      0.0
+     ],
+     [
+      41.85,
+      2.5,
+      0.0
+     ],
+     [
+      39.75,
+      2.5,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    34.2,
+    0.0,
+    0.0
+   ],
+   "end": [
+    37.0,
+    0.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    34.2,
+    0.075,
+    0.0
+   ],
+   "end": [
+    37.0,
+    0.075,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    34.2,
+    0.15,
+    0.0
+   ],
+   "end": [
+    37.0,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    34.2,
+    0.0,
+    0.0
+   ],
+   "end": [
+    34.2,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.0,
+    0.0,
+    0.0
+   ],
+   "end": [
+    37.0,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    38.0,
+    7.85,
+    0.0
+   ],
+   "end": [
+    40.0,
+    7.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    38.0,
+    7.925,
+    0.0
+   ],
+   "end": [
+    40.0,
+    7.925,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    38.0,
+    8.0,
+    0.0
+   ],
+   "end": [
+    40.0,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    38.0,
+    7.85,
+    0.0
+   ],
+   "end": [
+    38.0,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    40.0,
+    7.85,
+    0.0
+   ],
+   "end": [
+    40.0,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.0,
+    2.6,
+    0.0
+   ],
+   "end": [
+    30.0,
+    5.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.075,
+    2.6,
+    0.0
+   ],
+   "end": [
+    30.075,
+    5.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.15,
+    2.6,
+    0.0
+   ],
+   "end": [
+    30.15,
+    5.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.0,
+    2.6,
+    0.0
+   ],
+   "end": [
+    30.15,
+    2.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.0,
+    5.4,
+    0.0
+   ],
+   "end": [
+    30.15,
+    5.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    41.85,
+    0.9,
+    0.0
+   ],
+   "end": [
+    41.85,
+    1.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    41.925,
+    0.9,
+    0.0
+   ],
+   "end": [
+    41.925,
+    1.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    42.0,
+    0.9,
+    0.0
+   ],
+   "end": [
+    42.0,
+    1.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    41.85,
+    0.9,
+    0.0
+   ],
+   "end": [
+    42.0,
+    0.9,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    41.85,
+    1.5,
+    0.0
+   ],
+   "end": [
+    42.0,
+    1.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    32.2,
+    0.15,
+    0.0
+   ],
+   "end": [
+    32.2,
+    1.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    32.2,
+    0.15,
+    0.0
+   ],
+   "radius": 1.0,
+   "startAngle": 0.0,
+   "endAngle": 1.5707963267948966,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    40.6,
+    8.0,
+    0.0
+   ],
+   "end": [
+    40.6,
+    8.8,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    40.6,
+    8.0,
+    0.0
+   ],
+   "radius": 0.8,
+   "startAngle": 0.0,
+   "endAngle": 1.5707963267948966,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    39.9,
+    2.2,
+    0.0
+   ],
+   "end": [
+    40.6,
+    2.2,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    39.9,
+    2.2,
+    0.0
+   ],
+   "radius": 0.7,
+   "startAngle": -1.5707963267948966,
+   "endAngle": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    36.85,
+    2.3,
+    0.0
+   ],
+   "end": [
+    37.0,
+    2.3,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    36.85,
+    3.5,
+    0.0
+   ],
+   "end": [
+    37.0,
+    3.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    36.85,
+    5.6,
+    0.0
+   ],
+   "end": [
+    37.0,
+    5.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    36.85,
+    7.0,
+    0.0
+   ],
+   "end": [
+    37.0,
+    7.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    0.35,
+    0.0
+   ],
+   "end": [
+    38.15,
+    0.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    0.6,
+    0.0
+   ],
+   "end": [
+    38.15,
+    0.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    0.85,
+    0.0
+   ],
+   "end": [
+    38.15,
+    0.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    1.1,
+    0.0
+   ],
+   "end": [
+    38.15,
+    1.1,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    1.35,
+    0.0
+   ],
+   "end": [
+    38.15,
+    1.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    1.6,
+    0.0
+   ],
+   "end": [
+    38.15,
+    1.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    1.85,
+    0.0
+   ],
+   "end": [
+    38.15,
+    1.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    2.1,
+    0.0
+   ],
+   "end": [
+    38.15,
+    2.1,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    2.35,
+    0.0
+   ],
+   "end": [
+    38.15,
+    2.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    2.6,
+    0.0
+   ],
+   "end": [
+    38.15,
+    2.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    2.85,
+    0.0
+   ],
+   "end": [
+    38.15,
+    2.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    3.1,
+    0.0
+   ],
+   "end": [
+    38.15,
+    3.1,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    3.35,
+    0.0
+   ],
+   "end": [
+    38.15,
+    3.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    3.6,
+    0.0
+   ],
+   "end": [
+    38.15,
+    3.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    3.85,
+    0.0
+   ],
+   "end": [
+    38.15,
+    3.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    0.35,
+    0.0
+   ],
+   "end": [
+    37.15,
+    3.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    38.15,
+    0.35,
+    0.0
+   ],
+   "end": [
+    38.15,
+    3.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.65,
+     0.5,
+     0.0
+    ],
+    [
+     37.65,
+     3.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.55,
+     3.4,
+     0.0
+    ],
+    [
+     37.65,
+     3.6,
+     0.0
+    ],
+    [
+     37.75,
+     3.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    37.65,
+    0.18,
+    0.0
+   ],
+   "text": "SOBE",
+   "height": 0.14,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.15,
+    7.25,
+    0.0
+   ],
+   "end": [
+    40.45,
+    7.25,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    41.25,
+    4.15,
+    0.0
+   ],
+   "end": [
+    41.25,
+    7.0,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    38.6,
+    7.5,
+    0.0
+   ],
+   "radius": 0.2,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    39.2,
+    7.5,
+    0.0
+   ],
+   "radius": 0.2,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     40.3,
+     4.3,
+     0.0
+    ],
+    [
+     41.1,
+     4.3,
+     0.0
+    ],
+    [
+     41.1,
+     5.0,
+     0.0
+    ],
+    [
+     40.3,
+     5.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    41.35,
+    1.9,
+    0.0
+   ],
+   "radius": 0.18,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     41.1,
+     0.5,
+     0.0
+    ],
+    [
+     41.7,
+     0.5,
+     0.0
+    ],
+    [
+     41.7,
+     1.15,
+     0.0
+    ],
+    [
+     41.1,
+     1.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    41.4,
+    1.0,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    33.5,
+    4.6,
+    0.0
+   ],
+   "text": "ESTAR / JANTAR\n51,5 m²",
+   "height": 0.22,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    39.4,
+    5.8,
+    0.0
+   ],
+   "text": "COZINHA\n18,7 m²",
+   "height": 0.22,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    40.8,
+    1.6,
+    0.0
+   ],
+   "text": "LAVABO",
+   "height": 0.22,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    39.0,
+    3.1,
+    0.0
+   ],
+   "text": "HALL",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     30.82,
+     0.78,
+     0.0
+    ],
+    [
+     31.18,
+     0.78,
+     0.0
+    ],
+    [
+     31.0,
+     0.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    31.28,
+    0.66,
+    0.0
+   ],
+   "text": "+0,05",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    42.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    36.0,
+    -1.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    32.2,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    31.1,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    32.2,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    33.2,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    32.7,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    33.2,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    34.2,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    33.7,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    34.2,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    37.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    35.6,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    37.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    42.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    39.5,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    30.0,
+    8.0,
+    0.0
+   ],
+   "p3": [
+    28.5,
+    4.0,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    30.0,
+    2.6,
+    0.0
+   ],
+   "p3": [
+    29.2,
+    1.3,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    30.0,
+    2.6,
+    0.0
+   ],
+   "p2": [
+    30.0,
+    5.4,
+    0.0
+   ],
+   "p3": [
+    29.2,
+    4.0,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    30.0,
+    5.4,
+    0.0
+   ],
+   "p2": [
+    30.0,
+    8.0,
+    0.0
+   ],
+   "p3": [
+    29.2,
+    6.7,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.65,
+     -0.6,
+     0.0
+    ],
+    [
+     37.65,
+     8.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "DASHED",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    37.65,
+    -0.6,
+    0.0
+   ],
+   "radius": 0.28,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    37.65,
+    -0.69,
+    0.0
+   ],
+   "text": "A",
+   "height": 0.2,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.37,
+    -0.6,
+    0.0
+   ],
+   "end": [
+    36.95,
+    -0.6,
+    0.0
+   ],
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.1,
+     -0.5,
+     0.0
+    ],
+    [
+     36.95,
+     -0.6,
+     0.0
+    ],
+    [
+     37.1,
+     -0.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    37.65,
+    8.6,
+    0.0
+   ],
+   "radius": 0.28,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    37.65,
+    8.51,
+    0.0
+   ],
+   "text": "A",
+   "height": 0.2,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    37.37,
+    8.6,
+    0.0
+   ],
+   "end": [
+    36.95,
+    8.6,
+    0.0
+   ],
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.1,
+     8.7,
+     0.0
+    ],
+    [
+     36.95,
+     8.6,
+     0.0
+    ],
+    [
+     37.1,
+     8.5,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    36.0,
+    -2.6,
+    0.0
+   ],
+   "text": "PLANTA BAIXA — PAVIMENTO TÉRREO",
+   "height": 0.45,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    36.0,
+    -3.15,
+    0.0
+   ],
+   "text": "ESCALA 1:50",
+   "height": 0.25,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.0,
+     0.0,
+     0.0
+    ],
+    [
+     61.2,
+     0.0,
+     0.0
+    ],
+    [
+     61.2,
+     0.15,
+     0.0
+    ],
+    [
+     60.0,
+     0.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.0,
+      0.0,
+      0.0
+     ],
+     [
+      61.2,
+      0.0,
+      0.0
+     ],
+     [
+      61.2,
+      0.15,
+      0.0
+     ],
+     [
+      60.0,
+      0.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     63.8,
+     0.0,
+     0.0
+    ],
+    [
+     65.4,
+     0.0,
+     0.0
+    ],
+    [
+     65.4,
+     0.15,
+     0.0
+    ],
+    [
+     63.8,
+     0.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      63.8,
+      0.0,
+      0.0
+     ],
+     [
+      65.4,
+      0.0,
+      0.0
+     ],
+     [
+      65.4,
+      0.15,
+      0.0
+     ],
+     [
+      63.8,
+      0.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     66.3,
+     0.0,
+     0.0
+    ],
+    [
+     69.3,
+     0.0,
+     0.0
+    ],
+    [
+     69.3,
+     0.15,
+     0.0
+    ],
+    [
+     66.3,
+     0.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      66.3,
+      0.0,
+      0.0
+     ],
+     [
+      69.3,
+      0.0,
+      0.0
+     ],
+     [
+      69.3,
+      0.15,
+      0.0
+     ],
+     [
+      66.3,
+      0.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     70.3,
+     0.0,
+     0.0
+    ],
+    [
+     72.0,
+     0.0,
+     0.0
+    ],
+    [
+     72.0,
+     0.15,
+     0.0
+    ],
+    [
+     70.3,
+     0.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      70.3,
+      0.0,
+      0.0
+     ],
+     [
+      72.0,
+      0.0,
+      0.0
+     ],
+     [
+      72.0,
+      0.15,
+      0.0
+     ],
+     [
+      70.3,
+      0.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.0,
+     7.85,
+     0.0
+    ],
+    [
+     61.5,
+     7.85,
+     0.0
+    ],
+    [
+     61.5,
+     8.0,
+     0.0
+    ],
+    [
+     60.0,
+     8.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.0,
+      7.85,
+      0.0
+     ],
+     [
+      61.5,
+      7.85,
+      0.0
+     ],
+     [
+      61.5,
+      8.0,
+      0.0
+     ],
+     [
+      60.0,
+      8.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     64.0,
+     7.85,
+     0.0
+    ],
+    [
+     67.5,
+     7.85,
+     0.0
+    ],
+    [
+     67.5,
+     8.0,
+     0.0
+    ],
+    [
+     64.0,
+     8.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      64.0,
+      7.85,
+      0.0
+     ],
+     [
+      67.5,
+      7.85,
+      0.0
+     ],
+     [
+      67.5,
+      8.0,
+      0.0
+     ],
+     [
+      64.0,
+      8.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     70.0,
+     7.85,
+     0.0
+    ],
+    [
+     72.0,
+     7.85,
+     0.0
+    ],
+    [
+     72.0,
+     8.0,
+     0.0
+    ],
+    [
+     70.0,
+     8.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      70.0,
+      7.85,
+      0.0
+     ],
+     [
+      72.0,
+      7.85,
+      0.0
+     ],
+     [
+      72.0,
+      8.0,
+      0.0
+     ],
+     [
+      70.0,
+      8.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.0,
+     0.15,
+     0.0
+    ],
+    [
+     60.15,
+     0.15,
+     0.0
+    ],
+    [
+     60.15,
+     7.85,
+     0.0
+    ],
+    [
+     60.0,
+     7.85,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.0,
+      0.15,
+      0.0
+     ],
+     [
+      60.15,
+      0.15,
+      0.0
+     ],
+     [
+      60.15,
+      7.85,
+      0.0
+     ],
+     [
+      60.0,
+      7.85,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     71.85,
+     0.15,
+     0.0
+    ],
+    [
+     72.0,
+     0.15,
+     0.0
+    ],
+    [
+     72.0,
+     7.85,
+     0.0
+    ],
+    [
+     71.85,
+     7.85,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      71.85,
+      0.15,
+      0.0
+     ],
+     [
+      72.0,
+      0.15,
+      0.0
+     ],
+     [
+      72.0,
+      7.85,
+      0.0
+     ],
+     [
+      71.85,
+      7.85,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.15,
+     3.15,
+     0.0
+    ],
+    [
+     62.5,
+     3.15,
+     0.0
+    ],
+    [
+     62.5,
+     3.3,
+     0.0
+    ],
+    [
+     60.15,
+     3.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.15,
+      3.15,
+      0.0
+     ],
+     [
+      62.5,
+      3.15,
+      0.0
+     ],
+     [
+      62.5,
+      3.3,
+      0.0
+     ],
+     [
+      60.15,
+      3.3,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     63.3,
+     3.15,
+     0.0
+    ],
+    [
+     67.0,
+     3.15,
+     0.0
+    ],
+    [
+     67.0,
+     3.3,
+     0.0
+    ],
+    [
+     63.3,
+     3.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      63.3,
+      3.15,
+      0.0
+     ],
+     [
+      67.0,
+      3.15,
+      0.0
+     ],
+     [
+      67.0,
+      3.3,
+      0.0
+     ],
+     [
+      63.3,
+      3.3,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     68.3,
+     3.15,
+     0.0
+    ],
+    [
+     69.8,
+     3.15,
+     0.0
+    ],
+    [
+     69.8,
+     3.3,
+     0.0
+    ],
+    [
+     68.3,
+     3.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      68.3,
+      3.15,
+      0.0
+     ],
+     [
+      69.8,
+      3.15,
+      0.0
+     ],
+     [
+      69.8,
+      3.3,
+      0.0
+     ],
+     [
+      68.3,
+      3.3,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     70.6,
+     3.15,
+     0.0
+    ],
+    [
+     71.85,
+     3.15,
+     0.0
+    ],
+    [
+     71.85,
+     3.3,
+     0.0
+    ],
+    [
+     70.6,
+     3.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      70.6,
+      3.15,
+      0.0
+     ],
+     [
+      71.85,
+      3.15,
+      0.0
+     ],
+     [
+      71.85,
+      3.3,
+      0.0
+     ],
+     [
+      70.6,
+      3.3,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.15,
+     4.55,
+     0.0
+    ],
+    [
+     62.6,
+     4.55,
+     0.0
+    ],
+    [
+     62.6,
+     4.7,
+     0.0
+    ],
+    [
+     60.15,
+     4.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.15,
+      4.55,
+      0.0
+     ],
+     [
+      62.6,
+      4.55,
+      0.0
+     ],
+     [
+      62.6,
+      4.7,
+      0.0
+     ],
+     [
+      60.15,
+      4.7,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     63.4,
+     4.55,
+     0.0
+    ],
+    [
+     67.0,
+     4.55,
+     0.0
+    ],
+    [
+     67.0,
+     4.7,
+     0.0
+    ],
+    [
+     63.4,
+     4.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      63.4,
+      4.55,
+      0.0
+     ],
+     [
+      67.0,
+      4.55,
+      0.0
+     ],
+     [
+      67.0,
+      4.7,
+      0.0
+     ],
+     [
+      63.4,
+      4.7,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     68.15,
+     4.55,
+     0.0
+    ],
+    [
+     68.9,
+     4.55,
+     0.0
+    ],
+    [
+     68.9,
+     4.7,
+     0.0
+    ],
+    [
+     68.15,
+     4.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      68.15,
+      4.55,
+      0.0
+     ],
+     [
+      68.9,
+      4.55,
+      0.0
+     ],
+     [
+      68.9,
+      4.7,
+      0.0
+     ],
+     [
+      68.15,
+      4.7,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     69.7,
+     4.55,
+     0.0
+    ],
+    [
+     71.85,
+     4.55,
+     0.0
+    ],
+    [
+     71.85,
+     4.7,
+     0.0
+    ],
+    [
+     69.7,
+     4.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      69.7,
+      4.55,
+      0.0
+     ],
+     [
+      71.85,
+      4.55,
+      0.0
+     ],
+     [
+      71.85,
+      4.7,
+      0.0
+     ],
+     [
+      69.7,
+      4.7,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     64.75,
+     0.15,
+     0.0
+    ],
+    [
+     64.9,
+     0.15,
+     0.0
+    ],
+    [
+     64.9,
+     1.2,
+     0.0
+    ],
+    [
+     64.75,
+     1.2,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      64.75,
+      0.15,
+      0.0
+     ],
+     [
+      64.9,
+      0.15,
+      0.0
+     ],
+     [
+      64.9,
+      1.2,
+      0.0
+     ],
+     [
+      64.75,
+      1.2,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     64.75,
+     1.9,
+     0.0
+    ],
+    [
+     64.9,
+     1.9,
+     0.0
+    ],
+    [
+     64.9,
+     3.15,
+     0.0
+    ],
+    [
+     64.75,
+     3.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      64.75,
+      1.9,
+      0.0
+     ],
+     [
+      64.9,
+      1.9,
+      0.0
+     ],
+     [
+      64.9,
+      3.15,
+      0.0
+     ],
+     [
+      64.75,
+      3.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     67.0,
+     0.15,
+     0.0
+    ],
+    [
+     67.15,
+     0.15,
+     0.0
+    ],
+    [
+     67.15,
+     3.15,
+     0.0
+    ],
+    [
+     67.0,
+     3.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      67.0,
+      0.15,
+      0.0
+     ],
+     [
+      67.15,
+      0.15,
+      0.0
+     ],
+     [
+      67.15,
+      3.15,
+      0.0
+     ],
+     [
+      67.0,
+      3.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     68.15,
+     0.15,
+     0.0
+    ],
+    [
+     68.3,
+     0.15,
+     0.0
+    ],
+    [
+     68.3,
+     3.15,
+     0.0
+    ],
+    [
+     68.15,
+     3.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      68.15,
+      0.15,
+      0.0
+     ],
+     [
+      68.3,
+      0.15,
+      0.0
+     ],
+     [
+      68.3,
+      3.15,
+      0.0
+     ],
+     [
+      68.15,
+      3.15,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     65.85,
+     4.7,
+     0.0
+    ],
+    [
+     66.0,
+     4.7,
+     0.0
+    ],
+    [
+     66.0,
+     7.85,
+     0.0
+    ],
+    [
+     65.85,
+     7.85,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      65.85,
+      4.7,
+      0.0
+     ],
+     [
+      66.0,
+      4.7,
+      0.0
+     ],
+     [
+      66.0,
+      7.85,
+      0.0
+     ],
+     [
+      65.85,
+      7.85,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.2,
+    0.0,
+    0.0
+   ],
+   "end": [
+    63.8,
+    0.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.2,
+    0.075,
+    0.0
+   ],
+   "end": [
+    63.8,
+    0.075,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.2,
+    0.15,
+    0.0
+   ],
+   "end": [
+    63.8,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.2,
+    0.0,
+    0.0
+   ],
+   "end": [
+    61.2,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    63.8,
+    0.0,
+    0.0
+   ],
+   "end": [
+    63.8,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    65.4,
+    0.0,
+    0.0
+   ],
+   "end": [
+    66.3,
+    0.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    65.4,
+    0.075,
+    0.0
+   ],
+   "end": [
+    66.3,
+    0.075,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    65.4,
+    0.15,
+    0.0
+   ],
+   "end": [
+    66.3,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    65.4,
+    0.0,
+    0.0
+   ],
+   "end": [
+    65.4,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    66.3,
+    0.0,
+    0.0
+   ],
+   "end": [
+    66.3,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    69.3,
+    0.0,
+    0.0
+   ],
+   "end": [
+    70.3,
+    0.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    69.3,
+    0.075,
+    0.0
+   ],
+   "end": [
+    70.3,
+    0.075,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    69.3,
+    0.15,
+    0.0
+   ],
+   "end": [
+    70.3,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    69.3,
+    0.0,
+    0.0
+   ],
+   "end": [
+    69.3,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    70.3,
+    0.0,
+    0.0
+   ],
+   "end": [
+    70.3,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.5,
+    7.85,
+    0.0
+   ],
+   "end": [
+    64.0,
+    7.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.5,
+    7.925,
+    0.0
+   ],
+   "end": [
+    64.0,
+    7.925,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.5,
+    8.0,
+    0.0
+   ],
+   "end": [
+    64.0,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.5,
+    7.85,
+    0.0
+   ],
+   "end": [
+    61.5,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    64.0,
+    7.85,
+    0.0
+   ],
+   "end": [
+    64.0,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.5,
+    7.85,
+    0.0
+   ],
+   "end": [
+    70.0,
+    7.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.5,
+    7.925,
+    0.0
+   ],
+   "end": [
+    70.0,
+    7.925,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.5,
+    8.0,
+    0.0
+   ],
+   "end": [
+    70.0,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.5,
+    7.85,
+    0.0
+   ],
+   "end": [
+    67.5,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    70.0,
+    7.85,
+    0.0
+   ],
+   "end": [
+    70.0,
+    8.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    62.5,
+    3.15,
+    0.0
+   ],
+   "end": [
+    62.5,
+    2.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    62.5,
+    3.15,
+    0.0
+   ],
+   "radius": 0.8,
+   "startAngle": -1.5707963267948966,
+   "endAngle": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    64.9,
+    1.9,
+    0.0
+   ],
+   "end": [
+    65.6,
+    1.9,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    64.9,
+    1.9,
+    0.0
+   ],
+   "radius": 0.7,
+   "startAngle": -1.5707963267948966,
+   "endAngle": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    69.8,
+    3.15,
+    0.0
+   ],
+   "end": [
+    69.8,
+    2.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    69.8,
+    3.15,
+    0.0
+   ],
+   "radius": 0.8,
+   "startAngle": -1.5707963267948966,
+   "endAngle": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    62.6,
+    4.7,
+    0.0
+   ],
+   "end": [
+    62.6,
+    5.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    62.6,
+    4.7,
+    0.0
+   ],
+   "radius": 0.8,
+   "startAngle": 0.0,
+   "endAngle": 1.5707963267948966,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    69.7,
+    4.7,
+    0.0
+   ],
+   "end": [
+    69.7,
+    5.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    69.7,
+    4.7,
+    0.0
+   ],
+   "radius": 0.8,
+   "startAngle": 1.5707963267948966,
+   "endAngle": 3.141592653589793,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    0.35,
+    0.0
+   ],
+   "end": [
+    68.15,
+    0.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    0.6,
+    0.0
+   ],
+   "end": [
+    68.15,
+    0.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    0.85,
+    0.0
+   ],
+   "end": [
+    68.15,
+    0.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    1.1,
+    0.0
+   ],
+   "end": [
+    68.15,
+    1.1,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    1.35,
+    0.0
+   ],
+   "end": [
+    68.15,
+    1.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    1.6,
+    0.0
+   ],
+   "end": [
+    68.15,
+    1.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    1.85,
+    0.0
+   ],
+   "end": [
+    68.15,
+    1.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    2.1,
+    0.0
+   ],
+   "end": [
+    68.15,
+    2.1,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    2.35,
+    0.0
+   ],
+   "end": [
+    68.15,
+    2.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    2.6,
+    0.0
+   ],
+   "end": [
+    68.15,
+    2.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    2.85,
+    0.0
+   ],
+   "end": [
+    68.15,
+    2.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    3.1,
+    0.0
+   ],
+   "end": [
+    68.15,
+    3.1,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    3.35,
+    0.0
+   ],
+   "end": [
+    68.15,
+    3.35,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    3.6,
+    0.0
+   ],
+   "end": [
+    68.15,
+    3.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    3.85,
+    0.0
+   ],
+   "end": [
+    68.15,
+    3.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    67.15,
+    0.35,
+    0.0
+   ],
+   "end": [
+    67.15,
+    3.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    68.15,
+    0.35,
+    0.0
+   ],
+   "end": [
+    68.15,
+    3.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     67.65,
+     3.5,
+     0.0
+    ],
+    [
+     67.65,
+     0.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     67.55,
+     0.9,
+     0.0
+    ],
+    [
+     67.65,
+     0.7,
+     0.0
+    ],
+    [
+     67.75,
+     0.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    67.65,
+    3.65,
+    0.0
+   ],
+   "text": "DESCE",
+   "height": 0.14,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    68.15,
+    0.35,
+    0.0
+   ],
+   "end": [
+    68.15,
+    3.15,
+    0.0
+   ],
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.5,
+     0.7,
+     0.0
+    ],
+    [
+     62.3,
+     0.7,
+     0.0
+    ],
+    [
+     62.3,
+     2.7,
+     0.0
+    ],
+    [
+     60.5,
+     2.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.6,
+     5.4,
+     0.0
+    ],
+    [
+     62.0,
+     5.4,
+     0.0
+    ],
+    [
+     62.0,
+     7.4,
+     0.0
+    ],
+    [
+     60.6,
+     7.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     69.9,
+     5.4,
+     0.0
+    ],
+    [
+     71.3,
+     5.4,
+     0.0
+    ],
+    [
+     71.3,
+     7.4,
+     0.0
+    ],
+    [
+     69.9,
+     7.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    65.6,
+    0.7,
+    0.0
+   ],
+   "radius": 0.18,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     66.3,
+     0.4,
+     0.0
+    ],
+    [
+     66.75,
+     0.4,
+     0.0
+    ],
+    [
+     66.75,
+     1.0,
+     0.0
+    ],
+    [
+     66.3,
+     1.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     65.0,
+     2.3,
+     0.0
+    ],
+    [
+     66.6,
+     2.3,
+     0.0
+    ],
+    [
+     66.6,
+     3.0,
+     0.0
+    ],
+    [
+     65.0,
+     3.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    69.0,
+    0.7,
+    0.0
+   ],
+   "radius": 0.18,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     70.8,
+     0.4,
+     0.0
+    ],
+    [
+     71.25,
+     0.4,
+     0.0
+    ],
+    [
+     71.25,
+     1.0,
+     0.0
+    ],
+    [
+     70.8,
+     1.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     70.7,
+     2.3,
+     0.0
+    ],
+    [
+     71.7,
+     2.3,
+     0.0
+    ],
+    [
+     71.7,
+     3.0,
+     0.0
+    ],
+    [
+     70.7,
+     3.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    62.4,
+    1.7,
+    0.0
+   ],
+   "text": "SUÍTE\n14,0 m²",
+   "height": 0.22,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    65.8,
+    2.2,
+    0.0
+   ],
+   "text": "B. SUÍTE",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    70.0,
+    1.8,
+    0.0
+   ],
+   "text": "BANHO\n10,0 m²",
+   "height": 0.22,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    63.0,
+    6.2,
+    0.0
+   ],
+   "text": "QUARTO 2\n17,9 m²",
+   "height": 0.22,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    68.9,
+    6.2,
+    0.0
+   ],
+   "text": "QUARTO 3\n18,4 m²",
+   "height": 0.22,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    64.0,
+    3.8,
+    0.0
+   ],
+   "text": "CORREDOR",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.82,
+     4.18,
+     0.0
+    ],
+    [
+     61.18,
+     4.18,
+     0.0
+    ],
+    [
+     61.0,
+     4.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    61.28,
+    4.06,
+    0.0
+   ],
+   "text": "+3,20",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    60.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    72.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    66.0,
+    -1.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    60.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    61.2,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    60.6,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    61.2,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    63.8,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    62.5,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    63.8,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    65.4,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    64.6,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    65.4,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    66.3,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    65.85,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    66.3,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    69.3,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    67.8,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    69.3,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    70.3,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    69.8,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    70.3,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    72.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    71.15,
+    -0.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    72.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    72.0,
+    8.0,
+    0.0
+   ],
+   "p3": [
+    73.5,
+    4.0,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    66.0,
+    -2.6,
+    0.0
+   ],
+   "text": "PLANTA BAIXA — PAVIMENTO SUPERIOR",
+   "height": 0.45,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    66.0,
+    -3.15,
+    0.0
+   ],
+   "text": "ESCALA 1:50",
+   "height": 0.25,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    28.0,
+    -22.0,
+    0.0
+   ],
+   "end": [
+    44.0,
+    -22.0,
+    0.0
+   ],
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.6,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      28.0,
+      -22.35,
+      0.0
+     ],
+     [
+      44.0,
+      -22.35,
+      0.0
+     ],
+     [
+      44.0,
+      -22.0,
+      0.0
+     ],
+     [
+      28.0,
+      -22.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 9,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.12,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     30.0,
+     -22.0,
+     0.0
+    ],
+    [
+     42.0,
+     -22.0,
+     0.0
+    ],
+    [
+     42.0,
+     -15.4,
+     0.0
+    ],
+    [
+     30.0,
+     -15.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.5,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.0,
+    -15.65,
+    0.0
+   ],
+   "end": [
+    42.0,
+    -15.65,
+    0.0
+   ],
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.0,
+    -18.9,
+    0.0
+   ],
+   "end": [
+    42.0,
+    -18.9,
+    0.0
+   ],
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    30.0,
+    -18.7,
+    0.0
+   ],
+   "end": [
+    42.0,
+    -18.7,
+    0.0
+   ],
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     37.6,
+     -22.0,
+     0.0
+    ],
+    [
+     42.0,
+     -22.0,
+     0.0
+    ],
+    [
+     42.0,
+     -18.9,
+     0.0
+    ],
+    [
+     37.6,
+     -18.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      37.6,
+      -22.0,
+      0.0
+     ],
+     [
+      42.0,
+      -22.0,
+      0.0
+     ],
+     [
+      42.0,
+      -18.9,
+      0.0
+     ],
+     [
+      37.6,
+      -18.9,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 8,
+   "angleDeg": 90,
+   "scale": 1.0,
+   "spacing": 0.18,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-VIS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     32.2,
+     -22.0,
+     0.0
+    ],
+    [
+     33.2,
+     -22.0,
+     0.0
+    ],
+    [
+     33.2,
+     -19.6,
+     0.0
+    ],
+    [
+     32.2,
+     -19.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     32.3,
+     -22.0,
+     0.0
+    ],
+    [
+     33.1,
+     -22.0,
+     0.0
+    ],
+    [
+     33.1,
+     -19.7,
+     0.0
+    ],
+    [
+     32.3,
+     -19.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     34.2,
+     -21.1,
+     0.0
+    ],
+    [
+     37.0,
+     -21.1,
+     0.0
+    ],
+    [
+     37.0,
+     -19.5,
+     0.0
+    ],
+    [
+     34.2,
+     -19.5,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    34.9,
+    -21.1,
+    0.0
+   ],
+   "end": [
+    34.9,
+    -19.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    35.6,
+    -21.1,
+    0.0
+   ],
+   "end": [
+    35.6,
+    -19.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    36.3,
+    -21.1,
+    0.0
+   ],
+   "end": [
+    36.3,
+    -19.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     31.2,
+     -18.0,
+     0.0
+    ],
+    [
+     33.8,
+     -18.0,
+     0.0
+    ],
+    [
+     33.8,
+     -16.5,
+     0.0
+    ],
+    [
+     31.2,
+     -16.5,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    31.2,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    31.2,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    31.46,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    31.46,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    31.72,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    31.72,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    31.98,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    31.98,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    32.24,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    32.24,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    32.5,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    32.5,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    32.76,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    32.76,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    33.02,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    33.02,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    33.28,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    33.28,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    33.54,
+    -18.0,
+    0.0
+   ],
+   "end": [
+    33.54,
+    -16.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     35.4,
+     -17.5,
+     0.0
+    ],
+    [
+     36.3,
+     -17.5,
+     0.0
+    ],
+    [
+     36.3,
+     -16.7,
+     0.0
+    ],
+    [
+     35.4,
+     -16.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     39.3,
+     -17.5,
+     0.0
+    ],
+    [
+     40.3,
+     -17.5,
+     0.0
+    ],
+    [
+     40.3,
+     -16.7,
+     0.0
+    ],
+    [
+     39.3,
+     -16.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     31.9,
+     -19.45,
+     0.0
+    ],
+    [
+     33.5,
+     -19.45,
+     0.0
+    ],
+    [
+     33.5,
+     -19.3,
+     0.0
+    ],
+    [
+     31.9,
+     -19.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    42.0,
+    -22.0,
+    0.0
+   ],
+   "end": [
+    43.2,
+    -22.0,
+    0.0
+   ],
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     43.02,
+     -21.82,
+     0.0
+    ],
+    [
+     43.38,
+     -21.82,
+     0.0
+    ],
+    [
+     43.2,
+     -22.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    43.48,
+    -21.94,
+    0.0
+   ],
+   "text": "+0,00",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    42.0,
+    -18.8,
+    0.0
+   ],
+   "end": [
+    43.2,
+    -18.8,
+    0.0
+   ],
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     43.02,
+     -18.62,
+     0.0
+    ],
+    [
+     43.38,
+     -18.62,
+     0.0
+    ],
+    [
+     43.2,
+     -18.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    43.48,
+    -18.74,
+    0.0
+   ],
+   "text": "+3,20",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    42.0,
+    -15.4,
+    0.0
+   ],
+   "end": [
+    43.2,
+    -15.4,
+    0.0
+   ],
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     43.02,
+     -15.22,
+     0.0
+    ],
+    [
+     43.38,
+     -15.22,
+     0.0
+    ],
+    [
+     43.2,
+     -15.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    43.48,
+    -15.34,
+    0.0
+   ],
+   "text": "+6,60",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    36.0,
+    -23.8,
+    0.0
+   ],
+   "text": "ELEVAÇÃO FRONTAL",
+   "height": 0.45,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    36.0,
+    -24.35,
+    0.0
+   ],
+   "text": "ESCALA 1:50",
+   "height": 0.25,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      59.0,
+      -22.5,
+      0.0
+     ],
+     [
+      69.0,
+      -22.5,
+      0.0
+     ],
+     [
+      69.0,
+      -22.0,
+      0.0
+     ],
+     [
+      59.0,
+      -22.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 9,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.12,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    59.0,
+    -22.0,
+    0.0
+   ],
+   "end": [
+    69.0,
+    -22.0,
+    0.0
+   ],
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.6,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.0,
+     -22.0,
+     0.0
+    ],
+    [
+     68.0,
+     -22.0,
+     0.0
+    ],
+    [
+     68.0,
+     -21.9,
+     0.0
+    ],
+    [
+     60.0,
+     -21.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESTRUTURA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.0,
+      -22.0,
+      0.0
+     ],
+     [
+      68.0,
+      -22.0,
+      0.0
+     ],
+     [
+      68.0,
+      -21.9,
+      0.0
+     ],
+     [
+      60.0,
+      -21.9,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.0,
+     -18.9,
+     0.0
+    ],
+    [
+     68.0,
+     -18.9,
+     0.0
+    ],
+    [
+     68.0,
+     -18.7,
+     0.0
+    ],
+    [
+     60.0,
+     -18.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESTRUTURA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.0,
+      -18.9,
+      0.0
+     ],
+     [
+      68.0,
+      -18.9,
+      0.0
+     ],
+     [
+      68.0,
+      -18.7,
+      0.0
+     ],
+     [
+      60.0,
+      -18.7,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.0,
+     -15.8,
+     0.0
+    ],
+    [
+     68.0,
+     -15.8,
+     0.0
+    ],
+    [
+     68.0,
+     -15.6,
+     0.0
+    ],
+    [
+     60.0,
+     -15.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESTRUTURA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.0,
+      -15.8,
+      0.0
+     ],
+     [
+      68.0,
+      -15.8,
+      0.0
+     ],
+     [
+      68.0,
+      -15.6,
+      0.0
+     ],
+     [
+      60.0,
+      -15.6,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.0,
+     -21.9,
+     0.0
+    ],
+    [
+     60.15,
+     -21.9,
+     0.0
+    ],
+    [
+     60.15,
+     -15.0,
+     0.0
+    ],
+    [
+     60.0,
+     -15.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      60.0,
+      -21.9,
+      0.0
+     ],
+     [
+      60.15,
+      -21.9,
+      0.0
+     ],
+     [
+      60.15,
+      -15.0,
+      0.0
+     ],
+     [
+      60.0,
+      -15.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     67.85,
+     -21.9,
+     0.0
+    ],
+    [
+     68.0,
+     -21.9,
+     0.0
+    ],
+    [
+     68.0,
+     -15.0,
+     0.0
+    ],
+    [
+     67.85,
+     -15.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      67.85,
+      -21.9,
+      0.0
+     ],
+     [
+      68.0,
+      -21.9,
+      0.0
+     ],
+     [
+      68.0,
+      -15.0,
+      0.0
+     ],
+     [
+      67.85,
+      -15.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     63.85,
+     -21.9,
+     0.0
+    ],
+    [
+     64.0,
+     -21.9,
+     0.0
+    ],
+    [
+     64.0,
+     -18.9,
+     0.0
+    ],
+    [
+     63.85,
+     -18.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      63.85,
+      -21.9,
+      0.0
+     ],
+     [
+      64.0,
+      -21.9,
+      0.0
+     ],
+     [
+      64.0,
+      -18.9,
+      0.0
+     ],
+     [
+      63.85,
+      -18.9,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     63.15,
+     -18.7,
+     0.0
+    ],
+    [
+     63.3,
+     -18.7,
+     0.0
+    ],
+    [
+     63.3,
+     -15.8,
+     0.0
+    ],
+    [
+     63.15,
+     -15.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      63.15,
+      -18.7,
+      0.0
+     ],
+     [
+      63.3,
+      -18.7,
+      0.0
+     ],
+     [
+      63.3,
+      -15.8,
+      0.0
+     ],
+     [
+      63.15,
+      -15.8,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     64.55,
+     -18.7,
+     0.0
+    ],
+    [
+     64.7,
+     -18.7,
+     0.0
+    ],
+    [
+     64.7,
+     -15.8,
+     0.0
+    ],
+    [
+     64.55,
+     -15.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      64.55,
+      -18.7,
+      0.0
+     ],
+     [
+      64.7,
+      -18.7,
+      0.0
+     ],
+     [
+      64.7,
+      -15.8,
+      0.0
+     ],
+     [
+      64.55,
+      -15.8,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-PAR",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    60.0,
+    -15.0,
+    0.0
+   ],
+   "end": [
+    68.0,
+    -15.0,
+    0.0
+   ],
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "DASHED",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     60.35,
+     -21.9,
+     0.0
+    ],
+    [
+     60.35,
+     -21.693333,
+     0.0
+    ],
+    [
+     60.6,
+     -21.693333,
+     0.0
+    ],
+    [
+     60.6,
+     -21.486667,
+     0.0
+    ],
+    [
+     60.85,
+     -21.486667,
+     0.0
+    ],
+    [
+     60.85,
+     -21.28,
+     0.0
+    ],
+    [
+     61.1,
+     -21.28,
+     0.0
+    ],
+    [
+     61.1,
+     -21.073333,
+     0.0
+    ],
+    [
+     61.35,
+     -21.073333,
+     0.0
+    ],
+    [
+     61.35,
+     -20.866667,
+     0.0
+    ],
+    [
+     61.6,
+     -20.866667,
+     0.0
+    ],
+    [
+     61.6,
+     -20.66,
+     0.0
+    ],
+    [
+     61.85,
+     -20.66,
+     0.0
+    ],
+    [
+     61.85,
+     -20.453333,
+     0.0
+    ],
+    [
+     62.1,
+     -20.453333,
+     0.0
+    ],
+    [
+     62.1,
+     -20.246667,
+     0.0
+    ],
+    [
+     62.35,
+     -20.246667,
+     0.0
+    ],
+    [
+     62.35,
+     -20.04,
+     0.0
+    ],
+    [
+     62.6,
+     -20.04,
+     0.0
+    ],
+    [
+     62.6,
+     -19.833333,
+     0.0
+    ],
+    [
+     62.85,
+     -19.833333,
+     0.0
+    ],
+    [
+     62.85,
+     -19.626667,
+     0.0
+    ],
+    [
+     63.1,
+     -19.626667,
+     0.0
+    ],
+    [
+     63.1,
+     -19.42,
+     0.0
+    ],
+    [
+     63.35,
+     -19.42,
+     0.0
+    ],
+    [
+     63.35,
+     -19.213333,
+     0.0
+    ],
+    [
+     63.6,
+     -19.213333,
+     0.0
+    ],
+    [
+     63.6,
+     -19.006667,
+     0.0
+    ],
+    [
+     63.85,
+     -19.006667,
+     0.0
+    ],
+    [
+     63.85,
+     -18.8,
+     0.0
+    ],
+    [
+     63.85,
+     -18.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    60.6,
+    -20.65,
+    0.0
+   ],
+   "end": [
+    63.7,
+    -17.95,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    60.6,
+    -21.643333,
+    0.0
+   ],
+   "end": [
+    60.6,
+    -20.743333,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.1,
+    -21.23,
+    0.0
+   ],
+   "end": [
+    61.1,
+    -20.33,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    61.6,
+    -20.816667,
+    0.0
+   ],
+   "end": [
+    61.6,
+    -19.916667,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    62.1,
+    -20.403333,
+    0.0
+   ],
+   "end": [
+    62.1,
+    -19.503333,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    62.6,
+    -19.99,
+    0.0
+   ],
+   "end": [
+    62.6,
+    -19.09,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    63.1,
+    -19.576667,
+    0.0
+   ],
+   "end": [
+    63.1,
+    -18.676667,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    63.6,
+    -19.163333,
+    0.0
+   ],
+   "end": [
+    63.6,
+    -18.263333,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    60.35,
+    -18.7,
+    0.0
+   ],
+   "end": [
+    60.35,
+    -17.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    60.35,
+    -17.6,
+    0.0
+   ],
+   "end": [
+    63.85,
+    -17.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     64.0,
+     -21.9,
+     0.0
+    ],
+    [
+     64.9,
+     -21.9,
+     0.0
+    ],
+    [
+     64.9,
+     -19.8,
+     0.0
+    ],
+    [
+     64.0,
+     -19.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    68.0,
+    -21.9,
+    0.0
+   ],
+   "p2": [
+    68.0,
+    -18.9,
+    0.0
+   ],
+   "p3": [
+    69.2,
+    -20.4,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    68.0,
+    -18.7,
+    0.0
+   ],
+   "p2": [
+    68.0,
+    -15.8,
+    0.0
+   ],
+   "p3": [
+    69.2,
+    -17.25,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    60.0,
+    -22.0,
+    0.0
+   ],
+   "p2": [
+    60.0,
+    -15.0,
+    0.0
+   ],
+   "p3": [
+    58.8,
+    -18.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     68.42,
+     -21.72,
+     0.0
+    ],
+    [
+     68.78,
+     -21.72,
+     0.0
+    ],
+    [
+     68.6,
+     -21.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    68.88,
+    -21.84,
+    0.0
+   ],
+   "text": "+0,05",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     68.42,
+     -18.62,
+     0.0
+    ],
+    [
+     68.78,
+     -18.62,
+     0.0
+    ],
+    [
+     68.6,
+     -18.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    68.88,
+    -18.74,
+    0.0
+   ],
+   "text": "+3,20",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     68.42,
+     -15.42,
+     0.0
+    ],
+    [
+     68.78,
+     -15.42,
+     0.0
+    ],
+    [
+     68.6,
+     -15.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    68.88,
+    -15.54,
+    0.0
+   ],
+   "text": "+6,40",
+   "height": 0.18,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    62.0,
+    -20.1,
+    0.0
+   ],
+   "text": "ESCADA\n15 × 20,7/25 cm",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    66.0,
+    -20.5,
+    0.0
+   ],
+   "text": "ESTAR",
+   "height": 0.2,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    66.0,
+    -17.4,
+    0.0
+   ],
+   "text": "CORREDOR / QUARTOS",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    64.0,
+    -23.8,
+    0.0
+   ],
+   "text": "CORTE AA",
+   "height": 0.45,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    64.0,
+    -24.35,
+    0.0
+   ],
+   "text": "ESCALA 1:50",
+   "height": 0.25,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     15.0,
+     0.0,
+     0.0
+    ],
+    [
+     15.0,
+     20.0,
+     0.0
+    ],
+    [
+     0.0,
+     20.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.5,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    -2.0,
+    -2.2,
+    0.0
+   ],
+   "end": [
+    17.0,
+    -2.2,
+    0.0
+   ],
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    -2.0,
+    -6.0,
+    0.0
+   ],
+   "end": [
+    17.0,
+    -6.0,
+    0.0
+   ],
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    7.5,
+    -4.4,
+    0.0
+   ],
+   "text": "RUA DAS PALMEIRAS",
+   "height": 0.6,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "italic": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      -2.0,
+      -2.2,
+      0.0
+     ],
+     [
+      17.0,
+      -2.2,
+      0.0
+     ],
+     [
+      17.0,
+      0.0,
+      0.0
+     ],
+     [
+      -2.0,
+      0.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 3,
+   "angleDeg": 0,
+   "scale": 1.0,
+   "spacing": 0.8,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     1.5,
+     5.0,
+     0.0
+    ],
+    [
+     13.5,
+     5.0,
+     0.0
+    ],
+    [
+     13.5,
+     13.0,
+     0.0
+    ],
+    [
+     1.5,
+     13.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.5,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      1.5,
+      5.0,
+      0.0
+     ],
+     [
+      13.5,
+      5.0,
+      0.0
+     ],
+     [
+      13.5,
+      13.0,
+      0.0
+     ],
+     [
+      1.5,
+      13.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 1,
+   "angleDeg": 45,
+   "scale": 1.0,
+   "spacing": 0.5,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-VIS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    7.5,
+    9.3,
+    0.0
+   ],
+   "text": "RESIDÊNCIA\n2 PAVIMENTOS",
+   "height": 0.45,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     3.7,
+     0.0,
+     0.0
+    ],
+    [
+     6.7,
+     0.0,
+     0.0
+    ],
+    [
+     6.7,
+     5.0,
+     0.0
+    ],
+    [
+     3.7,
+     5.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      3.7,
+      0.0,
+      0.0
+     ],
+     [
+      6.7,
+      0.0,
+      0.0
+     ],
+     [
+      6.7,
+      5.0,
+      0.0
+     ],
+     [
+      3.7,
+      5.0,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 3,
+   "angleDeg": 0,
+   "scale": 1.0,
+   "spacing": 0.5,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     2.0,
+     14.2,
+     0.0
+    ],
+    [
+     7.0,
+     14.2,
+     0.0
+    ],
+    [
+     7.0,
+     18.6,
+     0.0
+    ],
+    [
+     2.0,
+     18.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISCINA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      2.0,
+      14.2,
+      0.0
+     ],
+     [
+      7.0,
+      14.2,
+      0.0
+     ],
+     [
+      7.0,
+      18.6,
+      0.0
+     ],
+     [
+      2.0,
+      18.6,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 0,
+   "angleDeg": 0,
+   "scale": 1.0,
+   "spacing": 0.28,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "PISCINA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    4.5,
+    16.3,
+    0.0
+   ],
+   "text": "PISCINA",
+   "height": 0.35,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     8.0,
+     13.8,
+     0.0
+    ],
+    [
+     14.5,
+     13.8,
+     0.0
+    ],
+    [
+     14.5,
+     19.4,
+     0.0
+    ],
+    [
+     8.0,
+     19.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      8.0,
+      13.8,
+      0.0
+     ],
+     [
+      14.5,
+      13.8,
+      0.0
+     ],
+     [
+      14.5,
+      19.4,
+      0.0
+     ],
+     [
+      8.0,
+      19.4,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 8,
+   "angleDeg": 90,
+   "scale": 1.0,
+   "spacing": 0.3,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "HACH-VIS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    11.2,
+    16.4,
+    0.0
+   ],
+   "text": "DECK",
+   "height": 0.35,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    13.8,
+    2.2,
+    0.0
+   ],
+   "radius": 1.0,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    13.8,
+    2.2,
+    0.0
+   ],
+   "radius": 0.55,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "POINT",
+   "position": [
+    13.8,
+    2.2,
+    0.0
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    1.6,
+    2.6,
+    0.0
+   ],
+   "radius": 0.8,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    1.6,
+    2.6,
+    0.0
+   ],
+   "radius": 0.44000000000000006,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "POINT",
+   "position": [
+    1.6,
+    2.6,
+    0.0
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    14.0,
+    10.5,
+    0.0
+   ],
+   "radius": 0.9,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    14.0,
+    10.5,
+    0.0
+   ],
+   "radius": 0.49500000000000005,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "POINT",
+   "position": [
+    14.0,
+    10.5,
+    0.0
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    0.9,
+    18.8,
+    0.0
+   ],
+   "radius": 0.7,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    0.9,
+    18.8,
+    0.0
+   ],
+   "radius": 0.385,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "POINT",
+   "position": [
+    0.9,
+    18.8,
+    0.0
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    7.6,
+    19.2,
+    0.0
+   ],
+   "radius": 0.6,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    7.6,
+    19.2,
+    0.0
+   ],
+   "radius": 0.33,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "POINT",
+   "position": [
+    7.6,
+    19.2,
+    0.0
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    17.3,
+    17.5,
+    0.0
+   ],
+   "radius": 1.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     16.95,
+     16.95,
+     0.0
+    ],
+    [
+     17.3,
+     18.25,
+     0.0
+    ],
+    [
+     17.65,
+     16.95,
+     0.0
+    ],
+    [
+     17.3,
+     17.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      16.95,
+      16.95,
+      0.0
+     ],
+     [
+      17.3,
+      18.25,
+      0.0
+     ],
+     [
+      17.3,
+      17.3,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 4,
+   "angleDeg": 45.0,
+   "scale": 1.0,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    17.3,
+    18.65,
+    0.0
+   ],
+   "text": "N",
+   "height": 0.4,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    0.0,
+    20.0,
+    0.0
+   ],
+   "p2": [
+    15.0,
+    20.0,
+    0.0
+   ],
+   "p3": [
+    7.5,
+    21.4,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    0.0,
+    20.0,
+    0.0
+   ],
+   "p3": [
+    -1.4,
+    10.0,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    1.5,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    1.5,
+    5.0,
+    0.0
+   ],
+   "p3": [
+    0.7,
+    2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    0.0,
+    13.0,
+    0.0
+   ],
+   "p2": [
+    1.5,
+    13.0,
+    0.0
+   ],
+   "p3": [
+    0.75,
+    13.8,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    13.5,
+    13.0,
+    0.0
+   ],
+   "p2": [
+    13.5,
+    20.0,
+    0.0
+   ],
+   "p3": [
+    14.3,
+    16.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    7.5,
+    -8.0,
+    0.0
+   ],
+   "text": "IMPLANTAÇÃO",
+   "height": 0.45,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    7.5,
+    -8.55,
+    0.0
+   ],
+   "text": "ESCALA 1:100",
+   "height": 0.25,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  }
+ ]
+}

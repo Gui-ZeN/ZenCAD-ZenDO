@@ -1,0 +1,934 @@
+{
+    "app": "ZenCAD",
+    "blocks": [
+    ],
+    "currentDim": "Standard",
+    "currentLayout": 0,
+    "currentText": "Standard",
+    "dimStyles": [
+        {
+            "annotative": false,
+            "arrowSize": -1,
+            "arrowType": 0,
+            "decimals": 2,
+            "name": "Standard",
+            "suffix": "",
+            "textHeight": 2.5,
+            "tolMinus": 0,
+            "tolPlus": 0
+        }
+    ],
+    "entities": [
+        {
+            "colorMode": "byLayer",
+            "end": [
+                0,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.2,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                0,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                0,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.2,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                0,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.2,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.2,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.2,
+                0.9,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                3,
+                0.9,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.2,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.2,
+                0.9,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                3,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.2,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                3,
+                0.9,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                3,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.2,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                3,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.2,
+                2.4,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.2,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                3,
+                2.4,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.2,
+                2.4,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                3,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                3,
+                2.4,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                3,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                7.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                3,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                3,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                7.6,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                3,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                7.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                7.6,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                7.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                8.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                7.6,
+                2.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                7.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                8.6,
+                2.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                7.6,
+                2.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                8.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                8.6,
+                2.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                8.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                11.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                8.6,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                8.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                11.6,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                8.6,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                11.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                11.6,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                11.6,
+                0.9,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                14.6,
+                0.9,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                11.6,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                11.6,
+                0.9,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                14.6,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                11.6,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                14.6,
+                0.9,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                14.6,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                11.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                14.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                11.6,
+                2.4,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                11.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                14.6,
+                2.4,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                11.6,
+                2.4,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                14.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                14.6,
+                2.4,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                14.6,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                16,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                14.6,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                14.6,
+                3.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                16,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                14.6,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                16,
+                3.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                16,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                7.640000000000001,
+                0.9,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                8.56,
+                0.9,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                8.56,
+                0,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                7.640000000000001,
+                0,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                12.200000000000001,
+                2.3753246753246753,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                12.200000000000001,
+                0.925974025974026,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                12.200000000000001,
+                2.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                12.200000000000001,
+                2.38,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                13.100000000000001,
+                2.1,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                12.200000000000001,
+                2.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                13.100000000000001,
+                2.38,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                13.100000000000001,
+                2.1,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                13.100000000000001,
+                0.9259740259740261,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                13.100000000000001,
+                2.3753246753246753,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                13,
+                2.0935064935064935,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                13,
+                0.925974025974026,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.8,
+                2.3753246753246753,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.8,
+                0.925974025974026,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        },
+        {
+            "colorMode": "byLayer",
+            "end": [
+                1.95,
+                0.9259740259740261,
+                0
+            ],
+            "layer": "ARESTAS",
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "start": [
+                1.95,
+                2.3753246753246753,
+                0
+            ],
+            "type": "LINE",
+            "visible": true
+        }
+    ],
+    "groups": [
+    ],
+    "layerStates": [
+    ],
+    "layers": [
+        {
+            "color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "frozen": false,
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "locked": false,
+            "name": "0",
+            "on": true
+        },
+        {
+            "color": [
+                150,
+                145,
+                130,
+                255
+            ],
+            "frozen": false,
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "locked": false,
+            "name": "ARESTAS",
+            "on": true
+        },
+        {
+            "color": [
+                235,
+                230,
+                215,
+                255
+            ],
+            "frozen": false,
+            "lineType": "ByLayer",
+            "lineWeightMm": -1,
+            "locked": false,
+            "name": "CORTE",
+            "on": true
+        }
+    ],
+    "layouts": [
+        {
+            "author": "",
+            "date": "",
+            "landscape": true,
+            "marginMm": 10,
+            "name": "Prancha 1",
+            "paper": 1,
+            "project": "",
+            "scaleLabel": "",
+            "title": "",
+            "viewports": [
+            ]
+        }
+    ],
+    "settings": {
+        "annoMmPerUnit": 1,
+        "currentLayer": "ARESTAS",
+        "ltScale": 1,
+        "ucsAngle": 0,
+        "ucsOx": 0,
+        "ucsOy": 0,
+        "unitDecimals": 2,
+        "unitIndex": 0,
+        "unitSuffix": ""
+    },
+    "textStyles": [
+        {
+            "annotative": false,
+            "font": "Arial",
+            "height": 2.5,
+            "name": "Standard"
+        }
+    ],
+    "version": 1
+}

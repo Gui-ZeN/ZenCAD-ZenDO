@@ -1,0 +1,137 @@
+﻿Bricks104 -> Tijolo 104
+Bricks102 -> Tijolo 102
+Bricks101 -> Tijolo 101
+Bricks075A -> Tijolo 075A
+Bricks085 -> Tijolo 085
+Bricks094 -> Tijolo 094
+Bricks092 -> Tijolo 092
+Bricks060 -> Tijolo 060
+Bricks066 -> Tijolo 066
+Bricks059 -> Tijolo 059
+Bricks084 -> Tijolo 084
+WoodFloor064 -> Piso madeira 064
+WoodFloor070 -> Piso madeira 070
+WoodFloor040 -> Piso madeira 040
+WoodFloor041 -> Piso madeira 041
+Planks037A -> Piso madeira 037A
+WoodFloor062 -> Piso madeira 062
+WoodFloor071 -> Piso madeira 071
+WoodFloor052 -> Piso madeira 052
+Planks023A -> Tábuas 023A
+WoodFloor039 -> Tábuas 039
+Wood095 -> Madeira 095
+Wood094 -> Madeira 094
+Wood092 -> Madeira 092
+Wood051 -> Madeira 051
+Wood066 -> Madeira 066
+Wood049 -> Madeira 049
+Concrete048 -> Concreto 048
+Concrete047A -> Concreto 047A
+Concrete046 -> Concreto 046
+Concrete042A -> Concreto 042A
+Concrete031 -> Concreto 031
+Concrete030 -> Concreto 030
+Concrete044D -> Concreto 044D
+Concrete036 -> Concreto 036
+Concrete032 -> Concreto 032
+PaintedPlaster017 -> Reboco 017
+Plaster007 -> Reboco 007
+Plaster002 -> Reboco 002
+Plaster003 -> Reboco 003
+Plaster004 -> Reboco 004
+Onyx015 -> Mármore 015
+Travertine009 -> Mármore 009
+Marble016 -> Mármore 016
+Marble021 -> Mármore 021
+Marble006 -> Mármore 006
+Onyx013 -> Mármore 013
+Marble014 -> Mármore 014
+Granite002A -> Granito 002A
+Granite002B -> Granito 002B
+Granite001A -> Granito 001A
+Granite005A -> Granito 005A
+Granite005B -> Granito 005B
+Travertine005 -> Travertino 005
+Travertine004 -> Travertino 004
+Travertine003 -> Travertino 003
+Tiles040 -> Granilite 040
+Terrazzo013 -> Granilite 013
+Tiles043 -> Granilite 043
+Terrazzo018 -> Granilite 018
+Tiles139 -> Ladrilho 139
+Tiles140 -> Ladrilho 140
+Tiles143 -> Ladrilho 143
+Tiles142 -> Ladrilho 142
+Tiles144 -> Ladrilho 144
+Tiles138 -> Ladrilho 138
+Tiles107 -> Ladrilho 107
+Tiles133A -> Ladrilho 133A
+RoofingTiles014A -> Ladrilho 014A
+RoofingTiles014B -> Telha 014B
+RoofingTiles012B -> Telha 012B
+Grass001 -> Grama 001
+Grass004 -> Grama 004
+Ground037 -> Grama 037
+Snow015 -> Grama 015
+Grass008 -> Grama 008
+Ground103 -> Terra 103
+Ground068 -> Terra 068
+Ground080 -> Terra 080
+Ground079S -> Brita 079S
+Gravel023 -> Brita 023
+Ground081 -> Brita 081
+Gravel041 -> Brita 041
+Rock064 -> Rocha 064
+Rock063 -> Rocha 063
+Rock058 -> Rocha 058
+Rock051 -> Rocha 051
+Rock060 -> Rocha 060
+PavingStones138 -> Calçamento 138
+PavingStones128 -> Calçamento 128
+PavingStones142 -> Calçamento 142
+PavingStones146 -> Calçamento 146
+PavingStones147 -> Calçamento 147
+PavingStones149 -> Calçamento 149
+PavingStones070 -> Calçamento 070
+PavingStones125A -> Calçamento 125A
+PavingStones136 -> Calçamento 136
+Metal049A -> Metal 049A
+Metal055A -> Metal 055A
+Metal046B -> Metal 046B
+Metal048A -> Metal 048A
+Metal061B -> Metal 061B
+Metal032 -> Metal 032
+CorrugatedSteel007A -> Telha metálica 007A
+CorrugatedSteel005 -> Telha metálica 005
+Road012A -> Asfalto 012A
+Road007 -> Asfalto 007
+Road008A -> Asfalto 008A
+Road013A -> Asfalto 013A
+Fabric028 -> Carpete 028
+Fabric023 -> Carpete 023
+Carpet012 -> Carpete 012
+Fabric026 -> Carpete 026
+Fabric081C -> Tecido 081C
+Fabric061 -> Tecido 061
+Fabric066 -> Tecido 066
+Fabric083 -> Tecido 083
+Fabric030 -> Tecido 030
+Fabric036 -> Tecido 036
+Fabric082A -> Tecido 082A
+Leather037 -> Couro 037
+Leather038 -> Couro 038
+Leather030 -> Couro 030
+Leather026 -> Couro 026
+Cork004 -> Cortiça 004
+Cork003 -> Cortiça 003
+Wallpaper001A -> Papel de parede 001A
+Wallpaper002A -> Papel de parede 002A
+Wallpaper001B -> Papel de parede 001B
+Wallpaper001C -> Papel de parede 001C
+Bamboo001C -> Bambu 001C
+Wicker013 -> Bambu 013
+Wicker010A -> Palhinha 010A
+Paper005 -> Papelão 005
+Cardboard002 -> Papelão 002
+OfficeCeiling001 -> Forro 001
+OfficeCeiling002 -> Forro 002

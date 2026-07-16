@@ -1,0 +1,30 @@
+Texturas fotográficas da biblioteca do Zendo (R10 + R11)
+==========================================================
+
+Origem: ambientCG (https://ambientcg.com) — mapas "Color" dos materiais
+1K-JPG, renomeados em pt-BR. A R11 varreu ~30 categorias de arquitetura
+(152 materiais no total); o mapa assetId -> nome está em PROCEDENCIA.txt.
+A pasta thumbs/ guarda as miniaturas 64px usadas pela paleta (carregamento
+preguiçoso — a imagem cheia só é lida quando o material é usado).
+
+Licença: Creative Commons CC0 1.0 Universal (domínio público).
+Sem exigência de atribuição; uso comercial permitido.
+https://docs.ambientcg.com/license/
+
+Ativos curados da R10 (nomes especiais):
+  Tijolo rústico ......... Bricks097
+  Parquet carvalho ....... WoodFloor051
+  Madeira de demolição ... WoodFloor043
+  Concreto aparente ...... Concrete034
+  Reboco branco .......... Plaster001
+  Mármore cinza .......... Marble012
+  Piso travertino ........ Tiles141
+  Telha de barro ......... RoofingTiles006
+  Gramado ................ Grass005
+  Brita .................. Gravel043
+  Chapa de aço ........... Metal063
+  Asfalto ................ Asphalt031
+  Terra batida ........... Ground054
+  Pedra portuguesa ....... PavingStones150
+  Carpete bege ........... Carpet016
+  Telha metálica ......... CorrugatedSteel009

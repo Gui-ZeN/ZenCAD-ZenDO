@@ -1,0 +1,39 @@
+# CadCore / ecossistema Zen — o que NÃO entra no histórico.
+# Critério (R49): sai o que é REGENERÁVEL a partir do que fica. Os ~2,6 GB
+# abaixo nascem de scripts/build_release.bat + ISCC. O que sobra (~75 MB) é
+# fonte de verdade — inclusive os assets CC0, que SÃO o produto (sem eles o
+# app builda sem textura nenhuma).
+/build/
+/out/
+*.user
+.vs/
+CMakeUserPresets.json
+
+# --- artefatos de build e instaladores (R49: 1,2 GB + 1,5 GB) ---
+/build-app/
+/build-app-rel/
+/dist/
+
+# --- motor de render: o app baixa sob demanda (R47) e nós nunca
+#     redistribuímos (GPL, roda como processo separado) ---
+blender-*-windows-x64/
+blender.zip
+
+# --- recuperação do app (mora em %APPDATA%, mas por garantia) ---
+*.zendo~
+auto.zendo
+oferta.zendo
+sessao.aberta
+sessao.lock
+
+# --- logs de build (R49: 13 deles estavam largados na raiz) ---
+release_build*.log
+*.log
+
+# --- lixo de editor/SO/Python ---
+*.suo
+.vscode/
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc

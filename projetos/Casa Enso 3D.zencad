@@ -1,0 +1,6523 @@
+{
+ "app": "ZenCAD",
+ "version": 1,
+ "settings": {
+  "ltScale": 0.05,
+  "unitIndex": 3,
+  "unitDecimals": 2,
+  "unitSuffix": " m",
+  "currentLayer": "PAREDES",
+  "annoMmPerUnit": 20.0
+ },
+ "layers": [
+  {
+   "name": "0",
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "PAREDES",
+   "color": [
+    232,
+    232,
+    232,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.5,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "HACH-PAR",
+   "color": [
+    96,
+    100,
+    108,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "ESQUADRIAS",
+   "color": [
+    95,
+    180,
+    196,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.25,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "MOBILIARIO",
+   "color": [
+    128,
+    133,
+    143,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.18,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "COTAS",
+   "color": [
+    225,
+    200,
+    90,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "TEXTO",
+   "color": [
+    235,
+    235,
+    235,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "TITULO",
+   "color": [
+    194,
+    160,
+    99,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.35,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "SIMBOLOS",
+   "color": [
+    220,
+    82,
+    82,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.3,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "TERRENO",
+   "color": [
+    124,
+    178,
+    124,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": 0.35,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "VEGETACAO",
+   "color": [
+    110,
+    170,
+    110,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "FLORACAO",
+   "color": [
+    222,
+    140,
+    160,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "PISO",
+   "color": [
+    110,
+    114,
+    122,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  },
+  {
+   "name": "PISCINA",
+   "color": [
+    95,
+    155,
+    205,
+    255
+   ],
+   "lineType": "CONTINUOUS",
+   "lineWeightMm": -1.0,
+   "on": true,
+   "frozen": false,
+   "locked": false
+  }
+ ],
+ "layerStates": [
+  {
+   "name": "APRESENTAÇÃO LIMPA",
+   "layers": [
+    {
+     "name": "0",
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "PAREDES",
+     "color": [
+      232,
+      232,
+      232,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": 0.5,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "HACH-PAR",
+     "color": [
+      96,
+      100,
+      108,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "ESQUADRIAS",
+     "color": [
+      95,
+      180,
+      196,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": 0.25,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "MOBILIARIO",
+     "color": [
+      128,
+      133,
+      143,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": 0.18,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "COTAS",
+     "color": [
+      225,
+      200,
+      90,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": false,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "TEXTO",
+     "color": [
+      235,
+      235,
+      235,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "TITULO",
+     "color": [
+      194,
+      160,
+      99,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": 0.35,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "SIMBOLOS",
+     "color": [
+      220,
+      82,
+      82,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": 0.3,
+     "on": false,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "TERRENO",
+     "color": [
+      124,
+      178,
+      124,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": 0.35,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "VEGETACAO",
+     "color": [
+      110,
+      170,
+      110,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "FLORACAO",
+     "color": [
+      222,
+      140,
+      160,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "PISO",
+     "color": [
+      110,
+      114,
+      122,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    },
+    {
+     "name": "PISCINA",
+     "color": [
+      95,
+      155,
+      205,
+      255
+     ],
+     "lineType": "CONTINUOUS",
+     "lineWeightMm": -1.0,
+     "on": true,
+     "frozen": false,
+     "locked": false
+    }
+   ]
+  }
+ ],
+ "dimStyles": [
+  {
+   "name": "Standard",
+   "textHeight": 3.6,
+   "arrowSize": 2.0,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "annotative": true
+  }
+ ],
+ "currentDim": "Standard",
+ "textStyles": [
+  {
+   "name": "Standard",
+   "height": 3.2,
+   "font": "Arial",
+   "annotative": true
+  }
+ ],
+ "currentText": "Standard",
+ "blocks": [
+  {
+   "name": "ARVORE",
+   "base": [
+    0,
+    0,
+    0
+   ],
+   "attdefs": [],
+   "members": [
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 0.92,
+     "startAngle": -0.20943951023931956,
+     "endAngle": 0.6981317007977318,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 1.12,
+     "startAngle": 0.5759586531581288,
+     "endAngle": 1.4835298641951802,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 0.92,
+     "startAngle": 1.361356816555577,
+     "endAngle": 2.2689280275926285,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 1.12,
+     "startAngle": 2.1467549799530254,
+     "endAngle": 3.0543261909900767,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 0.92,
+     "startAngle": 2.9321531433504737,
+     "endAngle": 3.839724354387525,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 1.12,
+     "startAngle": 3.717551306747922,
+     "endAngle": 4.625122517784973,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 0.92,
+     "startAngle": 4.50294947014537,
+     "endAngle": 5.410520681182422,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "ARC",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 1.12,
+     "startAngle": 5.288347633542818,
+     "endAngle": 6.19591884457987,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "CIRCLE",
+     "center": [
+      0,
+      0,
+      0.0
+     ],
+     "radius": 0.12,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "CIRCLE",
+     "center": [
+      0.45,
+      0.55,
+      0.0
+     ],
+     "radius": 0.09,
+     "layer": "FLORACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "CIRCLE",
+     "center": [
+      -0.6,
+      0.3,
+      0.0
+     ],
+     "radius": 0.09,
+     "layer": "FLORACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "CIRCLE",
+     "center": [
+      0.1,
+      -0.7,
+      0.0
+     ],
+     "radius": 0.09,
+     "layer": "FLORACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "CIRCLE",
+     "center": [
+      -0.3,
+      -0.45,
+      0.0
+     ],
+     "radius": 0.09,
+     "layer": "FLORACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "CIRCLE",
+     "center": [
+      0.62,
+      -0.2,
+      0.0
+     ],
+     "radius": 0.09,
+     "layer": "FLORACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "PEDRA",
+   "base": [
+    0,
+    0,
+    0
+   ],
+   "attdefs": [],
+   "members": [
+    {
+     "type": "LWPOLYLINE",
+     "vertices": [
+      [
+       -0.5,
+       -0.28,
+       0.0
+      ],
+      [
+       -0.15,
+       -0.42,
+       0.0
+      ],
+      [
+       0.42,
+       -0.3,
+       0.0
+      ],
+      [
+       0.55,
+       0.05,
+       0.0
+      ],
+      [
+       0.25,
+       0.38,
+       0.0
+      ],
+      [
+       -0.28,
+       0.42,
+       0.0
+      ],
+      [
+       -0.55,
+       0.1,
+       0.0
+      ]
+     ],
+     "bulges": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "closed": true,
+     "width": 0.0,
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "LINE",
+     "start": [
+      -0.3,
+      -0.1,
+      0.0
+     ],
+     "end": [
+      0.2,
+      0.18,
+      0.0
+     ],
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    },
+    {
+     "type": "LINE",
+     "start": [
+      -0.05,
+      -0.25,
+      0.0
+     ],
+     "end": [
+      0.3,
+      -0.02,
+      0.0
+     ],
+     "layer": "VEGETACAO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    }
+   ]
+  },
+  {
+   "name": "TERRENO",
+   "base": [
+    0,
+    0,
+    0
+   ],
+   "attdefs": [],
+   "members": [
+    {
+     "type": "LWPOLYLINE",
+     "vertices": [
+      [
+       -5,
+       -4.5,
+       0.0
+      ],
+      [
+       21,
+       -4.5,
+       0.0
+      ],
+      [
+       21,
+       13.5,
+       0.0
+      ],
+      [
+       -5,
+       13.5,
+       0.0
+      ]
+     ],
+     "bulges": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "closed": true,
+     "width": 0.0,
+     "layer": "TERRENO",
+     "colorMode": "byLayer",
+     "lineType": "ByLayer",
+     "lineWeightMm": -1.0,
+     "visible": true
+    }
+   ]
+  }
+ ],
+ "xrefs": [
+  {
+   "name": "TERRENO",
+   "path": "Terreno Enso.zencad"
+  }
+ ],
+ "layouts": [
+  {
+   "name": "01 IMPLANTAÇÃO",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "IMPLANTAÇÃO NO LOTE",
+   "project": "CASA ENSŌ — RESIDÊNCIA DE UMA IA",
+   "author": "Claude · ZenCAD",
+   "date": "03/07/2026",
+   "scaleLabel": "1:100",
+   "viewports": [
+    {
+     "xMm": 107.0,
+     "yMm": 99.0,
+     "wMm": 320,
+     "hMm": 250,
+     "modelCx": 8.0,
+     "modelCy": 4.5,
+     "mmPerUnit": 10.0,
+     "scaleDenom": 100.0,
+     "frozenLayers": [
+      "COTAS",
+      "MOBILIARIO",
+      "TEXTO",
+      "TITULO"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "02 PLANTA BAIXA",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "PLANTA BAIXA — TÉRREO ÚNICO",
+   "project": "CASA ENSŌ — RESIDÊNCIA DE UMA IA",
+   "author": "Claude · ZenCAD",
+   "date": "03/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 47.0,
+     "yMm": 49.0,
+     "wMm": 440,
+     "hMm": 350,
+     "modelCx": 8.0,
+     "modelCy": 3.6,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0,
+     "frozenLayers": [
+      "TERRENO"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "03 ESTÚDIO E PÁTIO",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "DETALHE — ESTÚDIO-BIBLIOTECA E PÁTIO",
+   "project": "CASA ENSŌ — RESIDÊNCIA DE UMA IA",
+   "author": "Claude · ZenCAD",
+   "date": "03/07/2026",
+   "scaleLabel": "1:20",
+   "viewports": [
+    {
+     "xMm": 27.0,
+     "yMm": 74.0,
+     "wMm": 480,
+     "hMm": 300,
+     "modelCx": 5.8,
+     "modelCy": 5.5,
+     "mmPerUnit": 50.0,
+     "scaleDenom": 20.0,
+     "frozenLayers": [
+      "TERRENO",
+      "COTAS"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "04 ELEVAÇÕES N-S",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "ELEVAÇÕES NORTE E SUL",
+   "project": "CASA ENSŌ — RESIDÊNCIA DE UMA IA",
+   "author": "Claude · ZenCAD",
+   "date": "03/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 47.0,
+     "yMm": 84.0,
+     "wMm": 440,
+     "hMm": 280,
+     "modelCx": 8.0,
+     "modelCy": -16.4,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0
+    }
+   ]
+  },
+  {
+   "name": "05 ELEVAÇÕES L-O",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "ELEVAÇÕES LESTE E OESTE",
+   "project": "CASA ENSŌ — RESIDÊNCIA DE UMA IA",
+   "author": "Claude · ZenCAD",
+   "date": "03/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 87.0,
+     "yMm": 84.0,
+     "wMm": 360,
+     "hMm": 280,
+     "modelCx": 26.0,
+     "modelCy": -16.4,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0
+    }
+   ]
+  },
+  {
+   "name": "06 JARDIM ENSŌ",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "O JARDIM SECO — KARESANSUI",
+   "project": "CASA ENSŌ — RESIDÊNCIA DE UMA IA",
+   "author": "Claude · ZenCAD",
+   "date": "03/07/2026",
+   "scaleLabel": "1:25",
+   "viewports": [
+    {
+     "xMm": 117.0,
+     "yMm": 114.0,
+     "wMm": 300,
+     "hMm": 220,
+     "modelCx": 8.5,
+     "modelCy": 5.6,
+     "mmPerUnit": 40.0,
+     "scaleDenom": 25.0,
+     "frozenLayers": [
+      "TERRENO",
+      "COTAS",
+      "MOBILIARIO"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "07 CORTES",
+   "paper": 2,
+   "landscape": true,
+   "marginMm": 10.0,
+   "title": "CORTES AA E BB",
+   "project": "CASA ENSŌ — RESIDÊNCIA DE UMA IA",
+   "author": "Claude · ZenCAD",
+   "date": "03/07/2026",
+   "scaleLabel": "1:50",
+   "viewports": [
+    {
+     "xMm": 57.0,
+     "yMm": 74.0,
+     "wMm": 420,
+     "hMm": 300,
+     "modelCx": 8.2,
+     "modelCy": -31.6,
+     "mmPerUnit": 20.0,
+     "scaleDenom": 50.0,
+     "frozenLayers": [
+      "TERRENO"
+     ]
+    }
+   ]
+  }
+ ],
+ "currentLayout": 1,
+ "entities": [
+  {
+   "type": "LINE",
+   "start": [
+    6.0,
+    3.3995,
+    0.0
+   ],
+   "end": [
+    7.6,
+    3.3995,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.0,
+    3.4505,
+    0.0
+   ],
+   "end": [
+    7.6,
+    3.4505,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.0,
+    7.5495,
+    0.0
+   ],
+   "end": [
+    7.6,
+    7.5495,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.0,
+    7.6005,
+    0.0
+   ],
+   "end": [
+    7.6,
+    7.6005,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    8.6,
+    3.3995,
+    0.0
+   ],
+   "end": [
+    11.0,
+    3.3995,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    8.6,
+    3.4505,
+    0.0
+   ],
+   "end": [
+    11.0,
+    3.4505,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    8.6,
+    7.5495,
+    0.0
+   ],
+   "end": [
+    11.0,
+    7.5495,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    8.6,
+    7.6005,
+    0.0
+   ],
+   "end": [
+    11.0,
+    7.6005,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    5.8995,
+    3.5,
+    0.0
+   ],
+   "end": [
+    5.8995,
+    4.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    5.9505,
+    3.5,
+    0.0
+   ],
+   "end": [
+    5.9505,
+    4.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    5.8995,
+    5.6,
+    0.0
+   ],
+   "end": [
+    5.8995,
+    7.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    5.9505,
+    5.6,
+    0.0
+   ],
+   "end": [
+    5.9505,
+    7.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    5.88,
+    4.6,
+    0.0
+   ],
+   "end": [
+    5.88,
+    5.2,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    5.97,
+    5.0,
+    0.0
+   ],
+   "end": [
+    5.97,
+    5.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.0495,
+    3.5,
+    0.0
+   ],
+   "end": [
+    11.0495,
+    4.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.1005,
+    3.5,
+    0.0
+   ],
+   "end": [
+    11.1005,
+    4.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.0495,
+    5.6,
+    0.0
+   ],
+   "end": [
+    11.0495,
+    7.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.1005,
+    5.6,
+    0.0
+   ],
+   "end": [
+    11.1005,
+    7.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.03,
+    4.6,
+    0.0
+   ],
+   "end": [
+    11.03,
+    5.2,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.12,
+    5.0,
+    0.0
+   ],
+   "end": [
+    11.12,
+    5.6,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    4.83,
+    4.9,
+    0.0
+   ],
+   "end": [
+    4.83,
+    5.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    4.92,
+    5.3,
+    0.0
+   ],
+   "end": [
+    4.92,
+    5.9,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.2,
+    0.0,
+    0.0
+   ],
+   "end": [
+    3.0,
+    0.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.2,
+    0.075,
+    0.0
+   ],
+   "end": [
+    3.0,
+    0.075,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.2,
+    0.15,
+    0.0
+   ],
+   "end": [
+    3.0,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.2,
+    0.0,
+    0.0
+   ],
+   "end": [
+    1.2,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    3.0,
+    0.0,
+    0.0
+   ],
+   "end": [
+    3.0,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.6,
+    0.0,
+    0.0
+   ],
+   "end": [
+    14.6,
+    0.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.6,
+    0.075,
+    0.0
+   ],
+   "end": [
+    14.6,
+    0.075,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.6,
+    0.15,
+    0.0
+   ],
+   "end": [
+    14.6,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.6,
+    0.0,
+    0.0
+   ],
+   "end": [
+    11.6,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    14.6,
+    0.0,
+    0.0
+   ],
+   "end": [
+    14.6,
+    0.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.5,
+    10.85,
+    0.0
+   ],
+   "end": [
+    1.3,
+    10.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.5,
+    10.925,
+    0.0
+   ],
+   "end": [
+    1.3,
+    10.925,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.5,
+    11.0,
+    0.0
+   ],
+   "end": [
+    1.3,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.5,
+    10.85,
+    0.0
+   ],
+   "end": [
+    0.5,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.3,
+    10.85,
+    0.0
+   ],
+   "end": [
+    1.3,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.4,
+    10.85,
+    0.0
+   ],
+   "end": [
+    4.4,
+    10.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.4,
+    10.925,
+    0.0
+   ],
+   "end": [
+    4.4,
+    10.925,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.4,
+    11.0,
+    0.0
+   ],
+   "end": [
+    4.4,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.4,
+    10.85,
+    0.0
+   ],
+   "end": [
+    2.4,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    4.4,
+    10.85,
+    0.0
+   ],
+   "end": [
+    4.4,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.8,
+    10.85,
+    0.0
+   ],
+   "end": [
+    8.8,
+    10.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.8,
+    10.925,
+    0.0
+   ],
+   "end": [
+    8.8,
+    10.925,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.8,
+    11.0,
+    0.0
+   ],
+   "end": [
+    8.8,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.8,
+    10.85,
+    0.0
+   ],
+   "end": [
+    6.8,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    8.8,
+    10.85,
+    0.0
+   ],
+   "end": [
+    8.8,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    12.0,
+    10.85,
+    0.0
+   ],
+   "end": [
+    15.0,
+    10.85,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    12.0,
+    10.925,
+    0.0
+   ],
+   "end": [
+    15.0,
+    10.925,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    12.0,
+    11.0,
+    0.0
+   ],
+   "end": [
+    15.0,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    12.0,
+    10.85,
+    0.0
+   ],
+   "end": [
+    12.0,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.0,
+    10.85,
+    0.0
+   ],
+   "end": [
+    15.0,
+    11.0,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.0,
+    4.2,
+    0.0
+   ],
+   "end": [
+    0.0,
+    6.8,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.075,
+    4.2,
+    0.0
+   ],
+   "end": [
+    0.075,
+    6.8,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.15,
+    4.2,
+    0.0
+   ],
+   "end": [
+    0.15,
+    6.8,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.0,
+    4.2,
+    0.0
+   ],
+   "end": [
+    0.15,
+    4.2,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.0,
+    6.8,
+    0.0
+   ],
+   "end": [
+    0.15,
+    6.8,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.85,
+    4.5,
+    0.0
+   ],
+   "end": [
+    15.85,
+    6.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.925,
+    4.5,
+    0.0
+   ],
+   "end": [
+    15.925,
+    6.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    16.0,
+    4.5,
+    0.0
+   ],
+   "end": [
+    16.0,
+    6.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.85,
+    4.5,
+    0.0
+   ],
+   "end": [
+    16.0,
+    4.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.85,
+    6.5,
+    0.0
+   ],
+   "end": [
+    16.0,
+    6.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.85,
+    8.2,
+    0.0
+   ],
+   "end": [
+    15.85,
+    9.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.925,
+    8.2,
+    0.0
+   ],
+   "end": [
+    15.925,
+    9.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    16.0,
+    8.2,
+    0.0
+   ],
+   "end": [
+    16.0,
+    9.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.85,
+    8.2,
+    0.0
+   ],
+   "end": [
+    16.0,
+    8.2,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    15.85,
+    9.4,
+    0.0
+   ],
+   "end": [
+    16.0,
+    9.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    8.6,
+    0.15,
+    0.0
+   ],
+   "end": [
+    8.6,
+    1.15,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    8.6,
+    0.15,
+    0.0
+   ],
+   "radius": 1.0,
+   "startAngle": 1.5707963267948966,
+   "endAngle": 3.141592653589793,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    4.8,
+    1.8,
+    0.0
+   ],
+   "end": [
+    3.9,
+    1.8,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    4.8,
+    1.8,
+    0.0
+   ],
+   "radius": 0.9,
+   "startAngle": 1.5707963267948966,
+   "endAngle": 3.141592653589793,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.8,
+    2.5,
+    0.0
+   ],
+   "end": [
+    1.1,
+    2.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    1.8,
+    2.5,
+    0.0
+   ],
+   "radius": 0.7,
+   "startAngle": 1.5707963267948966,
+   "endAngle": 3.141592653589793,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    11.15,
+    2.4,
+    0.0
+   ],
+   "end": [
+    11.95,
+    2.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    11.15,
+    2.4,
+    0.0
+   ],
+   "radius": 0.8,
+   "startAngle": -1.5707963267948966,
+   "endAngle": 0.0,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    12.2,
+    3.5,
+    0.0
+   ],
+   "end": [
+    12.2,
+    4.4,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    12.2,
+    3.5,
+    0.0
+   ],
+   "radius": 0.9,
+   "startAngle": 0.0,
+   "endAngle": 1.5707963267948966,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    5.8,
+    7.65,
+    0.0
+   ],
+   "end": [
+    5.8,
+    8.5,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    5.8,
+    7.65,
+    0.0
+   ],
+   "radius": 0.85,
+   "startAngle": 1.5707963267948966,
+   "endAngle": 3.141592653589793,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.7,
+    9.05,
+    0.0
+   ],
+   "end": [
+    0.95,
+    9.05,
+    0.0
+   ],
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    1.7,
+    9.05,
+    0.0
+   ],
+   "radius": 0.75,
+   "startAngle": 1.5707963267948966,
+   "endAngle": 3.141592653589793,
+   "layer": "ESQUADRIAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     0.3,
+     3.6,
+     0.0
+    ],
+    [
+     4.65,
+     3.6,
+     0.0
+    ],
+    [
+     4.65,
+     3.95,
+     0.0
+    ],
+    [
+     0.3,
+     3.95,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     0.3,
+     7.05,
+     0.0
+    ],
+    [
+     4.65,
+     7.05,
+     0.0
+    ],
+    [
+     4.65,
+     7.4,
+     0.0
+    ],
+    [
+     0.3,
+     7.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.72,
+    3.6,
+    0.0
+   ],
+   "end": [
+    0.72,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    0.72,
+    7.05,
+    0.0
+   ],
+   "end": [
+    0.72,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.16,
+    3.6,
+    0.0
+   ],
+   "end": [
+    1.16,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.16,
+    7.05,
+    0.0
+   ],
+   "end": [
+    1.16,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.6,
+    3.6,
+    0.0
+   ],
+   "end": [
+    1.6,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    1.6,
+    7.05,
+    0.0
+   ],
+   "end": [
+    1.6,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.04,
+    3.6,
+    0.0
+   ],
+   "end": [
+    2.04,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.04,
+    7.05,
+    0.0
+   ],
+   "end": [
+    2.04,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.48,
+    3.6,
+    0.0
+   ],
+   "end": [
+    2.48,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.48,
+    7.05,
+    0.0
+   ],
+   "end": [
+    2.48,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.92,
+    3.6,
+    0.0
+   ],
+   "end": [
+    2.92,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    2.92,
+    7.05,
+    0.0
+   ],
+   "end": [
+    2.92,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    3.36,
+    3.6,
+    0.0
+   ],
+   "end": [
+    3.36,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    3.36,
+    7.05,
+    0.0
+   ],
+   "end": [
+    3.36,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    3.8,
+    3.6,
+    0.0
+   ],
+   "end": [
+    3.8,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    3.8,
+    7.05,
+    0.0
+   ],
+   "end": [
+    3.8,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    4.24,
+    3.6,
+    0.0
+   ],
+   "end": [
+    4.24,
+    3.95,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    4.24,
+    7.05,
+    0.0
+   ],
+   "end": [
+    4.24,
+    7.4,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     1.8,
+     4.9,
+     0.0
+    ],
+    [
+     4.2,
+     4.9,
+     0.0
+    ],
+    [
+     4.2,
+     6.1,
+     0.0
+    ],
+    [
+     1.8,
+     6.1,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    2.4,
+    5.5,
+    0.0
+   ],
+   "radius": 0.25,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    3.6,
+    5.5,
+    0.0
+   ],
+   "radius": 0.25,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     0.35,
+     5.9,
+     0.0
+    ],
+    [
+     1.1,
+     5.9,
+     0.0
+    ],
+    [
+     1.1,
+     6.7,
+     0.0
+    ],
+    [
+     0.35,
+     6.7,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     11.5,
+     4.2,
+     0.0
+    ],
+    [
+     13.7,
+     4.2,
+     0.0
+    ],
+    [
+     13.7,
+     5.0,
+     0.0
+    ],
+    [
+     11.5,
+     5.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     11.5,
+     6.3,
+     0.0
+    ],
+    [
+     13.7,
+     6.3,
+     0.0
+    ],
+    [
+     13.7,
+     6.95,
+     0.0
+    ],
+    [
+     11.5,
+     6.95,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    14.5,
+    5.5,
+    0.0
+   ],
+   "radius": 0.45,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     11.7,
+     0.55,
+     0.0
+    ],
+    [
+     12.6,
+     0.55,
+     0.0
+    ],
+    [
+     12.6,
+     1.45,
+     0.0
+    ],
+    [
+     11.7,
+     1.45,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     12.6,
+     0.55,
+     0.0
+    ],
+    [
+     13.5,
+     0.55,
+     0.0
+    ],
+    [
+     13.5,
+     1.45,
+     0.0
+    ],
+    [
+     12.6,
+     1.45,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     13.5,
+     0.55,
+     0.0
+    ],
+    [
+     14.4,
+     0.55,
+     0.0
+    ],
+    [
+     14.4,
+     1.45,
+     0.0
+    ],
+    [
+     13.5,
+     1.45,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     11.7,
+     1.45,
+     0.0
+    ],
+    [
+     12.6,
+     1.45,
+     0.0
+    ],
+    [
+     12.6,
+     2.35,
+     0.0
+    ],
+    [
+     11.7,
+     2.35,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     12.6,
+     1.45,
+     0.0
+    ],
+    [
+     13.5,
+     1.45,
+     0.0
+    ],
+    [
+     13.5,
+     2.35,
+     0.0
+    ],
+    [
+     12.6,
+     2.35,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     13.5,
+     1.45,
+     0.0
+    ],
+    [
+     14.4,
+     1.45,
+     0.0
+    ],
+    [
+     14.4,
+     2.35,
+     0.0
+    ],
+    [
+     13.5,
+     2.35,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.2,
+    10.55,
+    0.0
+   ],
+   "end": [
+    10.7,
+    10.55,
+    0.0
+   ],
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     6.15,
+     9.85,
+     0.0
+    ],
+    [
+     6.95,
+     9.85,
+     0.0
+    ],
+    [
+     6.95,
+     10.6,
+     0.0
+    ],
+    [
+     6.15,
+     10.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    8.4,
+    10.3,
+    0.0
+   ],
+   "radius": 0.18,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    9.0,
+    10.3,
+    0.0
+   ],
+   "radius": 0.18,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     7.6,
+     8.35,
+     0.0
+    ],
+    [
+     9.6,
+     8.35,
+     0.0
+    ],
+    [
+     9.6,
+     9.15,
+     0.0
+    ],
+    [
+     7.6,
+     9.15,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     12.4,
+     8.6,
+     0.0
+    ],
+    [
+     14.6,
+     8.6,
+     0.0
+    ],
+    [
+     14.6,
+     9.8,
+     0.0
+    ],
+    [
+     12.4,
+     9.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    12.75,
+    8.35,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    12.75,
+    10.05,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    13.5,
+    8.35,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    13.5,
+    10.05,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    14.25,
+    8.35,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    14.25,
+    10.05,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     2.4,
+     0.4,
+     0.0
+    ],
+    [
+     4.2,
+     0.4,
+     0.0
+    ],
+    [
+     4.2,
+     2.2,
+     0.0
+    ],
+    [
+     2.4,
+     2.2,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     2.4,
+     2.2,
+     0.0
+    ],
+    [
+     2.9,
+     2.2,
+     0.0
+    ],
+    [
+     2.9,
+     2.65,
+     0.0
+    ],
+    [
+     2.4,
+     2.65,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     3.7,
+     2.2,
+     0.0
+    ],
+    [
+     4.2,
+     2.2,
+     0.0
+    ],
+    [
+     4.2,
+     2.65,
+     0.0
+    ],
+    [
+     3.7,
+     2.65,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    0.6,
+    3.05,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     1.05,
+     2.15,
+     0.0
+    ],
+    [
+     1.65,
+     2.15,
+     0.0
+    ],
+    [
+     1.65,
+     2.8,
+     0.0
+    ],
+    [
+     1.05,
+     2.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     2.3,
+     8.6,
+     0.0
+    ],
+    [
+     3.7,
+     8.6,
+     0.0
+    ],
+    [
+     3.7,
+     10.4,
+     0.0
+    ],
+    [
+     2.3,
+     10.4,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     2.3,
+     8.15,
+     0.0
+    ],
+    [
+     2.8,
+     8.15,
+     0.0
+    ],
+    [
+     2.8,
+     8.6,
+     0.0
+    ],
+    [
+     2.3,
+     8.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     3.2,
+     8.15,
+     0.0
+    ],
+    [
+     3.7,
+     8.15,
+     0.0
+    ],
+    [
+     3.7,
+     8.6,
+     0.0
+    ],
+    [
+     3.2,
+     8.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "CIRCLE",
+   "center": [
+    0.55,
+    10.35,
+    0.0
+   ],
+   "radius": 0.16,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     0.3,
+     8.0,
+     0.0
+    ],
+    [
+     0.9,
+     8.0,
+     0.0
+    ],
+    [
+     0.9,
+     8.65,
+     0.0
+    ],
+    [
+     0.3,
+     8.65,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "MOBILIARIO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.0,
+    3.6,
+    0.0
+   ],
+   "end": [
+    11.0,
+    3.6,
+    0.0
+   ],
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.0,
+    3.85,
+    0.0
+   ],
+   "end": [
+    11.0,
+    3.85,
+    0.0
+   ],
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LINE",
+   "start": [
+    6.0,
+    4.1,
+    0.0
+   ],
+   "end": [
+    11.0,
+    4.1,
+    0.0
+   ],
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     6.0,
+     4.35,
+     0.0
+    ],
+    [
+     11.0,
+     4.35,
+     0.0
+    ],
+    [
+     11.0,
+     7.5,
+     0.0
+    ],
+    [
+     6.0,
+     7.5,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      6.0,
+      4.35,
+      0.0
+     ],
+     [
+      11.0,
+      4.35,
+      0.0
+     ],
+     [
+      11.0,
+      7.5,
+      0.0
+     ],
+     [
+      6.0,
+      7.5,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 9,
+   "angleDeg": 45.0,
+   "scale": 1.6,
+   "spacing": 0.15,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    8.5,
+    5.9,
+    0.0
+   ],
+   "radius": 0.65,
+   "startAngle": 1.2217304763960306,
+   "endAngle": 0.5235987755982988,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    8.5,
+    5.9,
+    0.0
+   ],
+   "radius": 0.85,
+   "startAngle": 1.2217304763960306,
+   "endAngle": 0.5235987755982988,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "ARC",
+   "center": [
+    8.5,
+    5.9,
+    0.0
+   ],
+   "radius": 1.05,
+   "startAngle": 1.2217304763960306,
+   "endAngle": 0.5235987755982988,
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     6.5,
+     -2.2,
+     0.0
+    ],
+    [
+     9.7,
+     -2.2,
+     0.0
+    ],
+    [
+     9.7,
+     -0.35,
+     0.0
+    ],
+    [
+     6.5,
+     -0.35,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISCINA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      6.5,
+      -2.2,
+      0.0
+     ],
+     [
+      7.6,
+      -2.2,
+      0.0
+     ],
+     [
+      7.6,
+      -0.35,
+      0.0
+     ],
+     [
+      6.5,
+      -0.35,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 0,
+   "angleDeg": 0.0,
+   "scale": 1.0,
+   "spacing": 0.12,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "PISCINA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "HATCH",
+   "loops": [
+    [
+     [
+      8.6,
+      -2.2,
+      0.0
+     ],
+     [
+      9.7,
+      -2.2,
+      0.0
+     ],
+     [
+      9.7,
+      -0.35,
+      0.0
+     ],
+     [
+      8.6,
+      -0.35,
+      0.0
+     ]
+    ]
+   ],
+   "pattern": 0,
+   "angleDeg": 0.0,
+   "scale": 1.0,
+   "spacing": 0.12,
+   "gradientColor1": [
+    0,
+    0,
+    0,
+    255
+   ],
+   "gradientColor2": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "layer": "PISCINA",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     7.75,
+     -2.02,
+     0.0
+    ],
+    [
+     8.45,
+     -2.02,
+     0.0
+    ],
+    [
+     8.45,
+     -1.64,
+     0.0
+    ],
+    [
+     7.75,
+     -1.64,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.35,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     7.75,
+     -1.46,
+     0.0
+    ],
+    [
+     8.45,
+     -1.46,
+     0.0
+    ],
+    [
+     8.45,
+     -1.08,
+     0.0
+    ],
+    [
+     7.75,
+     -1.08,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.35,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     7.75,
+     -0.9,
+     0.0
+    ],
+    [
+     8.45,
+     -0.9,
+     0.0
+    ],
+    [
+     8.45,
+     -0.52,
+     0.0
+    ],
+    [
+     7.75,
+     -0.52,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": 0.35,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     7.3,
+     -0.35,
+     0.0
+    ],
+    [
+     8.9,
+     -0.35,
+     0.0
+    ],
+    [
+     8.9,
+     0.0,
+     0.0
+    ],
+    [
+     7.3,
+     0.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "PISO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     6.9,
+     -1.0,
+     0.0
+    ],
+    [
+     9.3,
+     -1.0,
+     0.0
+    ],
+    [
+     9.3,
+     0.0,
+     0.0
+    ],
+    [
+     6.9,
+     0.0,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "DASHED",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "PEDRA",
+   "attValues": [],
+   "xform": [
+    1.255703574175789,
+    0.33646475863327696,
+    0,
+    0,
+    -0.33646475863327696,
+    1.255703574175789,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    7.3,
+    6.3,
+    0,
+    1
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "PEDRA",
+   "attValues": [],
+   "xform": [
+    -0.5463694682335585,
+    0.6511377766511313,
+    0,
+    0,
+    -0.6511377766511313,
+    -0.5463694682335585,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    9.6,
+    6.5,
+    0,
+    1
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "PEDRA",
+   "attValues": [],
+   "xform": [
+    -0.09550649771681169,
+    -0.5416442641567144,
+    0,
+    0,
+    0.5416442641567144,
+    -0.09550649771681169,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    8.9,
+    5.0,
+    0,
+    1
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "ARVORE",
+   "attValues": [],
+   "xform": [
+    1.1,
+    0.0,
+    0,
+    0,
+    -0.0,
+    1.1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    4.6,
+    -2.6,
+    0,
+    1
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "ARVORE",
+   "attValues": [],
+   "xform": [
+    0.6894399988070802,
+    0.5785088487178853,
+    0,
+    0,
+    -0.5785088487178853,
+    0.6894399988070802,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    12.6,
+    -2.9,
+    0,
+    1
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "ARVORE",
+   "attValues": [],
+   "xform": [
+    1.4,
+    0.0,
+    0,
+    0,
+    -0.0,
+    1.4,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    -2.7,
+    5.5,
+    0,
+    1
+   ],
+   "hiddenLayers": [
+    "FLORACAO"
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "ARVORE",
+   "attValues": [],
+   "xform": [
+    0.3105828541230249,
+    1.159110991546882,
+    0,
+    0,
+    -1.159110991546882,
+    0.3105828541230249,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    18.7,
+    8.9,
+    0,
+    1
+   ],
+   "hiddenLayers": [
+    "FLORACAO"
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "ARVORE",
+   "attValues": [],
+   "xform": [
+    -0.7517540966287268,
+    -0.2736161146605349,
+    0,
+    0,
+    0.2736161146605349,
+    -0.7517540966287268,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    18.5,
+    2.2,
+    0,
+    1
+   ],
+   "hiddenLayers": [
+    "FLORACAO"
+   ],
+   "layer": "VEGETACAO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    2.4,
+    5.35,
+    0.0
+   ],
+   "text": "ESTÚDIO-\nBIBLIOTECA\n18,1 m²",
+   "height": 0.175,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    8.5,
+    4.85,
+    0.0
+   ],
+   "text": "PÁTIO ENSŌ\n20,0 m²",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    13.5,
+    5.5,
+    0.0
+   ],
+   "text": "ESTAR\n18,3 m²",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    13.4,
+    2.6,
+    0.0
+   ],
+   "text": "SALA DE CHÁ\n15,1 m²",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    2.9,
+    1.2,
+    0.0
+   ],
+   "text": "SUÍTE\n14,0 m²",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    0.9,
+    3.15,
+    0.0
+   ],
+   "text": "BANHO",
+   "height": 0.11000000000000001,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    8.4,
+    1.9,
+    0.0
+   ],
+   "text": "HALL",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    5.2,
+    4.8,
+    0.0
+   ],
+   "text": "GALERIA",
+   "height": 0.12,
+   "rotation": 1.5707963267948966,
+   "justify": 0,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    3.8,
+    9.5,
+    0.0
+   ],
+   "text": "HÓSPEDES\n13,3 m²",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    0.92,
+    9.6,
+    0.0
+   ],
+   "text": "BANHO",
+   "height": 0.11000000000000001,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    8.4,
+    9.5,
+    0.0
+   ],
+   "text": "COZINHA\n16,0 m²",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    13.5,
+    9.3,
+    0.0
+   ],
+   "text": "JANTAR\n14,6 m²",
+   "height": 0.16,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    8.1,
+    -1.15,
+    0.0
+   ],
+   "text": "ESPELHO D'ÁGUA",
+   "height": 0.125,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "annotative": true,
+   "layer": "TEXTO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     0.42,
+     10.48,
+     0.0
+    ],
+    [
+     0.78,
+     10.48,
+     0.0
+    ],
+    [
+     0.6,
+     10.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    0.88,
+    10.36,
+    0.0
+   ],
+   "text": "+0,15",
+   "height": 0.14,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     8.02,
+     7.08,
+     0.0
+    ],
+    [
+     8.38,
+     7.08,
+     0.0
+    ],
+    [
+     8.2,
+     6.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    8.48,
+    6.96,
+    0.0
+   ],
+   "text": "±0,00",
+   "height": 0.14,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    8.0,
+    -4.4,
+    0.0
+   ],
+   "text": "CASA ENSŌ — PLANTA BAIXA",
+   "height": 0.45,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    8.0,
+    -4.95,
+    0.0
+   ],
+   "text": "ESCALA 1:50",
+   "height": 0.25,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "layer": "TITULO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     17.02,
+     0.68,
+     0.0
+    ],
+    [
+     17.38,
+     0.68,
+     0.0
+    ],
+    [
+     17.2,
+     0.5,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    17.48,
+    0.56,
+    0.0
+   ],
+   "text": "+0,15",
+   "height": 0.14,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     -5.78,
+     -3.12,
+     0.0
+    ],
+    [
+     -5.42,
+     -3.12,
+     0.0
+    ],
+    [
+     -5.6,
+     -3.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     -5.78,
+     12.78,
+     0.0
+    ],
+    [
+     -5.42,
+     12.78,
+     0.0
+    ],
+    [
+     -5.6,
+     12.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     10.22,
+     -1.42,
+     0.0
+    ],
+    [
+     10.58,
+     -1.42,
+     0.0
+    ],
+    [
+     10.4,
+     -1.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    10.68,
+    -1.54,
+    0.0
+   ],
+   "text": "-0,05",
+   "height": 0.14,
+   "rotation": 0.0,
+   "justify": 0,
+   "font": "Arial",
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    16.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    8.0,
+    -3.2,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    0.0,
+    11.0,
+    0.0
+   ],
+   "p3": [
+    -1.8,
+    5.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    1.2,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    0.6,
+    -2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    1.2,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    3.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    2.1,
+    -2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    3.0,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    7.6,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    5.3,
+    -2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    7.6,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    8.6,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    8.1,
+    -2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    8.6,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    11.6,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    10.1,
+    -2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    11.6,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    14.6,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    13.1,
+    -2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    14.6,
+    0.0,
+    0.0
+   ],
+   "p2": [
+    16.0,
+    0.0,
+    0.0
+   ],
+   "p3": [
+    15.3,
+    -2.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    16.0,
+    0.15,
+    0.0
+   ],
+   "p2": [
+    16.0,
+    3.35,
+    0.0
+   ],
+   "p3": [
+    17.4,
+    1.75,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    16.0,
+    3.5,
+    0.0
+   ],
+   "p2": [
+    16.0,
+    7.5,
+    0.0
+   ],
+   "p3": [
+    17.4,
+    5.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    16.0,
+    7.65,
+    0.0
+   ],
+   "p2": [
+    16.0,
+    10.85,
+    0.0
+   ],
+   "p3": [
+    17.4,
+    9.25,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    6.0,
+    7.5,
+    0.0
+   ],
+   "p2": [
+    11.0,
+    7.5,
+    0.0
+   ],
+   "p3": [
+    8.5,
+    8.05,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "DIMENSION",
+   "kind": 0,
+   "p1": [
+    5.85,
+    3.5,
+    0.0
+   ],
+   "p2": [
+    5.85,
+    7.5,
+    0.0
+   ],
+   "p3": [
+    5.15,
+    5.5,
+    0.0
+   ],
+   "textHeight": 0.18,
+   "arrowSize": 0.1,
+   "decimals": 2,
+   "suffix": "",
+   "arrowType": 1,
+   "font": "Arial",
+   "annotative": true,
+   "layer": "COTAS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     0.42,
+     -9.72,
+     0.0
+    ],
+    [
+     0.78,
+     -9.72,
+     0.0
+    ],
+    [
+     0.6,
+     -9.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     20.92,
+     -9.72,
+     0.0
+    ],
+    [
+     21.28,
+     -9.72,
+     0.0
+    ],
+    [
+     21.1,
+     -9.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     -1.2,
+     6.3,
+     0.0
+    ],
+    [
+     17.2,
+     6.3,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "DASHDOT",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     -1.48,
+     6.3,
+     0.0
+    ],
+    [
+     -0.92,
+     6.3,
+     0.0
+    ],
+    [
+     -1.2,
+     6.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     16.92,
+     6.3,
+     0.0
+    ],
+    [
+     17.48,
+     6.3,
+     0.0
+    ],
+    [
+     17.2,
+     6.8,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    -1.2,
+    7.0,
+    0.0
+   ],
+   "text": "A",
+   "height": 0.4,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    17.2,
+    7.0,
+    0.0
+   ],
+   "text": "A",
+   "height": 0.4,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     8.1,
+     -2.9,
+     0.0
+    ],
+    [
+     8.1,
+     11.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0
+   ],
+   "closed": false,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "DASHDOT",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     8.1,
+     -3.18,
+     0.0
+    ],
+    [
+     8.1,
+     -2.62,
+     0.0
+    ],
+    [
+     7.6,
+     -2.9,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "LWPOLYLINE",
+   "vertices": [
+    [
+     8.1,
+     11.32,
+     0.0
+    ],
+    [
+     8.1,
+     11.88,
+     0.0
+    ],
+    [
+     7.6,
+     11.6,
+     0.0
+    ]
+   ],
+   "bulges": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "closed": true,
+   "width": 0.0,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    7.15,
+    -3.1,
+    0.0
+   ],
+   "text": "B",
+   "height": 0.4,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "MTEXT",
+   "position": [
+    7.15,
+    11.4,
+    0.0
+   ],
+   "text": "B",
+   "height": 0.4,
+   "rotation": 0.0,
+   "justify": 1,
+   "font": "Arial",
+   "bold": true,
+   "layer": "SIMBOLOS",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "INSERT",
+   "blockName": "TERRENO",
+   "attValues": [],
+   "xform": [
+    1.0,
+    0.0,
+    0,
+    0,
+    -0.0,
+    1.0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0.0,
+    0.0,
+    0,
+    1
+   ],
+   "layer": "TERRENO",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1.0,
+   "visible": true
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     0.0,
+     0.075,
+     0.0
+    ],
+    [
+     16.0,
+     0.075,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 1.2,
+     "width": 1.8,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    },
+    {
+     "station": 7.6,
+     "width": 1.0,
+     "kind": 1,
+     "side": 1,
+     "hingeAtEnd": true
+    },
+    {
+     "station": 11.6,
+     "width": 3.0,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     0.0,
+     10.925,
+     0.0
+    ],
+    [
+     16.0,
+     10.925,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 0.5,
+     "width": 0.8,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    },
+    {
+     "station": 2.4,
+     "width": 2.0,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    },
+    {
+     "station": 6.8,
+     "width": 2.0,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    },
+    {
+     "station": 12.0,
+     "width": 3.0,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     0.075,
+     0.15,
+     0.0
+    ],
+    [
+     0.075,
+     10.85,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 4.05,
+     "width": 2.6,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     15.925,
+     0.15,
+     0.0
+    ],
+    [
+     15.925,
+     10.85,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 4.35,
+     "width": 2.0,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    },
+    {
+     "station": 8.05,
+     "width": 1.2,
+     "kind": 2,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     0.15,
+     3.425,
+     0.0
+    ],
+    [
+     4.8,
+     3.425,
+     0.0
+    ]
+   ],
+   "openings": []
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     11.15,
+     3.425,
+     0.0
+    ],
+    [
+     15.85,
+     3.425,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 1.05,
+     "width": 0.9,
+     "kind": 1,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     0.15,
+     7.575,
+     0.0
+    ],
+    [
+     5.85,
+     7.575,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 4.75,
+     "width": 0.9,
+     "kind": 1,
+     "side": 1,
+     "hingeAtEnd": true
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     11.15,
+     7.575,
+     0.0
+    ],
+    [
+     15.85,
+     7.575,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 1.85,
+     "width": 1.0,
+     "kind": 0,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     4.875,
+     0.15,
+     0.0
+    ],
+    [
+     4.875,
+     3.35,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 1.65,
+     "width": 0.9,
+     "kind": 1,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     4.875,
+     3.5,
+     0.0
+    ],
+    [
+     4.875,
+     7.5,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 1.4,
+     "width": 1.0,
+     "kind": 0,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     11.075,
+     0.15,
+     0.0
+    ],
+    [
+     11.075,
+     3.35,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 1.45,
+     "width": 0.8,
+     "kind": 1,
+     "side": -1,
+     "hingeAtEnd": true
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     11.075,
+     7.65,
+     0.0
+    ],
+    [
+     11.075,
+     10.85,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 0.0,
+     "width": 1.25,
+     "kind": 0,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     1.775,
+     7.65,
+     0.0
+    ],
+    [
+     1.775,
+     10.85,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 0.65,
+     "width": 0.75,
+     "kind": 1,
+     "side": 1,
+     "hingeAtEnd": true
+    }
+   ]
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     5.925,
+     7.65,
+     0.0
+    ],
+    [
+     5.925,
+     10.85,
+     0.0
+    ]
+   ],
+   "openings": []
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     0.15,
+     1.975,
+     0.0
+    ],
+    [
+     1.8,
+     1.975,
+     0.0
+    ]
+   ],
+   "openings": []
+  },
+  {
+   "type": "WALL",
+   "layer": "PAREDES",
+   "colorMode": "byLayer",
+   "lineType": "ByLayer",
+   "lineWeightMm": -1,
+   "visible": true,
+   "thickness": 0.15,
+   "axis": [
+    [
+     1.875,
+     2.05,
+     0.0
+    ],
+    [
+     1.875,
+     3.35,
+     0.0
+    ]
+   ],
+   "openings": [
+    {
+     "station": 0.45,
+     "width": 0.7,
+     "kind": 1,
+     "side": 1,
+     "hingeAtEnd": false
+    }
+   ]
+  }
+ ],
+ "groups": [],
+ "dimLinks": [],
+ "hatchLinks": [],
+ "plotStyle": {
+  "name": "PB EXECUTIVO",
+  "active": true,
+  "entries": [
+   {
+    "layer": "0",
+    "plot": true,
+    "colorMode": 1
+   },
+   {
+    "layer": "PAREDES",
+    "plot": true,
+    "colorMode": 1,
+    "lineWeightMm": 0.6
+   },
+   {
+    "layer": "HACH-PAR",
+    "plot": true,
+    "colorMode": 1,
+    "lineWeightMm": 0.15
+   },
+   {
+    "layer": "ESQUADRIAS",
+    "plot": true,
+    "colorMode": 1,
+    "lineWeightMm": 0.25
+   },
+   {
+    "layer": "MOBILIARIO",
+    "plot": true,
+    "colorMode": 2,
+    "lineWeightMm": 0.15
+   },
+   {
+    "layer": "COTAS",
+    "plot": true,
+    "colorMode": 1,
+    "lineWeightMm": 0.18
+   },
+   {
+    "layer": "TEXTO",
+    "plot": true,
+    "colorMode": 1,
+    "lineWeightMm": 0.3
+   },
+   {
+    "layer": "TITULO",
+    "plot": true,
+    "colorMode": 1,
+    "lineWeightMm": 0.4
+   },
+   {
+    "layer": "SIMBOLOS",
+    "plot": true,
+    "colorMode": 1,
+    "lineWeightMm": 0.3
+   },
+   {
+    "layer": "TERRENO",
+    "plot": true,
+    "colorMode": 2,
+    "lineWeightMm": 0.3
+   },
+   {
+    "layer": "VEGETACAO",
+    "plot": true,
+    "colorMode": 2,
+    "lineWeightMm": 0.18
+   },
+   {
+    "layer": "FLORACAO",
+    "plot": true,
+    "colorMode": 2,
+    "lineWeightMm": 0.15
+   },
+   {
+    "layer": "PISO",
+    "plot": true,
+    "colorMode": 2,
+    "lineWeightMm": 0.13
+   },
+   {
+    "layer": "PISCINA",
+    "plot": true,
+    "colorMode": 2,
+    "lineWeightMm": 0.2
+   }
+  ]
+ }
+}
