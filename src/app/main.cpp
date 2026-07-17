@@ -28,6 +28,12 @@ int main(int argc, char** argv) {
 
     QApplication app(argc, argv);
     app.setApplicationName("ZenCAD");
+    // R60: o ZenCAD nunca soube dizer qual build era — só o Zendo versionava.
+    // Passou a importar: com instaladores separados, "qual versão do seu
+    // ZenCAD?" vira pergunta de suporte, e a resposta não pode ser um encolher
+    // de ombros. RITUAL DA LEVA: esta linha, a de zendo/main.cpp e o
+    // `#define AppVersion` de installer/common.isi andam JUNTAS.
+    app.setApplicationVersion(QStringLiteral("2.0.53"));
     app.setOrganizationName("Grupo Christus");
     app.setStyleSheet(zenTheme(ThemeMode::Dark));   // tema Sumi (escuro) por padrão
     app.setWindowIcon(QIcon(QCoreApplication::applicationDirPath() + "/assets/zencad.ico"));

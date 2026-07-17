@@ -1,0 +1,164 @@
+; installer\common.isi — o que ZenCAD, Zendo (e um dia o BIM) têm em comum.
+;
+; POR QUE DOIS INSTALADORES, E NÃO UM COM [Components]. Decisão de produto do
+; Guilherme: "não quero que quem baixa o Zendo receba um CAD 2D que não pediu —
+; ou eu baixo o AutoCAD ou baixo o Revit". É o modelo Autodesk: marcas e
+; downloads próprios sobre tecnologia comum. [Components] continuaria sendo
+; "baixe o Zen e escolha", que é justamente o que ele não quer.
+;
+; POR QUE .isi INCLUÍDO, E NÃO UM .iss PARAMETRIZADO POR /DPRODUCT. Porque um
+; .iss com `/D` compila o DEFAULT em silêncio quando aberto no Inno Setup IDE e
+; apertado Ctrl+F9 — um dia sairia um "Zendo-Setup" que é o ZenCAD por dentro.
+; Cada .iss aqui é clicável e auto-suficiente; o BIM será um 3º de ~20 linhas.
+;
+; O PREÇO, ASSUMIDO: os ~65 MB de DLL do Qt duplicam pra quem instalar os dois.
+; Antes eles caíam no mesmo {app} e se sobrescreviam. É o custo da identidade
+; separada — e é o mesmo que a Autodesk paga (AutoCAD e Revit não compartilham
+; runtime). A alternativa (pasta comum de DLLs) reacoplaria o que a leva da
+; fundação acabou de separar.
+
+; A VERSÃO MORA AQUI: um lugar só para os dois instaladores.
+; RITUAL (corrigido nesta leva): bump do 3º dígito por leva AQUI + em
+; `src/zendo/main.cpp` e `src/app/main.cpp` (o cadapp passou a versionar nesta
+; leva — antes ele não sabia responder "qual versão você é?", e com produtos
+; separados isso vira pergunta de suporte).
+#define AppVersion "2.0.53"
+
+; O AppId do Zen MONOLÍTICO (ZenCAD+Zendo num pacote só), até a 2.0.52.
+; NÃO é um GUID válido — "ZENCAD10" não é hexadecimal — mas o Inno trata AppId
+; como string opaca, então sempre funcionou. Ele não morre: virou a constante
+; que detecta a instalação legada. Ver MigraDoZenMonolitico abaixo.
+#define LegacyAppId "{7E2A9C4B-5D1F-4A83-9B60-ZENCAD10}"
+
+[Setup]
+AppPublisher=Guilherme · Grupo Christus
+AppVersion={#AppVersion}
+OutputDir=..\dist
+Compression=lzma2
+SolidCompression=yes
+WizardStyle=modern
+ArchitecturesInstallIn64BitMode=x64compatible
+DisableProgramGroupPage=yes
+; Faltava no .iss monolítico: é o que manda o Explorer atualizar os ícones das
+; extensões sem exigir logoff.
+ChangesAssociations=yes
+
+[Languages]
+Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
+
+[Tasks]
+Name: "desktopicon"; Description: "Criar atalho na Área de Trabalho"; GroupDescription: "Atalhos:"
+
+[Code]
+// ============================================================================
+//  MIGRAÇÃO DO ZEN MONOLÍTICO — e por que ela NÃO é opcional
+//
+//  A tentação é deixar a instalação velha em paz: ela é inofensiva, só ocupa
+//  disco. Não é. O desinstalador do Zen ≤2.0.52 carrega `uninsdeletekey` em
+//  ZenCAD.Project / Zendo.Study e `uninsdeletevalue` nos valores de .zencad e
+//  .zendo. Os instaladores novos reescrevem ESSAS MESMAS chaves. Então:
+//
+//    1. usuário instala ZenCAD-Setup e Zendo-Setup novos (tudo funciona)
+//    2. semanas depois vê "Zen 2.0.52" órfão no Painel e desinstala pra limpar
+//    3. o desinstalador VELHO apaga as associações que os NOVOS escreveram
+//    4. duplo clique num .zencad para de funcionar, o ícone some
+//
+//  O usuário nunca liga o passo 2 ao passo 4. É a mina que o Fable achou.
+//  Some a isso: sem migrar, os atalhos velhos do Desktop seguem apontando pro
+//  cadapp.exe 2.0.52 — a pessoa roda a versão velha sem saber e reporta bug
+//  já corrigido.
+// ============================================================================
+
+// A chave de uninstall que o Inno cria pro AppId legado (sufixo _is1).
+function ChaveDesinstLegado(): String;
+begin
+  Result := 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{#LegacyAppId}_is1';
+end;
+
+function AchaDesinstLegado(var Raiz: Integer; var Cmd: String): Boolean;
+begin
+  // HKLM primeiro (instalação pra todos), HKCU como rede — o instalador
+  // monolítico usava {autopf}, que cai num ou noutro conforme o privilégio.
+  Raiz := HKLM;
+  if RegQueryStringValue(HKLM, ChaveDesinstLegado(), 'QuietUninstallString', Cmd) then begin
+    Result := True;
+    exit;
+  end;
+  Raiz := HKCU;
+  Result := RegQueryStringValue(HKCU, ChaveDesinstLegado(), 'QuietUninstallString', Cmd);
+end;
+
+function ZenMonoliticoInstalado(): Boolean;
+var
+  Raiz: Integer;
+  Cmd: String;
+begin
+  Result := AchaDesinstLegado(Raiz, Cmd);
+end;
+
+// Roda o desinstalador legado e ESPERA ELE ACABAR DE VERDADE.
+//
+// ARMADILHA DO INNO: o unins000.exe se COPIA pro %TEMP% e o processo original
+// retorna antes de o trabalho terminar — `ewWaitUntilTerminated` devolve cedo e
+// nós copiaríamos arquivos por cima de um uninstall ainda em curso. Por isso o
+// laço: a verdade é a chave de registro sumir, não o processo retornar.
+function DesinstalaZenMonolitico(): Boolean;
+var
+  Raiz: Integer;
+  Cmd, Exe, Params: String;
+  Code, Esperou: Integer;
+begin
+  if not AchaDesinstLegado(Raiz, Cmd) then begin
+    Result := True;   // nada a migrar: caminho normal
+    exit;
+  end;
+
+  // QuietUninstallString vem como: "C:\...\unins000.exe" /SILENT
+  Exe := RemoveQuotes(Cmd);
+  if Pos('.exe" ', Cmd) > 0 then begin
+    Exe    := Copy(Cmd, 2, Pos('.exe" ', Cmd) + 2);
+    Params := '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES';
+  end else
+    Params := '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES';
+
+  if not Exec(Exe, Params, '', SW_HIDE, ewWaitUntilTerminated, Code) then begin
+    Result := False;
+    exit;
+  end;
+
+  // Espera a chave sumir (até ~15s). Se o uninstall falhar/for cancelado, ela
+  // fica — e aí NÃO seguimos em frente fingindo que deu certo.
+  Esperou := 0;
+  while (Esperou < 15000) and RegKeyExists(Raiz, ChaveDesinstLegado()) do begin
+    Sleep(500);
+    Esperou := Esperou + 500;
+  end;
+  Result := not RegKeyExists(Raiz, ChaveDesinstLegado());
+end;
+
+function PrepareToInstall(var NeedsRestart: Boolean): String;
+begin
+  Result := '';
+  if not ZenMonoliticoInstalado() then
+    exit;
+
+  // O aviso é honesto de propósito: desinstalar o Zen monolítico para instalar
+  // só o ZenCAD REMOVE o Zendo da máquina. Esconder isso seria mentir por
+  // omissão — o usuário precisa saber que tem um segundo download a fazer.
+  if MsgBox('Foi encontrada a instalação antiga do Zen, que trazia o ZenCAD e o'
+            + ' Zendo num pacote único.' #13#13
+            + 'Ela será removida antes de continuar, porque a partir desta versão'
+            + ' cada aplicativo tem seu próprio instalador.' #13#13
+            + 'ATENÇÃO: se você usa o OUTRO aplicativo do ecossistema, baixe e'
+            + ' instale o instalador dele em seguida — senão ele sairá desta'
+            + ' máquina.' #13#13
+            + 'Deseja continuar?',
+            mbConfirmation, MB_YESNO) <> IDYES then begin
+    Result := 'Instalação cancelada: a versão antiga do Zen precisa ser removida antes.';
+    exit;
+  end;
+
+  if not DesinstalaZenMonolitico() then
+    Result := 'Não foi possível remover a instalação antiga do Zen.'
+              + ' Desinstale "Zen" pelo Painel de Controle e rode este instalador de novo.';
+end;

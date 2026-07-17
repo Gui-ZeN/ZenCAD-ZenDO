@@ -13,8 +13,8 @@ cmake -G Ninja -S "%SRC%" -B "%BLD%" -DCADCORE_BUILD_APP=ON -DCMAKE_BUILD_TYPE=R
 echo ===== BUILD cadapp + zendo (Release) =====
 cmake --build "%BLD%" --target cadapp zendo || exit /b 1
 echo ===== DEPLOY Qt DLLs (release) =====
-"%QTDIR%\bin\windeployqt.exe" --release "%BLD%\src\app\cadapp.exe" >nul 2>&1
-"%QTDIR%\bin\windeployqt.exe" --release "%BLD%\src\zendo\zendo.exe" >nul 2>&1
+"%QTDIR%\bin\windeployqt.exe" --release "%BLD%\src\app\cadapp.exe" >nul 2>&1 || exit /b 1
+"%QTDIR%\bin\windeployqt.exe" --release "%BLD%\src\zendo\zendo.exe" >nul 2>&1 || exit /b 1
 echo ===== DONE =====
 dir "%BLD%\src\app\cadapp.exe" | findstr cadapp
 dir "%BLD%\src\zendo\zendo.exe" | findstr zendo

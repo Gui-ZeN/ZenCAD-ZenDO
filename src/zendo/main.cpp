@@ -22,9 +22,12 @@ int main(int argc, char** argv) {
 
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("Zendo"));
-    // R48: o "Sobre" precisa dizer qual build Ã©. RITUAL DA LEVA:
-    // esta linha e o AppVersion do installer/zencad.iss andam JUNTAS.
-    app.setApplicationVersion(QStringLiteral("2.0.52"));
+    // R48: o "Sobre" precisa dizer qual build Ã©. RITUAL DA LEVA (R60:
+    // agora sÃ£o TRÃS lugares, nÃ£o dois): esta linha, `src/app/main.cpp`
+    // (o ZenCAD passou a versionar) e o `#define AppVersion` de
+    // `installer/common.isi` (que substituiu o zencad.iss como fonte da
+    // versÃ£o) andam JUNTAS.
+    app.setApplicationVersion(QStringLiteral("2.0.53"));
     app.setApplicationDisplayName(QStringLiteral("Zendo"));
 
     // R52: os botoes que o Qt escreve sozinho (OK/Cancel/Close/Yes/No) vinham
