@@ -15,6 +15,7 @@
 #include <QKeyEvent>
 #include <QPainter>
 #include <QVariantAnimation>
+#include <QElapsedTimer>
 #include <QMouseEvent>
 #include <QWheelEvent>
 #include <QFocusEvent>
@@ -1629,11 +1630,16 @@ void Viewport3D::buildRenderArrays() {
         m_texBatches.push_back({name, {}, nullptr, nullptr, 0});
         return m_texBatches.back().data;
     };
-    for (const MeshPart& part : m_meshes) {
+    for (MeshPart& part : m_meshes) {   // R61: não-const p/ preencher as caches
         if (part.hidden) continue;
         std::vector<Point3> tris;
         std::vector<Idx> faceOf;
         part.mesh.triangulate(tris, &faceOf);
+        // R61: a MESMA triangulação que vira VBO alimenta o picking de hover.
+        // O soften abaixo só lê estas posições e computa normais — nunca as
+        // move —, então a cache é idêntica ao que o pickRay produziria.
+        part.cacheTris = tris;
+        part.cacheFaceOf = faceOf;
         // G6: SOFTEN automático — soma das normais por vértice; quando o
         // diedro é suave (<~40°), o canto usa a normal média e o cilindro
         // fica REDONDO; quinas de caixa (90°) continuam vivas.
@@ -1705,6 +1711,11 @@ void Viewport3D::buildRenderArrays() {
         }
         std::vector<Point3> lines;
         part.mesh.edgeLines(lines);
+        // R61: guarda as arestas CRUAS, ANTES do filtro de hiddenEdges abaixo.
+        // A inferência HOJE infere em aresta oculta (usa edgeLines cru); cachear
+        // o cru preserva esse comportamento — cachear o filtrado mudaria a
+        // semântica em silêncio (aresta escondida deixaria de inferir).
+        part.cacheEdges = lines;
         for (std::size_t i = 0; i + 1 < lines.size(); i += 2) {
             if (!part.hiddenEdges.empty()) {   // R8: Shift+borracha ocultou
                 auto ka = vk(lines[i]), kb = vk(lines[i + 1]);
@@ -3276,15 +3287,41 @@ bool Viewport3D::pickAt(const QPoint& pos, int& meshOut, Idx& faceOut,
 
     bool found = false;
     double bestT = 0.0;
+    // R61: itera a triangulação CACHEADA (buildRenderArrays) em vez de chamar
+    // pickRay — que re-triangulava toda a malha por ear-clipping a cada
+    // mouseMove. Möller-Trumbore COPIADO VERBATIM do pickRay (kEps 1e-9, mesmos
+    // sinais): a cacheTris vem do mesmo triangulateFace por face, então o
+    // resultado é byte-idêntico (a flag --qa-pick-parity prova). O pickRay do
+    // kernel vira o oráculo dessa paridade.
+    constexpr double kEps = 1e-9;
     for (int i = 0; i < int(m_meshes.size()); ++i) {
-        if (m_meshes[std::size_t(i)].hidden || !inCtx(i)) continue;
-        const auto hit = m_meshes[std::size_t(i)].mesh.pickRay(orig, dir);
-        if (hit.hit && (!found || hit.t < bestT)) {
-            found = true;
-            bestT = hit.t;
-            meshOut = i;
-            faceOut = hit.face;
-            if (hitOut) *hitOut = hit.point;
+        const MeshPart& part = m_meshes[std::size_t(i)];
+        if (part.hidden || !inCtx(i)) continue;
+        const std::vector<Point3>& T = part.cacheTris;
+        for (std::size_t k = 0; k + 3 <= T.size(); k += 3) {
+            const Point3& a = T[k];
+            const Point3& b = T[k + 1];
+            const Point3& c = T[k + 2];
+            const Vec3 e1 = b - a, e2 = c - a;
+            const Vec3 pv = dir.cross(e2);
+            const double det = e1.dot(pv);
+            if (std::abs(det) < kEps) continue;
+            const double invd = 1.0 / det;
+            const Vec3 tv = orig - a;
+            const double u = tv.dot(pv) * invd;
+            if (u < -kEps || u > 1.0 + kEps) continue;
+            const Vec3 qv = tv.cross(e1);
+            const double v = dir.dot(qv) * invd;
+            if (v < -kEps || u + v > 1.0 + kEps) continue;
+            const double t = e2.dot(qv) * invd;
+            if (t <= kEps) continue;
+            if (!found || t < bestT) {
+                found = true;
+                bestT = t;
+                meshOut = i;
+                faceOut = part.cacheFaceOf[k / 3];
+                if (hitOut) *hitOut = orig + dir * t;
+            }
         }
     }
     return found;
@@ -4008,14 +4045,13 @@ Viewport3D::Infer Viewport3D::inferAt(const QPoint& pos, const Point3* base,
         if (dd < c.d && dd < tol2) { c.d = dd; c.p = w; }
     };
 
-    std::vector<Point3> lines;
     std::vector<Point3> soup;
     for (int i = 0; i < int(m_meshes.size()); ++i) {
         const MeshPart& mp = m_meshes[std::size_t(i)];
         if (mp.hidden || !inCtx(i)) continue;
-        lines.clear();
-        mp.mesh.edgeLines(lines);
-        soup.insert(soup.end(), lines.begin(), lines.end());
+        // R61: arestas cacheadas (buildRenderArrays) — não re-extrai por
+        // mouseMove. hidden/inCtx aplicados aqui na consulta, como antes.
+        soup.insert(soup.end(), mp.cacheEdges.begin(), mp.cacheEdges.end());
     }
     for (const auto& [a, b] : m_sketch) {
         soup.push_back(a);
@@ -4333,6 +4369,181 @@ void Viewport3D::qaHover(const QString& seq) {
                    .arg(in.ref.z, 0, 'f', 2);
     emit pickInfo(msg);
     update();
+}
+
+// R61: BENCH da inferência — mede µs/chamada varrendo uma grade de posições
+// (mistura pontos que caem sobre aresta e no vão, os DOIS caminhos: o de aresta
+// e o fallback de face que era o gargalo).
+//
+// A/B no MESMO binário e MESMA cena: cronometra o fallback de face pela cache
+// (o novo, via pickAt) contra o loop pickRay (o ANTIGO, que re-triangulava a
+// cena por ear-clipping a cada chamada). A diferença é o ganho puro do fix,
+// sem contaminar com máquina/cena diferentes. Também mede o inferAt inteiro.
+void Viewport3D::qaInferBench(int n) {
+    if (n < 1) n = 1;
+    auto posAt = [&](int k) {
+        const double nx = 0.12 + 0.76 * ((k * 37) % 101) / 101.0;
+        const double ny = 0.12 + 0.76 * ((k * 61) % 103) / 103.0;
+        return QPoint(int(nx * width()), int(ny * height()));
+    };
+    long long acc = 0;
+
+    // (A) fallback de face pela CACHE — o caminho novo
+    QElapsedTimer tA;
+    tA.start();
+    for (int k = 0; k < n; ++k) {
+        int mi = -1;
+        Idx f = HalfEdgeMesh::kNone;
+        Point3 hp;
+        acc += pickAt(posAt(k), mi, f, &hp) ? 1 : 0;
+    }
+    const double usA = double(tA.nsecsElapsed()) / 1000.0 / n;
+
+    // (B) fallback de face pelo pickRay — o caminho ANTIGO (re-triangula)
+    QElapsedTimer tB;
+    tB.start();
+    for (int k = 0; k < n; ++k) {
+        Point3 orig;
+        Vec3 dir;
+        if (!rayAt(posAt(k), orig, dir)) continue;
+        for (int i = 0; i < int(m_meshes.size()); ++i) {
+            if (m_meshes[std::size_t(i)].hidden || !inCtx(i)) continue;
+            acc += m_meshes[std::size_t(i)].mesh.pickRay(orig, dir).hit ? 1 : 0;
+        }
+    }
+    const double usB = double(tB.nsecsElapsed()) / 1000.0 / n;
+
+    // inferAt inteiro (arestas + face), como o hover real chama
+    QElapsedTimer tI;
+    tI.start();
+    for (int k = 0; k < n; ++k)
+        acc += inferAt(posAt(k), nullptr, true, true).kind;
+    const double usI = double(tI.nsecsElapsed()) / 1000.0 / n;
+
+    emit pickInfo(
+        QStringLiteral("qa-infer-bench: %1 chamadas · face CACHE %2 us · "
+                       "face pickRay(antigo) %3 us · inferAt %4 us · ganho %5x "
+                       "(acc=%6)")
+            .arg(n)
+            .arg(usA, 0, 'f', 1)
+            .arg(usB, 0, 'f', 1)
+            .arg(usI, 0, 'f', 1)
+            .arg(usB / std::max(0.01, usA), 0, 'f', 1)
+            .arg(acc));
+}
+
+// R61: PARIDADE — pickAt (cache de triângulos) tem que casar com pickRay
+// (re-triangula, o oráculo do kernel) raio a raio: mesma malha, mesma face,
+// mesmo ponto (±1e-9). Divergência = a cache diverge do kernel = BUG.
+void Viewport3D::qaPickParity(int n) {
+    if (n < 1) n = 1;
+    int hits = 0, diffs = 0;
+    for (int k = 0; k < n; ++k) {
+        const double nx = 0.08 + 0.84 * ((k * 41) % 101) / 101.0;
+        const double ny = 0.08 + 0.84 * ((k * 67) % 103) / 103.0;
+        const QPoint pos(int(nx * width()), int(ny * height()));
+        int mi = -1;
+        Idx f = HalfEdgeMesh::kNone;
+        Point3 hp;
+        const bool a = pickAt(pos, mi, f, &hp);          // a cache (novo)
+        // oráculo: pickRay fresco por malha, MESMA seleção de nearest do pickAt
+        Point3 orig;
+        Vec3 dir;
+        bool b = false;
+        double bestT = 0.0;
+        int mi2 = -1;
+        Idx f2 = HalfEdgeMesh::kNone;
+        Point3 hp2;
+        if (rayAt(pos, orig, dir)) {
+            for (int i = 0; i < int(m_meshes.size()); ++i) {
+                if (m_meshes[std::size_t(i)].hidden || !inCtx(i)) continue;
+                const auto h = m_meshes[std::size_t(i)].mesh.pickRay(orig, dir);
+                if (h.hit && (!b || h.t < bestT)) {
+                    b = true;
+                    bestT = h.t;
+                    mi2 = i;
+                    f2 = h.face;
+                    hp2 = h.point;
+                }
+            }
+        }
+        if (a != b) {
+            ++diffs;
+            continue;
+        }
+        if (a) {
+            ++hits;
+            if (mi != mi2 || f != f2 || (hp - hp2).length() > 1e-9) ++diffs;
+        }
+    }
+    emit pickInfo(
+        QStringLiteral("qa-pick-parity: %1 raios · %2 acertos · %3 DIVERGENCIAS")
+            .arg(n)
+            .arg(hits)
+            .arg(diffs));
+}
+
+// R61: DETECTOR DE STALE — a cache tem que invalidar quando a geometria muda.
+// Infere no pixel P, MOVE o sólido sob P 8 m pra cima pelo caminho REAL
+// (moveSelectedZ → translate + buildRenderArrays, o choke point), e infere de
+// novo no MESMO pixel. Como o sólido saiu de cima de P, a inferência TEM que
+// mudar. Se ficar IGUAL, a cache não invalidou — está STALE. A prova de
+// mutação (comentar o rebuild da cache no buildRenderArrays) faz isto dar STALE.
+void Viewport3D::qaStale(double nx, double ny) {
+    // Acha um pixel que caia SOBRE um sólido — pelo ORÁCULO pickRay (fresco,
+    // independente da cache), NÃO pelo pickAt. Se usasse a cache pra achar o
+    // ponto, a mutação que a esvazia deixaria o teste "inconclusivo" em vez de
+    // STALE — o detector não pode depender da coisa que ele testa.
+    auto oraculo = [&](const QPoint& q) -> bool {
+        Point3 o;
+        Vec3 dr;
+        if (!rayAt(q, o, dr)) return false;
+        for (int i = 0; i < int(m_meshes.size()); ++i) {
+            if (m_meshes[std::size_t(i)].hidden || !inCtx(i)) continue;
+            if (m_meshes[std::size_t(i)].mesh.pickRay(o, dr).hit) return true;
+        }
+        return false;
+    };
+    QPoint p;
+    bool achou = false;
+    for (int gy = 0; gy < 9 && !achou; ++gy)
+        for (int gx = 0; gx < 9 && !achou; ++gx) {
+            const double tx = (gx == 0) ? nx : 0.15 + 0.70 * gx / 8.0;
+            const double ty = (gy == 0) ? ny : 0.15 + 0.70 * gy / 8.0;
+            const QPoint q(int(tx * width()), int(ty * height()));
+            if (oraculo(q)) {
+                p = q;
+                achou = true;
+            }
+        }
+    if (!achou) {
+        emit pickInfo(QStringLiteral(
+            "qa-stale: INCONCLUSIVO — nenhum pixel caiu sobre sólido"));
+        return;
+    }
+    const Infer a = inferAt(p, nullptr, true, true);   // antes
+    // MOVE TODA a geometria +8m em Z: a inferência acha o vértice/aresta mais
+    // próximo entre TODOS os sólidos, que pode ser de outro sólido que não o
+    // sob o cursor — mover só um daria falso-stale. translate + buildRenderArrays
+    // é o caminho real de invalidação (o choke point que reconstrói a cache).
+    for (MeshPart& mp : m_meshes) mp.mesh.translate({0.0, 0.0, 8.0});
+    buildRenderArrays();
+    const Infer b = inferAt(p, nullptr, true, true);   // depois, MESMO pixel
+    const bool mudou =
+        a.kind != b.kind || (a.p - b.p).length() > 1e-6;
+    emit pickInfo(
+        QStringLiteral("qa-stale: TUDO movido +8m · antes k=%1 @%2,%3,%4 | "
+                       "depois k=%5 @%6,%7,%8 | %9")
+            .arg(a.kind)
+            .arg(a.p.x, 0, 'f', 2)
+            .arg(a.p.y, 0, 'f', 2)
+            .arg(a.p.z, 0, 'f', 2)
+            .arg(b.kind)
+            .arg(b.p.x, 0, 'f', 2)
+            .arg(b.p.y, 0, 'f', 2)
+            .arg(b.p.z, 0, 'f', 2)
+            .arg(mudou ? QStringLiteral("OK-invalidou")
+                       : QStringLiteral("STALE-cache-velha")));
 }
 
 // QA G2: borracha num ponto; vmove "nx,ny,dx,dy,dz"; sketch3d em mundo

@@ -238,6 +238,9 @@ public:
     void setSketchJson(const QJsonArray& a);
     void qaDoublePick(double nx, double ny);     // seleciona o sólido inteiro
     void qaHover(const QString& seq);   // G1: "nx,ny;nx,ny…" — infere e acumula
+    void qaInferBench(int n);           // R61: µs/chamada da inferência
+    void qaPickParity(int n);           // R61: pickAt(cache) == pickRay(oráculo)
+    void qaStale(double nx, double ny);  // R61: a cache invalida?
     // R55: hover DE VERDADE — despacha um QMouseEvent de movimento pelo
     // caminho normal do widget. O qaHover acima chama inferAt direto e por isso
     // NÃO passa por mouseMoveEvent: usá-lo pra testar feedback de hover é o
@@ -378,6 +381,18 @@ private:
         std::set<std::pair<std::tuple<long long, long long, long long>,
                            std::tuple<long long, long long, long long>>>
             hiddenEdges;
+
+        // R61: caches de picking/inferência de hover. buildRenderArrays já
+        // triangula e extrai arestas de cada parte pra montar os VBOs; sem
+        // guardar isso, o pickAt/inferAt RE-triangulavam a cena inteira a cada
+        // mouseMove — o "congela" da fita métrica sobre portão/escada (o Fable
+        // mediu: 82% do custo mora no fallback de face, não no soup de arestas).
+        // Preenchidas SÓ por buildRenderArrays (o choke point de toda mutação
+        // de malha); consumidas por pickAt/inferAt. Coordenadas de MUNDO — a
+        // câmera NÃO invalida (a projeção segue por consulta).
+        std::vector<cad::Point3> cacheTris;    // triângulos (3 pts cada)
+        std::vector<Idx>         cacheFaceOf;  // face-fonte de cada triângulo
+        std::vector<cad::Point3> cacheEdges;   // arestas CRUAS, pré-hiddenEdges
     };
 
     void rebuildScene();                    // doc 2D -> malhas (paredes) + resto

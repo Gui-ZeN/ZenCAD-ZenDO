@@ -3322,6 +3322,12 @@ void ZendoWindow::shootAndQuit(const QString& pngPath) {
         }
         if (!m_qaVMove.isEmpty()) m_vp->qaVertexMove(m_qaVMove);       // G2
         if (!m_qaHover.isEmpty()) m_vp->qaHover(m_qaHover);   // G1: inferência
+        if (m_qaInferBench > 0) m_vp->qaInferBench(m_qaInferBench);   // R61
+        if (m_qaPickParity > 0) m_vp->qaPickParity(m_qaPickParity);  // R61
+        if (!m_qaStale.isEmpty()) {                                 // R61
+            const QStringList c = m_qaStale.split(',');
+            if (c.size() == 2) m_vp->qaStale(c[0].toDouble(), c[1].toDouble());
+        }
         if (m_qaCtrlS) {   // R55: o Ctrl+S de verdade. Se ele abrir diálogo
             // num app headless, ESTE processo trava e o timeout mata a QA —
             // o teste falha alto, que é como um teste tem que falhar.

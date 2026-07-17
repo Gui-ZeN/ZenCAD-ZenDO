@@ -73,6 +73,8 @@ int main(int argc, char** argv) {
         clipface, clipplane, cutplane, clipslide, dimang, clipdrag, render,
         stair, guard, slabhole, engine, qaBalde;
     int preset = -1;                         // R47
+    int inferBench = 0, pickParity = 0;      // R61: provas da inferência
+    QString stale;                           // R61
     bool inspect = false, fixsolid = false, cleanup = false, subtract = false;
     bool unite = false;
     bool walkenter = false, qaCtrlS = false;
@@ -153,6 +155,12 @@ int main(int argc, char** argv) {
             gltf = args[++i];   // exporta glTF (QA)
         else if (args[i] == QLatin1String("--hover") && i + 1 < args.size())
             hover = args[++i];  // G1: "nx,ny;nx,ny" — inferência tipada (QA)
+        else if (args[i] == QLatin1String("--qa-infer-bench") && i + 1 < args.size())
+            inferBench = args[++i].toInt();   // R61: µs/chamada da inferência
+        else if (args[i] == QLatin1String("--qa-pick-parity") && i + 1 < args.size())
+            pickParity = args[++i].toInt();   // R61: pickAt(cache)==pickRay
+        else if (args[i] == QLatin1String("--qa-stale") && i + 1 < args.size())
+            stale = args[++i];   // R61: a cache invalida na mutacao?
         else if (args[i] == QLatin1String("--qa-ctrls"))
             qaCtrlS = true;       // R55: exercita Salvar (Ctrl+S) sem dialogo
         else if (args[i] == QLatin1String("--qa-balde") && i + 1 < args.size())
@@ -360,6 +368,9 @@ int main(int argc, char** argv) {
     if (!obj.isEmpty()) w.setQaObj(obj);
     if (!gltf.isEmpty()) w.setQaGltf(gltf);
     if (!hover.isEmpty()) w.setQaHover(hover);
+    if (inferBench > 0) w.setQaInferBench(inferBench);   // R61
+    if (pickParity > 0) w.setQaPickParity(pickParity);   // R61
+    if (!stale.isEmpty()) w.setQaStale(stale);           // R61
     if (!qaBalde.isEmpty()) w.setQaBalde(qaBalde);
     if (qaCtrlS) w.setQaCtrlS(true);
     if (!redoN.isEmpty()) w.setQaRedo(redoN.toInt());

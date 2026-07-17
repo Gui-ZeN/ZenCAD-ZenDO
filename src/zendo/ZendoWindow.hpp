@@ -75,6 +75,9 @@ public:
     }
     void setQaCircle(const QString& s) { m_qaCircle = s; }   // "cx,cy,rx,ry"
     void setQaHover(const QString& s) { m_qaHover = s; }     // G1 "nx,ny;…"
+    void setQaInferBench(int n) { m_qaInferBench = n; }      // R61: µs/chamada
+    void setQaPickParity(int n) { m_qaPickParity = n; }      // R61: cache==oráculo
+    void setQaStale(const QString& s) { m_qaStale = s; }     // R61 "nx,ny"
     void setQaBalde(const QString& s) { m_qaBalde = s; }     // R55 "nx,ny"
     void setQaCtrlS(bool b) { m_qaCtrlS = b; }               // R55: Ctrl+S
     void setQaRedo(int n) { m_qaRedo = n; }                  // G2: Ctrl+Y
@@ -224,6 +227,9 @@ private:
         m_qaSelBox,
         m_qaTape, m_qaArray, m_qaMkGroup, m_qaCtxAt, m_qaTagSet, m_qaTagVis;
     bool m_qaFollow{false};
+    int m_qaInferBench{0};                   // R61: bench da inferência
+    int m_qaPickParity{0};                   // R61: paridade cache×oráculo
+    QString m_qaStale;                       // R61: prova de invalidacao
     bool m_qaCtrlS{false};                   // R55: exercita o Salvar direto
     bool m_qaOrtho{false};
     double m_qaFog{0.0};
