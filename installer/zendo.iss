@@ -71,7 +71,7 @@ Root: HKA; Subkey: "Software\Classes\Zendo.Study\shell\open\command"; ValueType:
 Root: HKA; Subkey: "Software\Classes\Zendo.Plant2D"; ValueType: string; ValueData: "Planta 2D (abrir no Zendo)"; Flags: uninsdeletekey
 Root: HKA; Subkey: "Software\Classes\Zendo.Plant2D\DefaultIcon"; ValueType: string; ValueData: "{app}\{#AppExe},0"
 Root: HKA; Subkey: "Software\Classes\Zendo.Plant2D\shell\open\command"; ValueType: string; ValueData: """{app}\{#AppExe}"" ""%1"""
-Root: HKA; Subkey: "Software\Classes\.zencad\OpenWithProgids"; ValueType: string; ValueName: "Zendo.Plant2D"; ValueData: ""; Flags: uninsdeletevalue
+Root: HKA; Subkey: "Software\Classes\.zencad\OpenWithProgids"; ValueType: string; ValueName: "Zendo.Plant2D"; ValueData: ""; Flags: uninsdeletevalue uninsdeletekeyifempty
 
 [Run]
 ; Sem `unchecked`: no instalador dele, o Zendo é o protagonista.

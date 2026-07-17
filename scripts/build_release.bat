@@ -15,6 +15,17 @@ cmake --build "%BLD%" --target cadapp zendo || exit /b 1
 echo ===== DEPLOY Qt DLLs (release) =====
 "%QTDIR%\bin\windeployqt.exe" --release "%BLD%\src\app\cadapp.exe" >nul 2>&1 || exit /b 1
 "%QTDIR%\bin\windeployqt.exe" --release "%BLD%\src\zendo\zendo.exe" >nul 2>&1 || exit /b 1
+echo ===== INSTALADORES (os DOIS, sempre juntos) =====
+rem R60: os dois ISCC moram AQUI de propósito. Com um instalador por produto,
+rem recompilar só um depois de um fix deixa o irmão com o nome novo e o binário
+rem velho — e ninguém percebe, porque o arquivo TEM a versão certa no nome. É a
+rem mesma classe de erro da revisão pós-R30 (8 releases num dia indistinguíveis),
+rem agora dobrada. Um comando gera a leva inteira, ou falha.
+set "ISCC=%LOCALAPPDATA%\Programs\Inno Setup 6\ISCC.exe"
+"%ISCC%" "%~dp0..\installer\zencad.iss" >nul || exit /b 1
+"%ISCC%" "%~dp0..\installer\zendo.iss"  >nul || exit /b 1
+
 echo ===== DONE =====
 dir "%BLD%\src\app\cadapp.exe" | findstr cadapp
 dir "%BLD%\src\zendo\zendo.exe" | findstr zendo
+dir "%~dp0..\dist\*Setup*.exe" | findstr Setup

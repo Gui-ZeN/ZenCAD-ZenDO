@@ -39,7 +39,8 @@ int main(int argc, char** argv) {
     // INCONDICIONAL, nao QLocale::system(): o app e pt-BR por design -- num
     // Windows em ingles o certo continua sendo "Cancelar", nao meio a meio.
     // O windeployqt ja gera translations/qt_pt_BR.qm no build-app-rel e o
-    // zencad.iss ja embarca translations\* -- por isso isto sao 5 linhas.
+    // zendo.iss ja embarca translations\* -- por isso isto sao 5 linhas.
+    // (R60: era o zencad.iss ate os instaladores separarem.)
     static QTranslator qtTr;
     const QLocale ptBR(QLocale::Portuguese, QLocale::Brazil);
     const QString trDir =

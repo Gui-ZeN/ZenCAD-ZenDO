@@ -114,12 +114,23 @@ begin
   end;
 
   // QuietUninstallString vem como: "C:\...\unins000.exe" /SILENT
-  Exe := RemoveQuotes(Cmd);
-  if Pos('.exe" ', Cmd) > 0 then begin
-    Exe    := Copy(Cmd, 2, Pos('.exe" ', Cmd) + 2);
-    Params := '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES';
-  end else
-    Params := '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES';
+  // Sem aspas (formato que o Inno nunca grava) o Pos dá 0 e o RemoveQuotes vira
+  // no-op: falha alta no Exec abaixo, não silêncio.
+  Params := '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES';
+  if Pos('.exe" ', Cmd) > 0 then
+    Exe := Copy(Cmd, 2, Pos('.exe" ', Cmd) + 2)
+  else
+    Exe := RemoveQuotes(Cmd);
+
+  // CHAVE ÓRFÃ: o usuário apagou `C:\Program Files\Zen` na mão e a chave de
+  // uninstall ficou. Sem isto, o Exec falharia e o instalador abortaria PARA
+  // SEMPRE — a vítima ficaria sem conseguir instalar nada até editar o
+  // registro. Não há o que desinstalar: limpa o cadáver e segue.
+  if not FileExists(Exe) then begin
+    RegDeleteKeyIncludingSubkeys(Raiz, ChaveDesinstLegado());
+    Result := not RegKeyExists(Raiz, ChaveDesinstLegado());
+    exit;
+  end;
 
   if not Exec(Exe, Params, '', SW_HIDE, ewWaitUntilTerminated, Code) then begin
     Result := False;
@@ -145,15 +156,21 @@ begin
   // O aviso é honesto de propósito: desinstalar o Zen monolítico para instalar
   // só o ZenCAD REMOVE o Zendo da máquina. Esconder isso seria mentir por
   // omissão — o usuário precisa saber que tem um segundo download a fazer.
-  if MsgBox('Foi encontrada a instalação antiga do Zen, que trazia o ZenCAD e o'
-            + ' Zendo num pacote único.' #13#13
+  // SuppressibleMsgBox, e não MsgBox: `/SUPPRESSMSGBOXES` só cala o
+  // suprimível. Um MsgBox puro aqui TRAVARIA uma instalação silenciosa
+  // (`/VERYSILENT`) esperando um clique num diálogo que ninguém vê — e o
+  // Grupo Christus empurrar isso por script é cenário real, não hipótese.
+  // Em modo silencioso a resposta é IDYES: quem pediu silêncio pediu que
+  // seguisse.
+  if SuppressibleMsgBox('Foi encontrada a instalação antiga do Zen, que trazia o'
+            + ' ZenCAD e o Zendo num pacote único.' #13#13
             + 'Ela será removida antes de continuar, porque a partir desta versão'
             + ' cada aplicativo tem seu próprio instalador.' #13#13
             + 'ATENÇÃO: se você usa o OUTRO aplicativo do ecossistema, baixe e'
             + ' instale o instalador dele em seguida — senão ele sairá desta'
             + ' máquina.' #13#13
             + 'Deseja continuar?',
-            mbConfirmation, MB_YESNO) <> IDYES then begin
+            mbConfirmation, MB_YESNO, IDYES) <> IDYES then begin
     Result := 'Instalação cancelada: a versão antiga do Zen precisa ser removida antes.';
     exit;
   end;
