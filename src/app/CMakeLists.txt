@@ -16,8 +16,6 @@ qt_add_executable(cadapp
     CursorHud.hpp
     LayersPanel.cpp
     LayersPanel.hpp
-    ProjectIo.cpp
-    ProjectIo.hpp
     StartPage.cpp
     StartPage.hpp
     zencad.rc
@@ -41,6 +39,7 @@ add_custom_command(TARGET cadapp POST_BUILD
             $<TARGET_FILE_DIR:cadapp>/assets/logo.png)
 target_link_libraries(cadapp PRIVATE
     cadcore
+    zenio       # o formato .zencad — era fonte local, virou lib compartilhada
     Qt6::Core Qt6::Gui Qt6::Widgets Qt6::OpenGLWidgets
 )
 if(MSVC)

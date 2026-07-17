@@ -1,4 +1,4 @@
-// src/app/ProjectIo.hpp
+// src/zenio/ProjectIo.hpp
 // Formato de PROJETO do ZenCAD (.zencad): um único arquivo JSON com TUDO que
 // o documento carrega — entidades (todos os tipos), camadas (com estado),
 // biblioteca de blocos (com atributos), estilos de cota/texto, pranchas e
@@ -13,7 +13,7 @@
 #include "core/document/DrawingManager.hpp"
 #include "core/document/Style.hpp"
 #include "core/layout/Layout.hpp"
-#include "app/PlotStyle.hpp"
+#include "core/document/PlotStyle.hpp"
 
 namespace cad {
 

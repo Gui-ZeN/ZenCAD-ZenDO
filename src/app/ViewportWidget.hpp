@@ -12,7 +12,7 @@
 #include <unordered_map>
 
 #include "app/Camera.hpp"
-#include "app/Theme.hpp"
+#include "ui/Theme.hpp"
 #include "core/geometry/RenderBatch.hpp"
 #include "core/interaction/ToolController.hpp"
 #include "core/snap/SnapEngine.hpp"

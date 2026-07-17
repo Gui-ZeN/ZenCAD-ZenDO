@@ -1,8 +1,8 @@
-// src/app/ProjectIo.cpp
+// src/zenio/ProjectIo.cpp
 // Implementação do formato .zencad: UM arquivo JSON com todo o documento —
 // entidades, camadas, blocos (com atributos), estilos, pranchas e configurações.
 // Round-trip fiel: cada tipo concreto de Entity tem serializador e fábrica.
-#include "app/ProjectIo.hpp"
+#include "zenio/ProjectIo.hpp"
 
 #include <QBuffer>
 #include <QFile>
@@ -38,6 +38,12 @@
 #include "core/geometry/XLine.hpp"
 
 namespace cad {
+
+// A versão do formato .zencad que ESTE binário sabe ler. Anda junto com o
+// `root["version"]` do saveProject — subir uma sem a outra é o bug que a
+// checagem no loadProject existe para pegar.
+constexpr int kFormatVersion = 1;
+
 namespace {
 
 // ============================================================================
@@ -712,7 +718,7 @@ bool saveProject(const QString& path,
                  const QImage* thumbnail) {
     QJsonObject root;
     root["app"]     = "ZenCAD";
-    root["version"] = 1;
+    root["version"] = kFormatVersion;
 
     QJsonObject s;
     s["ltScale"]      = settings.ltScale;
@@ -874,6 +880,35 @@ bool loadProject(const QString& path,
     const QJsonObject root = jdoc.object();
     if (root.value("app").toString() != QLatin1String("ZenCAD")) {
         setErr(err, QStringLiteral("\"%1\" não é um projeto ZenCAD.").arg(path));
+        return false;
+    }
+
+    // O formato se APRESENTA antes de ser lido.
+    //
+    // O saveProject grava `version` desde o primeiro dia e este load nunca o
+    // lia: o campo era enfeite. Com um instalador único ninguém sentia — os
+    // dois apps sempre saíam da mesma leva, então a versão era a mesma por
+    // construção. Com produtos de release SEPARADO (instaladores próprios) a
+    // premissa morre, e o silêncio vira perda de dados: o irmão novo grava um
+    // campo que o irmão velho desconhece, o velho carrega ignorando o aviso
+    // que ninguém leu, o usuário salva por cima — e o trabalho evapora sem uma
+    // única mensagem de erro. É o modo de falha mais caro que existe.
+    //
+    // Recusar é a única resposta honesta: "não sei ler" é sempre melhor que
+    // "li errado e não te contei". Ausência do campo = v1 (formato original),
+    // que é o que os arquivos de antes desta checagem realmente são.
+    // `toDouble` e não `toInt`: o JSON não tem tipo inteiro, e `toInt` devolve
+    // o DEFAULT (=1, "pode abrir") quando o valor é fracionário ou estoura o
+    // int — ou seja, erra pro lado permissivo justamente onde deveria
+    // desconfiar. Hoje isso é inalcançável (o único escritor é o saveProject
+    // logo acima), mas um gate que falha aberto não é um gate.
+    const double ver = root.value("version").toDouble(1.0);
+    if (ver > double(kFormatVersion)) {
+        setErr(err, QStringLiteral(
+                        "\"%1\" foi salvo num formato mais novo (v%2) do que "
+                        "este aplicativo sabe ler (v%3). Atualize o Zen para "
+                        "abrir este projeto.")
+                        .arg(path).arg(ver).arg(kFormatVersion));
         return false;
     }
 

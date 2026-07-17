@@ -17,7 +17,7 @@
 #include <QSettings>
 #include <QFileInfo>
 
-#include "app/ProjectIo.hpp"
+#include "zenio/ProjectIo.hpp"
 #include "app/StartPage.hpp"
 #include <QStackedWidget>
 #include <QPixmap>

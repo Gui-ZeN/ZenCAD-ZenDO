@@ -11,7 +11,7 @@ class QLockFile;
 #include "core/document/DrawingManager.hpp"
 #include "core/document/Style.hpp"
 #include "core/layout/Layout.hpp"
-#include "app/ProjectIo.hpp"
+#include "zenio/ProjectIo.hpp"
 
 class Viewport3D;
 class ZendoStartPage;

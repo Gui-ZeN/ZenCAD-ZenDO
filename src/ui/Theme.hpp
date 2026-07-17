@@ -1,4 +1,4 @@
-// src/app/Theme.hpp
+// src/ui/Theme.hpp
 #pragma once
 #include <QString>
 #include <QColor>

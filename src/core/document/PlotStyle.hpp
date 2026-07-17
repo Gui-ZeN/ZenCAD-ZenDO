@@ -1,4 +1,4 @@
-// src/app/PlotStyle.hpp
+// src/core/document/PlotStyle.hpp
 // Estilos de plotagem nomeados (o "CTB" do ZenCAD, por CAMADA): o que cada
 // camada vira no PAPEL — plota ou não, cor de saída e espessura forçada.
 // A tabela ativa é aplicada no pipeline de plot (Plotar/PUBLISH/preview),

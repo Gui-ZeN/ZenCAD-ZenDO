@@ -8,8 +8,8 @@
 #include "core/document/DrawingManager.hpp"
 #include "core/document/Style.hpp"
 #include "core/layout/Layout.hpp"
-#include "app/PlotStyle.hpp"
-#include "app/Theme.hpp"
+#include "core/document/PlotStyle.hpp"
+#include "ui/Theme.hpp"
 
 class QPlainTextEdit;
 class QLineEdit;

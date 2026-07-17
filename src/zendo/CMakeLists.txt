@@ -23,7 +23,6 @@ qt_add_executable(zendo
     ObjImport.hpp
     BlenderInstaller.cpp    # R47: o motor de render que se instala sozinho
     BlenderInstaller.hpp
-    ../app/ProjectIo.cpp    # leitura/escrita do .zencad compartilhada
     zendo.rc
 )
 
@@ -51,7 +50,8 @@ add_custom_command(TARGET zendo POST_BUILD
 # os irmãos conversam por arquivos .zencad, não por acoplamento.
 target_link_libraries(zendo PRIVATE
     zencore
-    cadcore
+    cadcore     # explícito de propósito: o Zendo usa o 2D direto (PlantImport)
+    zenio       # o .zencad — antes era `../app/ProjectIo.cpp` compilado aqui
     Qt6::Core Qt6::Gui Qt6::Widgets Qt6::OpenGLWidgets
 )
 if(WIN32)

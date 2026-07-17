@@ -8,7 +8,7 @@
 #include <QSurfaceFormat>
 #include <QTranslator>
 
-#include "app/Theme.hpp"
+#include "ui/Theme.hpp"
 #include "ZendoWindow.hpp"
 #include "ZendoChrome.hpp"   // por Ãºltimo: puxa windows.h (enxuto)
 

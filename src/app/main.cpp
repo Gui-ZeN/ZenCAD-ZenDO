@@ -4,7 +4,7 @@
 #include <memory>
 
 #include "app/MainWindow.hpp"
-#include "app/Theme.hpp"
+#include "ui/Theme.hpp"
 #include "core/document/DrawingManager.hpp"
 #include "core/geometry/LinePattern.hpp"
 #include "core/spatial/Quadtree.hpp"
