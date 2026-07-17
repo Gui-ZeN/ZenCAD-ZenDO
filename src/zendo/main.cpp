@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     app.setApplicationName(QStringLiteral("Zendo"));
     // R48: o "Sobre" precisa dizer qual build Ã©. RITUAL DA LEVA:
     // esta linha e o AppVersion do installer/zencad.iss andam JUNTAS.
-    app.setApplicationVersion(QStringLiteral("2.0.51"));
+    app.setApplicationVersion(QStringLiteral("2.0.52"));
     app.setApplicationDisplayName(QStringLiteral("Zendo"));
 
     // R52: os botoes que o Qt escreve sozinho (OK/Cancel/Close/Yes/No) vinham

@@ -274,10 +274,25 @@ static Result sectionWithView(const std::vector<const HalfEdgeMesh*>& meshes,
 Result exportSection(const std::vector<const HalfEdgeMesh*>& meshes,
                      char axis, double pos, int lookSign,
                      const QString& outPath) {
-    View vw;
+    // R57: o `else` desta função ENGOLIA qualquer letra que não fosse X e
+    // devolvia um corte em Y — calado. Pedi um corte em 'Z' esperando planta
+    // baixa, recebi uma ELEVAÇÃO, e salvei o arquivo chamando de "Planta".
+    // Uma função que aceita entrada inválida e retorna OUTRA COISA sem avisar
+    // é pior que uma que falha: ela transforma erro de digitação em entrega
+    // errada. Agora Z faz o que o usuário quis (delega ao plano geral da R31,
+    // que sabe planta baixa) e o resto é recusado com o motivo.
     const double sign = lookSign >= 0 ? 1.0 : -1.0;
-    if (axis == 'X' || axis == 'x') vw.dir = {sign, 0, 0};
-    else                            vw.dir = {0, sign, 0};
+    const char a = (axis >= 'a' && axis <= 'z') ? char(axis - 32) : axis;
+    if (a == 'Z')                 // planta baixa: plano horizontal
+        return exportSectionPlane(meshes, {0.0, 0.0, sign}, pos * sign,
+                                  outPath);
+    if (a != 'X' && a != 'Y')
+        return {false, 0, 0,
+                QStringLiteral("eixo '%1' não existe — use X, Y ou Z")
+                    .arg(QChar(axis))};
+    View vw;
+    if (a == 'X') vw.dir = {sign, 0, 0};
+    else          vw.dir = {0, sign, 0};
     vw.up = {0, 0, 1};
     vw.right = vw.dir.cross(vw.up).normalized();
     return sectionWithView(meshes, vw, pos * sign, outPath);

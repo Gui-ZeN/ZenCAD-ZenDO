@@ -6,7 +6,7 @@
 ; num dia todos com o mesmo nome tornavam builds indistinguÃ­veis).
 
 #define AppName    "Zen"
-#define AppVersion "2.0.51"
+#define AppVersion "2.0.52"
 #define CadExe     "cadapp.exe"
 #define ZendoExe   "zendo.exe"
 #define CadDir     "..\build-app-rel\src\app"
