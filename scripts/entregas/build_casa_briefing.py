@@ -454,7 +454,17 @@ box(RX0 + 1.5, RX1, _pv[0] - 0.02, _pv[1] + 0.02, SZ0 + 2.56, SZ0 + 2.60,
     color=GRAFITE)                               # trilho superior
 box(RX0 + 1.62, RX0 + 1.68, _pv[0] - 0.06, _pv[1] - 0.02, SZ0 + 1.25,
     SZ0 + 2.05, color=LATAO)                     # puxador
-box(RX0, RX1, SY0, SY0 + 1.9, SZ0 + 0.3, SZ0 + 0.36, tex=PISOSUP, scale=1.2)
+# O PISO DA VARANDA — o defeito que o Guilherme achou olhando: eu tinha posto o
+# piso em `SY0, SY0+1.9` (y 5,6→7,5), DENTRO do quarto, onde a laje sul já cobre.
+# O parapeito em U avança pra FRENTE da fachada (y 3,64→5,6, o balanço sobre o
+# portão); o piso ia pro lado oposto. Resultado: 1,96 m de sacada com grade e
+# sem chão — sai da porta e cai na garagem. É a 7ª encarnação de "montei o
+# elemento e esqueci de abrir/fechar o lugar dele". O piso vai sob o parapeito,
+# do parapeito frontal (SY0-1.96) à fachada (SY0), cobrindo o balanço inteiro:
+# laje estrutural de concreto (SZ0..SZ0+0,3, como a laje sul) + acabamento por
+# cima. Só o acabamento de 6 cm seria um piso boiando no ar sobre o portão.
+box(RX0, RX1, SY0 - 1.96, SY0, SZ0, SZ0 + 0.3, tex=CONC, scale=2.2)
+box(RX0, RX1, SY0 - 1.96, SY0, SZ0 + 0.3, SZ0 + 0.36, tex=PISOSUP, scale=1.2)
 box(RX0, RX1, SY0 - 1.96, SY0 - 1.9, SZ0 + 0.36, SZ0 + 1.36, color=VIDRO)
 box(RX0, RX1, SY0 - 1.98, SY0 - 1.88, SZ0 + 1.36, SZ0 + 1.42, tex=MAD, scale=0.6)
 box(RX0 - 0.06, RX0, SY0 - 1.96, SY0, SZ0 + 0.36, SZ0 + 1.36, color=VIDRO)
