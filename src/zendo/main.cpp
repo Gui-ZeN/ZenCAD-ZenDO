@@ -1,4 +1,4 @@
-﻿// src/zendo/main.cpp â€” Zendo, o espaÃ§o 3D do ecossistema Zen (spike).
+﻿// src/zendo/main.cpp — Zendo, o espaço 3D do ecossistema Zen (spike).
 // Uso: zendo.exe [projeto.zencad] [--shot saida.png]
 #include <QApplication>
 #include <QFileInfo>
@@ -10,7 +10,7 @@
 
 #include "ui/Theme.hpp"
 #include "ZendoWindow.hpp"
-#include "ZendoChrome.hpp"   // por Ãºltimo: puxa windows.h (enxuto)
+#include "ZendoChrome.hpp"   // por último: puxa windows.h (enxuto)
 
 int main(int argc, char** argv) {
     QSurfaceFormat fmt;
@@ -22,11 +22,11 @@ int main(int argc, char** argv) {
 
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("Zendo"));
-    // R48: o "Sobre" precisa dizer qual build Ã©. RITUAL DA LEVA (R60:
-    // agora sÃ£o TRÃS lugares, nÃ£o dois): esta linha, `src/app/main.cpp`
+    // R48: o "Sobre" precisa dizer qual build é. RITUAL DA LEVA (R60:
+    // agora são TRÊS lugares, não dois): esta linha, `src/app/main.cpp`
     // (o ZenCAD passou a versionar) e o `#define AppVersion` de
     // `installer/common.isi` (que substituiu o zencad.iss como fonte da
-    // versÃ£o) andam JUNTAS.
+    // versão) andam JUNTAS.
     app.setApplicationVersion(QStringLiteral("2.0.53"));
     app.setApplicationDisplayName(QStringLiteral("Zendo"));
 
@@ -52,11 +52,11 @@ int main(int argc, char** argv) {
         app.installTranslator(&qtTr);
 
     app.setStyleSheet(cad::zenTheme(cad::ThemeMode::Dark) +
-                      zendo::zendoChrome());   // Sumi + moldura prÃ³pria (R33)
-    // R34: toda janela nova (diÃ¡logos) ganha a caption escura ao aparecer
+                      zendo::zendoChrome());   // Sumi + moldura própria (R33)
+    // R34: toda janela nova (diálogos) ganha a caption escura ao aparecer
     app.installEventFilter(new zendo::DarkTitleFilter(&app));
 
-    // Ãcone prÃ³prio (cubo no ensÅ); cai no da famÃ­lia se faltar.
+    // Ícone próprio (cubo no ensō); cai no da família se faltar.
     const QString dir = QCoreApplication::applicationDirPath() + "/assets/";
     if (QFileInfo::exists(dir + "zendo.ico"))
         app.setWindowIcon(QIcon(dir + "zendo.ico"));
@@ -78,7 +78,7 @@ int main(int argc, char** argv) {
     bool walkenter = false, qaCtrlS = false;
     bool follow = false, ortho = false, newstudy = false, night = false;
     bool del = false, glue = false, terrain = false, redef = false;
-    bool hdri = false;                       // R46: cÃ©u real no --render
+    bool hdri = false;                       // R46: céu real no --render
     bool qaAutosave = false, qaRecovery = false;   // R48
     bool qaLimpeza = false, qaAjuda = false, qaProtecao = false;
     bool qaI18n = false, qaEnquadrar = false, qaFoto = false;  // R52
@@ -92,13 +92,13 @@ int main(int argc, char** argv) {
         else if (args[i] == QLatin1String("--cam") && i + 1 < args.size())
             cam = args[++i];   // "yaw,pitch,fator" (graus, graus, x auto-zoom)
         else if (args[i] == QLatin1String("--pick") && i + 1 < args.size())
-            pick = args[++i];  // "nx,ny" (0..1): clique sintÃ©tico p/ QA
+            pick = args[++i];  // "nx,ny" (0..1): clique sintético p/ QA
         else if (args[i] == QLatin1String("--pull") && i + 1 < args.size())
             pull = args[++i];  // metros: empurrar/puxar a face do --pick
         else if (args[i] == QLatin1String("--rect") && i + 1 < args.size())
             rect = args[++i];  // "x1,y1,x2,y2" (0..1): retangulo na face p/ QA
         else if (args[i] == QLatin1String("--undo") && i + 1 < args.size())
-            undo = args[++i];  // nÂº de Ctrl+Z apÃ³s as ediÃ§Ãµes (QA)
+            undo = args[++i];  // nº de Ctrl+Z após as edições (QA)
         else if (args[i] == QLatin1String("--line") && i + 1 < args.size())
             line = args[++i];  // "x1,y1,x2,y2": linha divisora p/ QA
         else if (args[i] == QLatin1String("--paint") && i + 1 < args.size())
@@ -152,53 +152,53 @@ int main(int argc, char** argv) {
         else if (args[i] == QLatin1String("--gltf") && i + 1 < args.size())
             gltf = args[++i];   // exporta glTF (QA)
         else if (args[i] == QLatin1String("--hover") && i + 1 < args.size())
-            hover = args[++i];  // G1: "nx,ny;nx,ny" â€” inferÃªncia tipada (QA)
+            hover = args[++i];  // G1: "nx,ny;nx,ny" — inferência tipada (QA)
         else if (args[i] == QLatin1String("--qa-ctrls"))
             qaCtrlS = true;       // R55: exercita Salvar (Ctrl+S) sem dialogo
         else if (args[i] == QLatin1String("--qa-balde") && i + 1 < args.size())
             qaBalde = args[++i];  // R55: "nx,ny" - balde + mouseMove real (QA)
         else if (args[i] == QLatin1String("--redo") && i + 1 < args.size())
-            redoN = args[++i];  // G2: nÂº de Ctrl+Y apÃ³s os undo (QA)
+            redoN = args[++i];  // G2: nº de Ctrl+Y após os undo (QA)
         else if (args[i] == QLatin1String("--erase") && i + 1 < args.size())
-            erase = args[++i];  // G2: "nx,ny" â€” borracha (QA)
+            erase = args[++i];  // G2: "nx,ny" — borracha (QA)
         else if (args[i] == QLatin1String("--vmove") && i + 1 < args.size())
-            vmove = args[++i];  // G2: "nx,ny,dx,dy,dz" â€” vÃ©rtice + autofold
+            vmove = args[++i];  // G2: "nx,ny,dx,dy,dz" — vértice + autofold
         else if (args[i] == QLatin1String("--sketch3d") && i + 1 < args.size())
-            sketch3d = args[++i];   // G2: "x,y,z;x,y,z;â€¦" lÃ¡pis em MUNDO
+            sketch3d = args[++i];   // G2: "x,y,z;x,y,z;…" lápis em MUNDO
         else if (args[i] == QLatin1String("--selbox") && i + 1 < args.size())
-            selbox = args[++i];     // G3: "x1,y1,x2,y2[,del]" caixa de seleÃ§Ã£o
+            selbox = args[++i];     // G3: "x1,y1,x2,y2[,del]" caixa de seleção
         else if (args[i] == QLatin1String("--tape") && i + 1 < args.size())
-            tape = args[++i];       // G4: "x1,y1,x2,y2" fita mÃ©trica (guia)
+            tape = args[++i];       // G4: "x1,y1,x2,y2" fita métrica (guia)
         else if (args[i] == QLatin1String("--dim3d") && i + 1 < args.size())
             dim3d = args[++i];      // R26: "ax,ay,az,bx,by,bz,cx,cy,cz" cota
         else if (args[i] == QLatin1String("--walk") && i + 1 < args.size())
-            walk = args[++i];       // R27: "ex,ey,ez,yaw,pitch" 1Âª pessoa
+            walk = args[++i];       // R27: "ex,ey,ez,yaw,pitch" 1ª pessoa
         else if (args[i] == QLatin1String("--dimclick") && i + 1 < args.size())
-            dimclick = args[++i];   // R27: "nx,ny;â€¦" cliques da cota (aresta)
+            dimclick = args[++i];   // R27: "nx,ny;…" cliques da cota (aresta)
         else if (args[i] == QLatin1String("--walkenter"))
             walkenter = true;       // R27: entra no walk pelo caminho do F8
         else if (args[i] == QLatin1String("--poscam") && i + 1 < args.size())
-            poscam = args[++i];     // R28: "nx,ny" posiciona cÃ¢mera 1Âª pessoa
+            poscam = args[++i];     // R28: "nx,ny" posiciona câmera 1ª pessoa
         else if (args[i] == QLatin1String("--walksim") && i + 1 < args.size())
             walksim = args[++i];    // R28: "W,60" testa o integrador do walk
         else if (args[i] == QLatin1String("--clipface") && i + 1 < args.size())
-            clipface = args[++i];   // R30: "nx,ny" seÃ§Ã£o no plano da face
+            clipface = args[++i];   // R30: "nx,ny" seção no plano da face
         else if (args[i] == QLatin1String("--clipplane") && i + 1 < args.size())
             clipplane = args[++i];  // R30: "a,b,c,d" plano de corte direto
         else if (args[i] == QLatin1String("--cutplane") && i + 1 < args.size())
             cutplane = args[++i];   // R31: "a,b,c,d,arquivo" export do corte
         else if (args[i] == QLatin1String("--clipslide") && i + 1 < args.size())
-            clipslide = args[++i];  // R34: desliza a Ãºltima seÃ§Ã£o (m)
+            clipslide = args[++i];  // R34: desliza a última seção (m)
         else if (args[i] == QLatin1String("--clipdrag") && i + 1 < args.size())
             clipdrag = args[++i];   // R34: "x0,y0,x1,y1" gesto real de arrasto
         else if (args[i] == QLatin1String("--render") && i + 1 < args.size())
-            render = args[++i];     // R36: FotÃ³grafo headless "saida.png"
+            render = args[++i];     // R36: Fotógrafo headless "saida.png"
         else if (args[i] == QLatin1String("--stair") && i + 1 < args.size())
             stair = args[++i];      // R41: "ox,oy,dx,dy,w,h,run" escada
         else if (args[i] == QLatin1String("--guard") && i + 1 < args.size())
             guard = args[++i];      // R43: "x1,y1,x2,y2,z,h,gap" guarda-corpo
         else if (args[i] == QLatin1String("--hdri"))
-            hdri = true;            // R46: --render com cÃ©u real
+            hdri = true;            // R46: --render com céu real
         else if (args[i] == QLatin1String("--qa-autosave"))
             qaAutosave = true;      // R48
         else if (args[i] == QLatin1String("--qa-recovery"))
@@ -228,65 +228,65 @@ int main(int argc, char** argv) {
         else if (args[i] == QLatin1String("--slabhole") && i + 1 < args.size())
             slabhole = args[++i];   // R43: "x1,y1,x2,y2,hx1,hy1,hx2,hy2,zt,th"
         else if (args[i] == QLatin1String("--dimang") && i + 1 < args.size())
-            dimang = args[++i];     // R34: cota angular "a...,b(vÃ©rtice)...,c..."
+            dimang = args[++i];     // R34: cota angular "a...,b(vértice)...,c..."
         else if (args[i] == QLatin1String("--sides") && i + 1 < args.size())
-            sides = args[++i];      // G4: cÃ­rculo vira polÃ­gono N lados
+            sides = args[++i];      // G4: círculo vira polígono N lados
         else if (args[i] == QLatin1String("--followme"))
             follow = true;          // G4: varre o perfil pelo rascunho
         else if (args[i] == QLatin1String("--array") && i + 1 < args.size())
-            arr = args[++i];        // G4: "x3" ou "/3" apÃ³s mover/rotacionar
+            arr = args[++i];        // G4: "x3" ou "/3" após mover/rotacionar
         else if (args[i] == QLatin1String("--mkgroup") && i + 1 < args.size())
-            mkgroup = args[++i];    // G5: agrupa a multi-seleÃ§Ã£o
+            mkgroup = args[++i];    // G5: agrupa a multi-seleção
         else if (args[i] == QLatin1String("--ctxat") && i + 1 < args.size())
             ctxat = args[++i];      // G5: "nx,ny" entra no contexto
         else if (args[i] == QLatin1String("--tagset") && i + 1 < args.size())
-            tagset = args[++i];     // G5: tag na seleÃ§Ã£o
+            tagset = args[++i];     // G5: tag na seleção
         else if (args[i] == QLatin1String("--tagvis") && i + 1 < args.size())
             tagvis = args[++i];     // G5: "tag,0|1"
         else if (args[i] == QLatin1String("--ortho"))
-            ortho = true;           // G6: projeÃ§Ã£o paralela (QA)
+            ortho = true;           // G6: projeção paralela (QA)
         else if (args[i] == QLatin1String("--fog") && i + 1 < args.size())
             fog = args[++i];        // G6: densidade da neblina (QA)
         else if (args[i] == QLatin1String("--newstudy"))
-            newstudy = true;        // R1: estudo do zero (EnsÅ-san)
+            newstudy = true;        // R1: estudo do zero (Ensō-san)
         else if (args[i] == QLatin1String("--rectx") && i + 1 < args.size())
-            rectx = args[++i];      // R2: "nx,ny,a,b" retÃ¢ngulo EXATO digitado
+            rectx = args[++i];      // R2: "nx,ny,a,b" retângulo EXATO digitado
         else if (args[i] == QLatin1String("--pencilx") && i + 1 < args.size())
-            pencilx = args[++i];    // R4: "nx,ny,len" traÃ§o exato
+            pencilx = args[++i];    // R4: "nx,ny,len" traço exato
         else if (args[i] == QLatin1String("--movem") && i + 1 < args.size())
-            movem = args[++i];      // R4: move multi pÃ³s-selbox
+            movem = args[++i];      // R4: move multi pós-selbox
         else if (args[i] == QLatin1String("--night"))
             night = true;           // R5: ambiente Noite (QA)
         else if (args[i] == QLatin1String("--palette") && i + 1 < args.size())
-            palette = args[++i];    // R5: "r,g,b" pinta a seleÃ§Ã£o (QA)
+            palette = args[++i];    // R5: "r,g,b" pinta a seleção (QA)
         else if (args[i] == QLatin1String("--bucket") && i + 1 < args.size())
             bucket = args[++i];     // R6: arma o balde "r,g,b"
         else if (args[i] == QLatin1String("--paintat") && i + 1 < args.size())
-            paintat = args[++i];    // R6: cliques "nx,ny[,ctrl];â€¦"
+            paintat = args[++i];    // R6: cliques "nx,ny[,ctrl];…"
         else if (args[i] == QLatin1String("--arcq") && i + 1 < args.size())
             arcq = args[++i];       // R7: "ax,ay,bx,by,raio"
         else if (args[i] == QLatin1String("--protr") && i + 1 < args.size())
             protr = args[++i];      // R7: "cx,cy,rx,ry,ang[,copy]"
         else if (args[i] == QLatin1String("--scaleq") && i + 1 < args.size())
-            scaleq = args[++i];     // R7: fator na seleÃ§Ã£o
+            scaleq = args[++i];     // R7: fator na seleção
         else if (args[i] == QLatin1String("--fmperim") && i + 1 < args.size())
             fmperim = args[++i];    // R8: "px,py,cx,cy" perfil + caminho
         else if (args[i] == QLatin1String("--texscale") && i + 1 < args.size())
-            texscale = args[++i];   // R13: reveste a seleÃ§Ã£o nessa escala
+            texscale = args[++i];   // R13: reveste a seleção nessa escala
         else if (args[i] == QLatin1String("--impobj") && i + 1 < args.size())
             impobj = args[++i];     // R15: "arquivo|escala|y" importa+insere
         else if (args[i] == QLatin1String("--inspect"))
-            inspect = true;         // R17: relatÃ³rio de furos/integridade
+            inspect = true;         // R17: relatório de furos/integridade
         else if (args[i] == QLatin1String("--fixsolid"))
             fixsolid = true;        // R17: tampa os furos do selecionado
         else if (args[i] == QLatin1String("--cleanup"))
             cleanup = true;         // R17: coplanares + purge
         else if (args[i] == QLatin1String("--mirror") && i + 1 < args.size())
-            mirror = args[++i];     // R17: "x|y|z" espelha a seleÃ§Ã£o
+            mirror = args[++i];     // R17: "x|y|z" espelha a seleção
         else if (args[i] == QLatin1String("--subtract"))
-            subtract = true;        // R21: subtrai o menor sÃ³lido do maior
+            subtract = true;        // R21: subtrai o menor sólido do maior
         else if (args[i] == QLatin1String("--unite"))
-            unite = true;            // R24: une os 2 sÃ³lidos selecionados
+            unite = true;            // R24: une os 2 sólidos selecionados
         else if (args[i] == QLatin1String("--move") && i + 1 < args.size())
             move = args[++i];   // "x1,y1,x2,y2": move o solido selecionado
         else if (args[i] == QLatin1String("--copy") && i + 1 < args.size())
@@ -299,7 +299,7 @@ int main(int argc, char** argv) {
             file = args[i];
     }
 
-    // R48: antes da janela â€” a raiz vale pro boot inteiro
+    // R48: antes da janela — a raiz vale pro boot inteiro
     if (!recdir.isEmpty()) ZendoWindow::setPastaRecuperacao(recdir);
     ZendoWindow w;
     w.resize(1440, 900);
@@ -436,8 +436,8 @@ int main(int argc, char** argv) {
     if (!shot.isEmpty()) {
         w.shootAndQuit(shot);            // QA: sem oferta, sem painel
     } else {
-        w.iniciarProtecao();             // R48: recuperaÃ§Ã£o + sentinela
-        w.primeirosPassos(false);        // R48: sÃ³ no 1Âº boot da vida
+        w.iniciarProtecao();             // R48: recuperação + sentinela
+        w.primeirosPassos(false);        // R48: só no 1º boot da vida
     }
     return app.exec();
 }
