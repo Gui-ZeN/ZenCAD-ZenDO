@@ -277,3 +277,24 @@ entraram **Arco elíptico** (trecho paramétrico da elipse) e **Círculo TTT**
 - Parâmetros na UI: raio de fillet / recuo de chanfro; escala de linetype; estilo de cota.
 - DXF: exportar Hatch/Dimension, seção HEADER/handles, "abrir" substituindo o documento.
 - Plotagem: Paper Space / múltiplas viewports, escala 1:N.
+
+## Licença
+
+Copyright (C) 2026 Guilherme (Gui-ZeN).
+
+Este programa é software livre: você pode redistribuí-lo e/ou modificá-lo sob os
+termos da **GNU General Public License versão 3**, publicada pela Free Software
+Foundation. Veja o arquivo [LICENSE](LICENSE) para o texto completo.
+
+Ele é distribuído na esperança de ser útil, mas **SEM NENHUMA GARANTIA** — sem
+sequer a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO A UM PROPÓSITO
+ESPECÍFICO.
+
+### O que é de terceiros (e não é coberto pela GPL acima)
+
+- **Texturas em `assets/materiais/`** — pack CC0 do [ambientCG](https://ambientcg.com),
+  domínio público. Uso livre para qualquer fim, inclusive comercial.
+- **Qt 6** — não é redistribuído neste repositório; é dependência de build,
+  ligada dinamicamente, sob licença própria (LGPLv3 / comercial).
+- **Blender / Cycles** — o motor de render **não** é redistribuído: o app o baixa
+  sob demanda e o executa como processo separado (GPL, sem ligação de código).
