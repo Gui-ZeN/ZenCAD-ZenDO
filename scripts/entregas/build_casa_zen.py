@@ -392,79 +392,117 @@ for cx in (9.90, 10.80, 11.70):
     cadeira(cx, 13.95, giroY=False)
 
 # ========================================== SUPERIOR: girado 8°, 3 SUÍTES REAIS
-# Tudo em coordenadas LOCAIS (pré-giro) e girado no fim, com pivô único.
-# A cozinha abaixo já tem laje ORTOGONAL própria — o volume girado passa por
-# cima como gesto, não como estrutura. Foi a inversão dessa dependência que
-# gerou os 4 buracos da casa anterior.
-SX0, SX1, SY0, SY1 = 8.2, 14.8, 5.6, 17.0
-SZ0, SZ1 = 3.44, 6.30                 # piso do superior · teto
-ZP, ZT = SZ0 + 0.06, SZ1              # piso acabado · teto
+# VOLUME ESTICADO (pedido do Guilherme: quartos de 10 m² são apertados).
+# 11,40 -> 13,00 m de comprimento. As folgas foram CALCULADAS, não chutadas —
+# a rotação de 8° joga o canto NW pra oeste, e esticar só em Y levava o volume
+# a 7 cm do social. Estreitei 25 cm no oeste pra compensar:
+#   NW=(7.32, 18.09) folga do social  +0.32 m
+#   leste  x máx 15.42  folga da divisa +0.58 m
+#   sul    y mín  5.22  folga do recuo  +0.22 m
+SX0, SX1, SY0, SY1 = 8.45, 14.8, 5.6, 18.6
+SZ0, SZ1 = 3.44, 6.30
+ZP, ZT = SZ0 + 0.06, SZ1
+# A PLANTA EM FAIXAS (local, oeste->leste):
+#   8.45-8.70  parede oeste
+#   8.70-10.00 CORREDOR + poço da escada (1,30 — a escada precisa de largura)
+#   10.00-11.45 banheiros (1,45)
+#   11.45-11.57 divisória
+#   11.57-14.55 QUARTOS (2,98 de largura livre)
+COR0, COR1 = 8.70, 9.90        # corredor 1,20 (com o poço da escada)
+QX0, QX1 = 9.90, 14.55         # a CÉLULA da suíte: 4,65 de largura livre
+BW = 2.00                      # o banheiro ocupa só um CANTO da célula
+BD = 2.20
 _s = len(M)
-# laje + piso do superior (com o vão da escada recortado)
-VX0, VX1, VY0, VY1 = 8.2, 10.5, 7.00, 11.2      # o vão da escada
-for (a, b, c, d) in ((SX0, SX1, SY0, VY0), (SX0, SX1, VY1, SY1),
-                     (VX1, SX1, VY0, VY1)):
-    box(a, b, c, d, SZ0 - 0.24, SZ0, tex=CONC, scale=2.2)
-    box(a, b, c, d, SZ0, ZP, tex=PISOSUP, scale=1.2)
-# guarda-corpo do vão (leste e sul; o norte é por onde a escada chega)
+VX0, VX1, VY0, VY1 = COR0, COR1, 6.20, 10.10
+for (a, b, c, d_) in ((SX0, SX1, SY0, VY0), (SX0, SX1, VY1, SY1),
+                      (VX1, SX1, VY0, VY1), (SX0, VX0, VY0, VY1)):
+    if b > a and d_ > c:
+        box(a, b, c, d_, SZ0 - 0.24, SZ0, tex=CONC, scale=2.2)
+        box(a, b, c, d_, SZ0, ZP, tex=PISOSUP, scale=1.2)
 box(VX1, VX1 + 0.06, VY0, VY1, ZP, ZP + 1.00, color=VIDRO)
+box(VX0 - 0.06, VX0, VY0, VY1, ZP, ZP + 1.00, color=VIDRO)
 box(VX0, VX1, VY0 - 0.06, VY0, ZP, ZP + 1.00, color=VIDRO)
-# envoltória: oeste cega, leste pedra (divisa), norte com as 3 janelas
 box(SX0, SX0 + 0.25, SY0, SY1, ZP, ZT, tex=REBOCO, scale=3)
 box(SX1 - 0.25, SX1, SY0, SY1, ZP, ZT, tex=PEDRA, scale=1.4)
 parede_x(SX0, SX1, SY1 - 0.25, SY1, ZP, ZT,
-         vaos=[(jx, jx + 1.6, ZP + 0.95, ZT - 0.45)
-               for jx in (8.6, 10.7, 12.8)], tex=REBOCO, scale=3)
-# fachada sul: porta da varanda da master
-RX0, RX1 = 11.6, 14.55
+         vaos=[(jx, jx + 1.7, ZP + 0.95, ZT - 0.45)
+               for jx in (10.2, 12.6)], tex=REBOCO, scale=3)
+RX0, RX1 = 11.40, 14.55
 parede_x(SX0, SX1, SY0, SY0 + 0.25, ZP, ZT,
          vaos=[(RX0, RX1, ZP, ZP + 2.30)], tex=REBOCO, scale=3, esq=False)
 box(RX0 + 1.5, RX1, SY0 + 0.10, SY0 + 0.16, ZP, ZP + 2.26, color=VIDRO)
-# A VARANDA: piso SOB o parapeito (o erro da casa anterior era o sinal trocado)
 box(RX0, RX1, SY0 - 1.96, SY0, SZ0 - 0.24, SZ0, tex=CONC, scale=2.2)
 box(RX0, RX1, SY0 - 1.96, SY0, SZ0, ZP, tex=PISOSUP, scale=1.2)
 box(RX0, RX1, SY0 - 1.96, SY0 - 1.90, ZP, ZP + 1.00, color=VIDRO)
 box(RX0 - 0.06, RX0, SY0 - 1.96, SY0, ZP, ZP + 1.00, color=VIDRO)
 box(RX1, RX1 + 0.06, SY0 - 1.96, SY0, ZP, ZP + 1.00, color=VIDRO)
+# parede corredor|suítes, com as 3 portas
+parede_y(COR1, COR1 + 0.12, SY0, SY1, ZP, ZT,
+         vaos=[(6.60, 7.40, ZP, ZP + 2.10), (12.00, 12.80, ZP, ZP + 2.10),
+               (15.70, 16.50, ZP, ZP + 2.10)], tex=REBOCO, scale=3, esq=False)
 
-# --- corredor + as 3 suítes ---
-COR1, DIV = 11.62, 0.12
-parede_y(COR1, COR1 + DIV, SY0, SY1, ZP, ZT,
-         vaos=[(7.10, 8.00, ZP, ZP + 2.10), (11.60, 12.50, ZP, ZP + 2.10),
-               (15.10, 16.00, ZP, ZP + 2.10)], tex=REBOCO, scale=3, esq=False)
-for dy in (9.40, 13.20):
-    box(COR1 + DIV, SX1 - 0.25, dy, dy + DIV, ZP, ZT, tex=REBOCO, scale=3)
-
-SUITES = [("master", SY0 + 0.25, 9.40, 11.6, 14.55),
-          ("suite 2", 9.52, 13.20, 11.6, 14.55),
-          ("suite 3", 13.32, SY1 - 0.25, 11.6, 14.55)]
-for (nome, ya, yb, xa, xb) in SUITES:
-    comodo(nome, xa, ya, xb, yb, ZP, ZT,
+# --- as 3 SUÍTES: o banheiro ocupa um CANTO da célula, não uma faixa própria.
+# Era a faixa que espremia o quarto a 2,98 m de largura; agora o quarto usa os
+# 4,65 inteiros no trecho livre. A master ainda ganha o CLOSET.
+SUITES = [("master", 5.85, 9.90, 11.60), ("suite 2", 11.72, 15.15, None),
+          ("suite 3", 15.27, 18.35, None)]
+for (nome, ya, yq, ycl) in SUITES:
+    comodo(nome, QX0, ya, QX1, yq, ZP, ZT,
            ["piso", "teto", "acesso", "abertura", "cama", "armario"])
     poe(nome, "piso", "teto", "acesso", "abertura")
-    ymeio = (ya + yb) / 2
-    cama(13.30, ymeio - 1.0, z=ZP);       poe(nome, "cama")
-    armario(11.80, 12.80, ya + 0.15, ya + 0.75, z=ZP, h=2.30)
+    cama(12.90, yq - 2.45, z=ZP);                    poe(nome, "cama")
+    armario(13.30, 14.45, ya + 0.10, ya + 0.70, z=ZP, h=2.30)
     poe(nome, "armario")
-
-# --- os 3 BANHEIROS (a oeste do corredor, com louça de verdade) ---
-BANHOS = [("banho master", SY0 + 0.30, 8.30), ("banho 2", 9.60, 11.60),
-          ("banho 3", 13.40, 15.40)]
-for (nome, ya, yb) in BANHOS:
-    xa, xb = 8.45, 11.62
-    comodo(nome, xa, ya, xb, yb, ZP, ZP + 2.60,
+    # o BANHEIRO no canto noroeste da célula
+    bx0, bx1, by0, by1 = QX0, QX0 + BW, yq - BD, yq
+    nb = "banho " + ("master" if ycl else nome.split()[-1])
+    comodo(nb, bx0, by0, bx1, by1, ZP, ZP + 2.60,
            ["piso", "teto", "acesso", "vaso", "cuba", "box"])
-    box(xa, xb, ya, yb, SZ0, ZP, tex=PISO, scale=0.7)
-    poe(nome, "piso")
-    box(xa, xb, ya, yb, ZP + 2.60, ZP + 2.72, tex=CONC, scale=2)
-    poe(nome, "teto")
-    poe(nome, "acesso")                       # porta na parede do corredor
-    box(xa, xb, yb - 0.12, yb, ZP, ZP + 2.60, tex=REBOCO, scale=3)
-    vaso(9.10, ya + 0.25, z=ZP);              poe(nome, "vaso")
-    cuba(10.60, ya + 0.20, z=ZP + 0.82);      poe(nome, "cuba")
-    box_banho(8.55, 9.95, ya + 1.10, yb - 0.20, z=ZP, h=1.90)
-    poe(nome, "box")
+    box(bx0, bx1, by0, by1, SZ0, ZP, tex=PISO, scale=0.7)
+    poe(nb, "piso")
+    box(bx0, bx1, by0, by1, ZP + 2.60, ZP + 2.72, tex=CONC, scale=2)
+    poe(nb, "teto")
+    parede_y(bx1, bx1 + 0.12, by0, by1, ZP, ZP + 2.60,
+             vaos=[(by0 + 0.30, by0 + 1.10, ZP, ZP + 2.10)],
+             tex=REBOCO, scale=3, esq=False)
+    poe(nb, "acesso")
+    box(bx0, bx1 + 0.12, by0 - 0.12, by0, ZP, ZP + 2.60, tex=REBOCO, scale=3)
+    vaso(bx0 + 0.45, by0 + 0.25, z=ZP);        poe(nb, "vaso")
+    cuba(bx1 - 0.40, by0 + 0.20, z=ZP + 0.82); poe(nb, "cuba")
+    box_banho(bx0 + 0.08, bx0 + 1.10, by1 - 1.00, by1 - 0.10, z=ZP, h=1.90)
+    poe(nb, "box")
+    if ycl:
+        comodo("closet", QX0, yq, QX1, ycl, ZP, ZP + 2.50,
+               ["piso", "teto", "acesso", "armario"])
+        box(QX0, QX1, yq, ycl, SZ0, ZP, tex=PISOSUP, scale=1.2)
+        poe("closet", "piso")
+        box(QX0, QX1, yq, ycl, ZP + 2.50, ZP + 2.62, tex=CONC, scale=2)
+        poe("closet", "teto")
+        box(QX0, QX1, yq - 0.12, yq, ZP + 2.10, ZT, tex=REBOCO, scale=3)
+        poe("closet", "acesso")
+        armario(QX0 + 0.05, QX1 - 0.05, yq + 0.08, yq + 0.68, z=ZP, h=2.30)
+        armario(QX0 + 0.05, QX1 - 0.05, ycl - 0.68, ycl - 0.08, z=ZP, h=2.30)
+        poe("closet", "armario")
 girados(_s)
+
+# ================== A ESCADA — a casa anterior tinha o POÇO e nenhuma escada.
+# Meu validador deixou passar porque eu confundi "porta do quarto" com "acesso
+# ao pavimento": marquei acesso nas suítes e ninguém perguntou como se CHEGA
+# nelas. Agora `confere()` exige uma escada declarada.
+# Reta, no eixo do poço, subindo do hall (z=0,06) ao piso do superior (3,50).
+# 20 degraus de 17,2 cm; piso de 27 cm; largura 1,20.
+ESC_X0, ESC_X1 = 8.80, 10.00        # dentro do corredor (1,20 de largura)
+ESC_Y0 = 5.30
+NDEG, ESP, PIS = 20, 0.172, 0.27
+_e = len(M)
+for i in range(NDEG):
+    yd = ESC_Y0 + i * PIS
+    box(ESC_X0, ESC_X1, yd, yd + PIS + 0.02, 0.06 + i * ESP,
+        0.06 + (i + 1) * ESP, tex=CONC, scale=1.2)
+box(ESC_X0 - 0.06, ESC_X0, ESC_Y0, ESC_Y0 + NDEG * PIS, 0.90, 1.95,
+    color=VIDRO)                                    # guarda-corpo da escada
+girados(_e)
+ESCADA_OK = True
 
 # ================================================================ A COBERTURA
 _c = len(M)
@@ -506,6 +544,13 @@ for cy in (24.7, 26.1):
 # ============================================== O VALIDADOR: aborta cômodo oco
 def confere():
     ruim = []
+    # ACESSO VERTICAL: a 1a versao desta casa tinha o POCO da escada, os
+    # guarda-corpos e NENHUMA escada — e passou, porque eu marquei "acesso" nas
+    # suites querendo dizer "porta do quarto". Porta de quarto nao leva ninguem
+    # ao pavimento. Se ha comodo acima do terreo, tem que haver escada.
+    if any(c["piso"] > 1.5 for c in COMODOS) and not globals().get("ESCADA_OK"):
+        raise SystemExit("ABORTADO: ha comodo no pavimento superior e NENHUMA "
+                         "escada — como a pessoa sobe?")
     for c in COMODOS:
         falta = c["precisa"] - c["tem"]
         if falta:
