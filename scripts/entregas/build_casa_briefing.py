@@ -299,7 +299,15 @@ box(BX0, 8.60, 10.6, 17.0, 3.0, 3.2, tex=CONC, scale=2.2)
 # cai em x local 15,03, além dos 14,80 do superior). Terceira vez nesta leva
 # que eu conto com o volume girado pra cobrir um ambiente ortogonal: hall,
 # faixa oeste, e agora a quina. **Girado não cobre reto — em canto nenhum.**
-box(13.0, BX1, 14.9, 17.0, 3.0, 3.2, tex=CONC, scale=2.2)
+# y=13,20 e NÃO 14,90: o remendo da quina parou 1,5 m CURTO. Sobrava uma fresta
+# de 15 cm × 1,5 m colada na parede leste (x 14,25-14,40, y 13,35-14,85) — o
+# quarto "girado não cobre reto" desta casa, e o que o Guilherme fotografou.
+# Eu tinha consertado a QUINA e chamado de resolvido; a aresta girada some
+# gradualmente ao descer em y, então o remendo tem que acompanhar a diagonal,
+# não cobrir só o canto. Achado pela prova_cobertura (polígono real, não bbox):
+# a de bbox dava a quina como coberta porque a caixa envolvente da laje girada
+# encosta na parede — a laje, não.
+box(13.0, BX1, 13.20, 17.0, 3.0, 3.2, tex=CONC, scale=2.2)
 # LESTE (divisa): com o VÃO onde o cobogó vai. A 1ª versão era parede maciça e
 # eu colava a grelha do cobogó em cima dela — um cobogó decorativo grudado em
 # reboco, "ventilação cruzada" que não ventilava nada. Cobogó É o vão: a parede
